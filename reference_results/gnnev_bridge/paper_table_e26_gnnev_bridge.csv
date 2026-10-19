@@ -1,0 +1,4 @@
+verifier,information_set,robust_or_certified_count,recall_against_known_exact_robust,precision_against_known_exact_robust,soundness_violations
+GNNev 1.1,"known endpoints, features, and candidate edges",33,1.0,1.0,0
+FedBCert symmetric,one endpoint-blind boundary-count upper bound,6,0.18181818181818182,1.0,0
+FedBCert cone-hybrid,one endpoint-blind boundary-count upper bound,22,0.6666666666666666,1.0,0

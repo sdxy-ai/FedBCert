@@ -1,0 +1,56 @@
+{
+  "experiment": "E28b-independent-confirmation",
+  "date": "2026-10-04",
+  "base_protocol": "configs/fedbcert_e28b_controlled_protocol_v2.json",
+  "base_protocol_sha256": "8f899f9236d577a850d901cd18da861398f6af1bfb30ceea56914d7b0dc1c9b8",
+  "authorization": "User requested continuing implementation and executing all experiments possible in the current environment; confirmation is authorized in this turn.",
+  "scientific_changes_from_development": "none: generator/features/splits/model architectures/alpha/optimizer/100-round budget/checkpoint selection/certificates/diagnostic unchanged",
+  "confirmation": {
+    "seeds": [28101, 28102, 28103, 28104, 28105, 28106, 28107, 28108],
+    "homophily": [0.5, 0.7, 0.9],
+    "cross_client_mass": [0.0, 0.01, 0.1, 0.4],
+    "graph_units": 96,
+    "models": ["observed_p", "identity", "strong_mlp"],
+    "training_runs": 288,
+    "primary_cell": {"h": 0.9, "rho": 0.4},
+    "primary_cell_origin": "selected on development validation data, locked before any confirmation graph is generated; no switching after confirmation",
+    "evaluation": "original test_sealed mask of each NEW confirmation graph; original development test masks remain sealed",
+    "checkpoint_commit": "ALL 288 selected checkpoint hashes and 96 graph bundle hashes written to exclusive checkpoint_commit.json before any confirmation test evaluation",
+    "audit_split": "audit_unused remains unused in all phases",
+    "interim_efficacy": "not printed or inspected during training or test audit; final analysis requires complete matrix",
+    "partial_resume": "forbidden: preserve failure and stop, no silent overwrite/retry/seed replacement"
+  },
+  "statistics": {
+    "unit": "independent whole-graph seed; nodes, clients and grid cells sharing a seed are NOT independent replicates",
+    "aggregation": "unweighted arithmetic mean over eight seed-level metrics within each cell",
+    "bootstrap": {"draws": 10000, "seed": 28401, "method": "paired whole-graph seed resampling with replacement, shared resample index matrix for all cells/metrics", "interval": "two-sided percentile 95%, descriptive with n=8; not simultaneous intervals, not a distribution-free confidence guarantee"},
+    "primary_test": "exact one-sided binomial sign-consistency test; success is paired effect strictly greater than null margin, zeros count as nonsuccess; p=sum_{k=s}^{8} C(8,k)/2^8",
+    "primary_test_estimand": "Pr(seed-level paired effect > null margin) > 1/2, NOT a distribution-free test of positive mean; bootstrap intervals describe seed-mean effects separately",
+    "primary_family": [
+      {"metric": "p_minus_i_all_macro_f1", "null_margin": 0.0},
+      {"metric": "p_minus_i_exposed_macro_f1", "null_margin": 0.0},
+      {"metric": "p_minus_mlp_all_macro_f1", "null_margin": -0.01},
+      {"metric": "hybrid_minus_symmetric_exposed_ratio", "null_margin": 0.0}
+    ],
+    "multiplicity": "Holm step-down adjusted p over exactly the four primary hypotheses, family alpha=0.05; all four required",
+    "grid_inference": "all twelve cells reported descriptively with seed-level data and 95% bootstrap intervals; no significance claims or post-test choice of a replacement primary cell",
+    "undefined_subgroups": "rho=0 exposed is empty: subgroup metrics and intervals remain null, never imputed as zero",
+    "missing_units": "no imputation or favourable deletion; incomplete matrix => no confirmatory decision"
+  },
+  "decision": {
+    "primary_point_gates": "same development_cell_gate thresholds as base protocol",
+    "additional_requirements": "all four primary Holm p <=0.05 AND bootstrap lower endpoint strictly exceeds each corresponding null margin, plus zero reliability violations and all resource limits",
+    "positive": "controlled_application_chain_confirmed_at_locked_primary_cell",
+    "negative": "stop_after_e28b_confirmation",
+    "no_automatic_retuning": true,
+    "claim_limit": "supports only the locked synthetic generator/predictor condition; not real business validation, not rescue of E19-E24 negative findings, not accuracy/safety/privacy certification"
+  },
+  "resources": {"seconds_total_training": 7200, "seconds_total_test_audit": 1800, "seconds_per_training_run": 900, "cuda_peak_gib": 6.0, "process_peak_rss_gib": 8.0},
+  "hard_stop": ["certified class flip", "analytic bound violation beyond inherited 1e-6 tolerance", "nonfinite output", "label isolation/hash/pairing mismatch", "resource cap or execution exception"],
+  "artifacts": {
+    "output_root": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation",
+    "sources": ["configs/fedbcert_e28b_confirmation_protocol.json", "scripts/fedbcert_e28b_confirmation_common.py", "scripts/run_fedbcert_e28b_confirmation.py", "scripts/analyze_fedbcert_e28b_confirmation.py", "scripts/audit_fedbcert_e28b_confirmation.py", "tests/test_fedbcert_e28b_confirmation.py", "docs/FEDBCERT_E28B_CONFIRMATION_PROTOCOL_ZH.md"],
+    "protect": "all previous E28b development files, base frozen sources/protected files, main manuscript and submission package remain unchanged throughout confirmation",
+    "paper_update": "produce a separate candidate insertion; do not overwrite the protected manuscript/submission files"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "protocol": "FedBCert E18c frozen cone-hybrid ogbn-arxiv scale audit",
+  "status": "frozen_before_execution",
+  "parent_e18_protocol": "configs/fedbcert_e18_cone_protocol.json",
+  "parent_e18_config_sha256": "a1dc34017f820ab0ee57590b9dc9a096ce12987cd739722fe8bed4e1c2a971b6",
+  "required_e18b_decision": "confirmation_complete_claim_supported",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale",
+  "dataset": "ogbn-arxiv",
+  "num_clients": 3,
+  "partition": "random",
+  "seeds": [76, 77, 78],
+  "variants": {
+    "feature_alpha0": {
+      "encoder_type": "feature_only_mlp",
+      "encoder_depth": 2,
+      "alpha": 0.0,
+      "role": "frozen graph-invariant control"
+    },
+    "dual_alpha025": {
+      "encoder_type": "dual_feature_spectral",
+      "encoder_depth": 2,
+      "alpha": 0.25,
+      "role": "E18a-frozen nonzero operating point"
+    }
+  },
+  "selected_certificate": "cone_hybrid",
+  "expected_runner_units": 6,
+  "expected_metric_rows": 6,
+  "training_method": "standard FedAvg only; no OGB model, alpha, or certificate selection",
+  "fixed_hyperparameters": {
+    "hidden_dim": 64,
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "encoder_residual_scale": 0.5,
+    "uncertainty_recurrence": "retained_mass",
+    "certificate_margin_mode": "pairwise_difference",
+    "include_cone_certificate_audit": true
+  },
+  "required_audits": {
+    "maximum_certificate_violations": 0,
+    "pure_feature_certified_ratio_min": 0.999999,
+    "official_ogb_split_required": true,
+    "selected_variant_must_equal_e18_policy": true,
+    "ordinary_logits_shared_by_symmetric_and_cone": true
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 180076,
+    "unit": "seed",
+    "interpretation": "descriptive paired interval; not a selection gate"
+  },
+  "decision_rule": "report frozen alpha=0.25 versus feature utility and cone-hybrid versus symmetric certificates, runtime, memory, and communication; never select or tune",
+  "test_labels_used_for_selection": false,
+  "prohibited_actions": [
+    "changing alpha after E18b confirmation",
+    "choosing between symmetric and cone after observing OGB metrics",
+    "using OGB test labels for checkpoint, model, alpha, or certificate selection",
+    "adding seeds to reverse an unfavorable scale result",
+    "claiming E18c as an independent model-selection experiment"
+  ]
+}

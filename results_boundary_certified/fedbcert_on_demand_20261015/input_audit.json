@@ -1,0 +1,3517 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "passed": true,
+  "scope": "read-only audit and historical forward replay of eight fixed synthetic primary cases",
+  "not_performed": [
+    "training",
+    "checkpoint selection",
+    "query/cost experiment",
+    "new efficacy analysis",
+    "paper modification"
+  ],
+  "observed_model": {
+    "encoder": "dual_feature_spectral",
+    "parameters": 8775,
+    "input_dim": 32,
+    "hidden_dim": 64,
+    "classes": 2,
+    "order_count": 3,
+    "alpha": 0.25,
+    "residual_scale": 0.5,
+    "evaluation_dtype": "float64",
+    "training_state_dtype": "float32"
+  },
+  "source_hashes_unchanged_after_audit": true,
+  "verified_file_count": 137,
+  "verified_file_sha256": {
+    "configs/fedbcert_e28b_controlled_protocol_v2.json": "8f899f9236d577a850d901cd18da861398f6af1bfb30ceea56914d7b0dc1c9b8",
+    "configs/fedbcert_e28b_confirmation_protocol.json": "3629402157a678a1a51e3f4222dc3d740af48005ee7d802438fb94e2f898f347",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/freeze_manifest.json": "0d02e217ed621e81db83dbd81b206486b6b904cb1f0265b50db50a142f50c167",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/checkpoint_commit.json": "f761d1c29c8cccd0357c553ea12567216f150d6c10ace2b3848d8128369edfc7",
+    "scripts/fedbcert_e28b_common.py": "35f42fe5c3aac679c3b485db16be287712448b430aae4004f46e4c812a6fd8c8",
+    "scripts/fedbcert_e28b_confirmation_common.py": "ae601857ca11881f32f3a71b895d2487b6cc61f480168648b664adda65008174",
+    "openfgl/flcore/fedbcert/certificate.py": "eb4cd1cc98a4bd9ca51d96cf959c2c0c1ffc61460c83d84b15ca3f708bb4dbd2",
+    "openfgl/flcore/fedbcert/federated.py": "8657f722a2c2f1fcdc15c7260d5c5f51c66d47b0a99dc7eff1b5d1afb88beb79",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/completion.json": "3e32a1c47d73018aae7d7f0cb812fd3708c7ba00ecf704ff5d5fb60ef1c4b69f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/sealed_graph_bundle.pt": "6f359334596f8254c890221d4127ecf5b702080bb5a997d0fae60b48f34b47c4",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/graph_manifest.json": "9b0f178bc0e0df8abef4fd12e7af60651857491960659f7a642fdc4f71732c46",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/observed_p/initial_state.pt": "a6a5ae1947973bff6f386f1b4cde3ff5469017d117c8224b4f73ac3b1ef4fc64",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/observed_p/selected_state.pt": "50d273995b8e2fb94402eacb7ce25cee6d052964e59cde1411c24a936323546f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/observed_p/validation_trajectory.json": "f7fce7383df09283b4ff19a28bfbb82be5c81a9ebff980d42f8d1b1a969e9ba4",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/observed_p/training_record.json": "34d4fa99850dcfe794ffd13871792020440f50da9c27a8bb752c2c5143690852",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/identity/initial_state.pt": "a6a5ae1947973bff6f386f1b4cde3ff5469017d117c8224b4f73ac3b1ef4fc64",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/identity/selected_state.pt": "770698600fe3dc8d37fb006f40fbe77f95bd73756031dd2c4685a23876251d61",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/identity/validation_trajectory.json": "659c9ec94143c79476a7a8679acf45c3d652bd98a636c12da216c3e8ea31a89b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/identity/training_record.json": "696311c03bc42f5c35ff7fd4f12ebd1401af5a8927f3382504a04484d18aed30",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/strong_mlp/initial_state.pt": "c006169a00160c0a727c02370edcbff86642437bf86813725739c627b7648ccd",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/strong_mlp/selected_state.pt": "6310ab59c721789fa7e532339a9b0792598403d3695bab4dfc5f4a31f7bcda06",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/strong_mlp/validation_trajectory.json": "7467427822d670ea3a1138b6051e3daa10f28a09c7dabdadacc4eb08ac08fc27",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/strong_mlp/training_record.json": "27e08502355400db63ea4aa44b635e3f387fe17577ee7dfdc9ef883e8412150c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28101/observed_p/test_metrics.json": "f6a6d0ade9d36432c65c9de62ab0b100022c87b404f6ec04d9dba27e49b08359",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28101/observed_p/test_evidence.pt": "0c715b1f231423b4509321fe75642eb64059aa57c46301535d115c4012f7477e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/sealed_graph_bundle.pt": "8dd84093f6b6252531fe29dc09764dd40da6d71514f3f76fcbceb62592ad0788",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/graph_manifest.json": "4bd9d7869c755f818e70a2ded14fd0858c288af35752bd064b630f4a81564bfe",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/observed_p/initial_state.pt": "11964cfd4f5788914edc656e58a659dc0ba63fd5fe240b15d44c1f62897956b6",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/observed_p/selected_state.pt": "25aa0a99d5b4576a9f930bc1e43bfebbad316553e036d185ce7a45f63661d308",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/observed_p/validation_trajectory.json": "002337e538ccff292b81c9706d64a782d1e983948810cdbfe8fde5fc6b91fb7f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/observed_p/training_record.json": "fa3646c085d66a7ffa5e9b0be3d05605d61c2a1f214eaf2d3936e785615bc5b3",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/identity/initial_state.pt": "11964cfd4f5788914edc656e58a659dc0ba63fd5fe240b15d44c1f62897956b6",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/identity/selected_state.pt": "14bb5c7705feee8292e0385164119337f57d3db6f3cb299771a73e9abfd0db6a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/identity/validation_trajectory.json": "c4e889454b70638a7afd7a8b85c246a3eb320695fe53be00a6fc266023aeb591",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/identity/training_record.json": "438ff900bd07f6e81c444a49fcee1862ebe10c9d2dc18181f409f76b97f5f00b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/strong_mlp/initial_state.pt": "ffdb2f3e909d955cba76e3ef568c0664d27f367e855f8a75495ab8218227d192",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/strong_mlp/selected_state.pt": "27abd835a2a15705e55953221899bb559191ba88d5c4d97aec5b701101bd17b2",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/strong_mlp/validation_trajectory.json": "a0e1c1160773d85510203d0f1e005331a14cc51f437c7f96a906ebdecae92d79",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/strong_mlp/training_record.json": "c4660fad99bfe7b857b14ec4c062dbb278fbfc8c4066233c30f39b1ed722d772",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28102/observed_p/test_metrics.json": "29c1c1bcbbb5f3384bacac24be3e91af128da49f5af12c77e40f5dbdca96f3bf",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28102/observed_p/test_evidence.pt": "fc3a2287857dddaef6b641685312afac6c82c3b5b79892735e77c0d3b9687d02",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/sealed_graph_bundle.pt": "43342fc87fccc7b2913a604fe7278f40aac52f3be514dd76a790eb267f2c69b1",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/graph_manifest.json": "d4bb091c57d89adfd3ebd045708a94e5110e92fa908f87cda0dfc47f63a8635a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/observed_p/initial_state.pt": "074b69845fbc8e87aab78357b3f211c40c474b721f0b9aabb7ed9edc76c1391c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/observed_p/selected_state.pt": "bbd0680d4907fc07854347dac1119f3a496a9c4bb0f2341a572ae093cee79a4d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/observed_p/validation_trajectory.json": "710dbdaead9241332e5a371875d2df3931fa794f4c390199116df0676a79dfb6",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/observed_p/training_record.json": "1606a4e054912f3c73ea78af26f88eb934c4bfd99b0c5a3d5ed5e623d3c71a5a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/identity/initial_state.pt": "074b69845fbc8e87aab78357b3f211c40c474b721f0b9aabb7ed9edc76c1391c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/identity/selected_state.pt": "2d77c4e4bfdd5f0c50bba92cada2f48d3953d9819cd073544ed27f1915b2ab60",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/identity/validation_trajectory.json": "28f82f00e52740d84942ba2eaff643cf4bbafa33bd72afbe5aee8c084a725ed0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/identity/training_record.json": "5badae65a1e916315341c00fcec465c2b84afa4bf0790c136e34c5cf1b0b7486",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/strong_mlp/initial_state.pt": "3bce1e2e9b93fd1e7b5a3713998f866fae76796b45937d599e52bbe24dbf6540",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/strong_mlp/selected_state.pt": "391a87b03f9b7306d11e10681f949d2f89d0675a223e5e077f4f6860bace7318",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/strong_mlp/validation_trajectory.json": "46c4f069693280d7f328ddfb15f95993513c19422d40fe878e9c8909f2dc9e2b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/strong_mlp/training_record.json": "4939a801d85007b2a2657fcbe0639d060b18d43ba8b8276146915e29e2be6701",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28103/observed_p/test_metrics.json": "b236eb8e0e7bd11699a2b721b3c1cf083bf7b553fa24adf0eb4f95fb52bbbeb5",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28103/observed_p/test_evidence.pt": "c0329e4e2b241fe49a6784c2322221f986155b9d338b6fc1b917384196ce57a7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/sealed_graph_bundle.pt": "4965d31629728dcd55b7386b77912feab90917361901980afc63b0d33892b7f2",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/graph_manifest.json": "c859f55443959454df21499ea5a9292d33898e148e2bd56b9efa91d4eb20f6a7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/observed_p/initial_state.pt": "4971aa4dac79a36d25eb9bd914588ec20b2e451cbaab063bcd36da8f51c9d0ec",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/observed_p/selected_state.pt": "f74aaf18def2f11255905f57174137cf020e17e2710623dd832b1facb8c3d437",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/observed_p/validation_trajectory.json": "a07a54bfd7de1cbfb6b4f285df3a795dfeb5f11c576c7a8147be113622552855",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/observed_p/training_record.json": "34d88590ccb9608ccd67436e927888ff376e6fb3cee142629bed0225a1489214",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/identity/initial_state.pt": "4971aa4dac79a36d25eb9bd914588ec20b2e451cbaab063bcd36da8f51c9d0ec",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/identity/selected_state.pt": "81222cc5a31d9dd6bc57d558344599aa8ca58a4f37fef084974ec4696775287b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/identity/validation_trajectory.json": "97dc7705cf8634c8d61b512b66f05e6745ee9fdaf1ce02d1c652a89189a99ef7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/identity/training_record.json": "a0f2f1793be7f40628cb61462e9e52a4248dbb57f19144ba23bdbf127803e581",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/strong_mlp/initial_state.pt": "f3221a7bc6de5e2211af9a63e33fcdc97342c5404cebb45c5e27fa8173c72198",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/strong_mlp/selected_state.pt": "e00fea98b2117c4c069a466b04e1c2186e0087ed755805432d457dd806ab57ea",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/strong_mlp/validation_trajectory.json": "27fa240a8b0c0d412d13902b3d8a366f697cde5c1f01df6e690f5629781c6407",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/strong_mlp/training_record.json": "6ac17b2fc5ae2be865fb9a980024088bad71162ccd2fc8eba0ec93d52071bcac",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28104/observed_p/test_metrics.json": "7b70fe923c69a8b0a581f39decd57d8ba277b5b49909fe5b99ed9338b8b1bd36",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28104/observed_p/test_evidence.pt": "2288365f7000d1ea22a5fc761df03ee0ffc3b17eb6b198e41fe8a79c23b942f7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/sealed_graph_bundle.pt": "bd3cd47495b48629cb3b095f100a662194b3d98e98ccaf2af20a7681bb5a95bf",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/graph_manifest.json": "bc5cd5a7275c05dbbd3eb68e1ac565cd5a9089b11f11133dff8b38da6d3f32fb",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/observed_p/initial_state.pt": "e97b1f0face50ef67676cbcd8cc983a868cdb5080dcfb4b030e3115a5fc1de03",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/observed_p/selected_state.pt": "d68f9f03da222646d161d57dd98aa4d1de6883601f2aaa990205c132d2e15615",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/observed_p/validation_trajectory.json": "439fa21f42639f707d73ad19a0cf3f073985e21e97813cbfb0e24f5c215b90ed",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/observed_p/training_record.json": "6a25b8ef7c6e1b9aea59ee7bcf487ca07e1037c49dd315df492c147d7ecc6cfe",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/identity/initial_state.pt": "e97b1f0face50ef67676cbcd8cc983a868cdb5080dcfb4b030e3115a5fc1de03",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/identity/selected_state.pt": "5452bfef1099fb4caa41b9654eedcc8a3a8827e28fabc73550235a12d354d2a8",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/identity/validation_trajectory.json": "8dcd59677843942bb3d303ceaa6cef37153b55acc48995205a20a6cb2ca9e8ac",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/identity/training_record.json": "1efb85c05f49b67eeebdd834b0947d6566665c34708cf6932c03cc0495bee46a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/strong_mlp/initial_state.pt": "d389204abfd1b0c76c7d0ebc919a96eb5593fb3e74c4c5e7774fcebd3cc19063",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/strong_mlp/selected_state.pt": "d38ddbbb46b9e586de8824fd6fa7397a866ef7b1a867f868512b2ea6c782e78d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/strong_mlp/validation_trajectory.json": "d902fcfd4477d46beb45906d1422d0124a6633d84c9b9edc37371fe862440459",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/strong_mlp/training_record.json": "bc9c9e685b46303fe9d69ac9b13bcd933a1b684ad30967b192a37cf26e980ab4",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28105/observed_p/test_metrics.json": "38b886e4a3d3fe112b0801f490cdd7531e5498dbee6b6e4c418d389ceef71186",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28105/observed_p/test_evidence.pt": "4b4e87d75b8ab8f7ee6e99f49f0a8c09676a25496ff6d3ecd30ff22e2d67185e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/sealed_graph_bundle.pt": "ad5aa18abca71aed634f9053f0eba78971d2af28fc7ec2fe339b22bd8580a984",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/graph_manifest.json": "abf53dde3cba3569b000fedfaff80bc7b162e92baccc578119ef4b3352f82717",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/observed_p/initial_state.pt": "31e528569e43ceae0aa7a7b88e0046ec0c29d755971fdad479893675833b1748",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/observed_p/selected_state.pt": "8bab6cd47788efe540d3506bc424dab18c83f03be48bb875bb6425d972d34adb",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/observed_p/validation_trajectory.json": "1f3685762375d79650c03c7458fd0521651ced972574a0dd9c7b1ebe8924dc96",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/observed_p/training_record.json": "c782af47a8c89f118b3afde437f97c2313eca49afb7385af8d17f95c2aa80003",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/identity/initial_state.pt": "31e528569e43ceae0aa7a7b88e0046ec0c29d755971fdad479893675833b1748",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/identity/selected_state.pt": "109c82cf7c00ccea049bb7f0f588ebe58d29e128b02d2de22ccc5586ddd28323",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/identity/validation_trajectory.json": "73142469f97e8f5bde6c1723ae3312354ca01d9352c3365edca378803e992d18",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/identity/training_record.json": "9dff5ed1a3cf6a876ea37ef5f3d698983e76fb9523d6bc180c55789436f69ad9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/strong_mlp/initial_state.pt": "310345c1435cd44c10cf1b909d7512a188f0ab6713fdcfe4c960012e2a674f3f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/strong_mlp/selected_state.pt": "0d85ccb7cc2624a5be1a635a52882a3e3b9d142f1fc0e6a42d2de5f690d090c9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/strong_mlp/validation_trajectory.json": "2bfe8971a241b1915ed8ecbbc4216f04321f864c34c719d9355029fa9b9bdf41",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/strong_mlp/training_record.json": "624df4c6e70e21d66566da315a92dfd3c1ddd45e9ff87ae06b7855b69f2f9a36",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28106/observed_p/test_metrics.json": "d19d5f8acae57a440a458bca2cd57f6da7fecf7cbe932f4dbd216dd59148589d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28106/observed_p/test_evidence.pt": "4deb33786a98c31d6ad5858c97cc4374019d26b004cf6d81e4d932cab71e784e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/sealed_graph_bundle.pt": "bc8a9ac2ee1e56b6e0c807d9c59b5b525e84d1ce4cb2da74d4c5f2936c11377b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/graph_manifest.json": "39b323994c09650f2517734b891fd004cb7075a500d0e7216ef1634c67bafe97",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/observed_p/initial_state.pt": "0aa80be72f9480017693743d117c2ceecef4c6a7ef6aef49748d210176178422",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/observed_p/selected_state.pt": "8566be0e11cc5a88f29a77139c12547d4027594f04c78dfb2aeeb8f58dc6e36a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/observed_p/validation_trajectory.json": "10a964d198ff38220a3aa7c83d38e09d8582694c6a81fecfce0013b7922bdc48",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/observed_p/training_record.json": "098137b5407d273efb2732c9e1772815e7b058f744d8b6295fc566019f10110b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/identity/initial_state.pt": "0aa80be72f9480017693743d117c2ceecef4c6a7ef6aef49748d210176178422",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/identity/selected_state.pt": "2995b0d14c24af8a9c537413492fff238bee0ec649ab5f0b26e37962e3ff37b6",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/identity/validation_trajectory.json": "baad413baf676df35863e7c074ed755bd53063879ad3fa6b57755b0eab27c075",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/identity/training_record.json": "bbf203a08de8328ee4676fb03fd93ccb3184e5cbf2064a559259eedfba646e34",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/strong_mlp/initial_state.pt": "9566ede38caff53d49e7b311b61e69da5cca955c0966053ceff6081243394a0b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/strong_mlp/selected_state.pt": "4e7d01ff0f0b31bf5bbb2c1ad8093914b9ce6c3b720b6819c4ec4c6590c98050",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/strong_mlp/validation_trajectory.json": "d25cd06a32977d4f67391ba21a3821ca23c09784a5ebe822ae590766e00ac869",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/strong_mlp/training_record.json": "a629093e896a08c7801cf032202d6724d47a6430bd4d0265a00e00727223e6c4",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28107/observed_p/test_metrics.json": "be4b8cde4b134a4212212f365883f2939dc77664bd74cf41c9787a63be40ac46",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28107/observed_p/test_evidence.pt": "69678e0f8e4773715688119564f3edf13fc7e292dc3e5f802438dbc4a27c844d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/sealed_graph_bundle.pt": "9e6141d7857c2e2c694a99281031459700a5bd0e5ee198553022fd17965f7305",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/graph_manifest.json": "c1ad0fb0aa612600b3055f5f695532a4adcb8b6ab77bd3ee706980ab4dfa9874",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/observed_p/initial_state.pt": "2a10672f4e62e888d9392f42d13c1315b3471159b73f66e9622e0ca5cc80f198",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/observed_p/selected_state.pt": "b7b68afb0bbf30f25fcb52ac25e375a01b5c118b9afa4f71f9fbf5b568945fc9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/observed_p/validation_trajectory.json": "4dcd8768606e1be31b648bc4fb0b611ff7a60d316b7b2d06149b913f749a1c4c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/observed_p/training_record.json": "bd33998923ced46a32387153eb98fbc80d6650b3431e303166ce8192456e5c4c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/identity/initial_state.pt": "2a10672f4e62e888d9392f42d13c1315b3471159b73f66e9622e0ca5cc80f198",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/identity/selected_state.pt": "625525a8655e86c5b5a29fe1816d195d0299e2a84fb3b7b9ffa108afb9ff2f8b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/identity/validation_trajectory.json": "a51da6c30fecee2c90077bd131626868df092e8a041db314878163900bdc6771",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/identity/training_record.json": "848386ea11f4538837e7789798bee1a2d005a8844f055ad9a9ff700d2fa22734",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/strong_mlp/initial_state.pt": "efa5e02c6d22e92d09ae31c316314f365389108b9d77a2b4c09e253bdf6ab74f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/strong_mlp/selected_state.pt": "d76e2e099e0c9a6a1e80ba75271fc3bb87e530a3a817a21dcb6ca16fe6e28ca1",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/strong_mlp/validation_trajectory.json": "3c4711ca00e734c00ae19a8ec19890c9ff41dba8c559487d4df77cbe19a72a6a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/strong_mlp/training_record.json": "c51f5ce60b5f8287af8d3493499c8558bd0a1c109ff2fde893435be0af616c2f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28108/observed_p/test_metrics.json": "f020c46e56c79db8b0273fcb2687ba80bade62e537f115293e8eccf8c0adf18a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28108/observed_p/test_evidence.pt": "9945b701bd90f7167e3a815f2cdac15c99d987ef8e17bee20077fb7a34119618"
+  },
+  "cases": [
+    {
+      "seed": 28101,
+      "graph_id": "h0.90_rho0.40_seed28101",
+      "bundle": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/sealed_graph_bundle.pt",
+      "selected_state": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/observed_p/selected_state.pt",
+      "historical_test_evidence": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28101/observed_p/test_evidence.pt",
+      "graph": {
+        "nodes": 6000,
+        "undirected_edges": 35684,
+        "cross_client_undirected_edges": 14284,
+        "clients": 3,
+        "nodes_per_client": 2000,
+        "split_counts": {
+          "train": 1800,
+          "audit_unused": 600,
+          "validation": 1200,
+          "test_sealed": 2400
+        }
+      },
+      "selected_round": 91,
+      "parameter_count": 8775,
+      "initial_tensor_sha256": "30c71b6ab232ff0457b8bc3fba02d3f894cb09abc0a0766f9acf8ac298094673",
+      "selected_tensor_sha256": "8ef757f7d710b22407c7318092975373c4a0557afb245998ac17ecae91b8e4af",
+      "prediction_replay": {
+        "nominal_max_abs": 0.0,
+        "full_graph_max_abs": 0.0
+      },
+      "bundle_schema": {
+        "features": {
+          "shape": [
+            6000,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "labels": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "membership": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "full_edge_index": {
+          "shape": [
+            2,
+            71368
+          ],
+          "dtype": "torch.int64"
+        },
+        "missing_degree": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.float32"
+        },
+        "masks": {
+          "train": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "audit_unused": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "validation": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "test_sealed": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "metadata": {
+          "seed": "int",
+          "h": "float",
+          "rho": "float",
+          "nodes": "int",
+          "edges": "int",
+          "mean_degree": "float",
+          "actual_homophily": "float",
+          "actual_cut_ratio": "float",
+          "boundary_nodes": "int",
+          "derived_seeds": {
+            "edges": "int",
+            "features": "int",
+            "splits": "int",
+            "model": "int",
+            "diagnostic_reserved": "int"
+          },
+          "split_counts": {
+            "train": "int",
+            "audit_unused": "int",
+            "validation": "int",
+            "test_sealed": "int"
+          }
+        }
+      },
+      "state_schema": {
+        "theta": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.weight": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "evidence_schema": {
+        "nodes": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "labels": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "nominal_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "completion_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "softmax_change": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "flip": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.bool"
+        },
+        "groups": {
+          "all": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "near_boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "exposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "unexposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "certificates": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "slacks": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        "radius": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "reliability": {
+          "certified_flip_nodes": "list",
+          "bound_violations": "int",
+          "numeric_tolerance": "float",
+          "hidden_bound_max_excess": "float",
+          "symmetric_logit_bound_max_excess": "float",
+          "cone_margin_bound_max_excess": "float"
+        }
+      },
+      "client_schema": [
+        {
+          "client_id": 0,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16242,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 1,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16244,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 2,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16314,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        }
+      ]
+    },
+    {
+      "seed": 28102,
+      "graph_id": "h0.90_rho0.40_seed28102",
+      "bundle": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/sealed_graph_bundle.pt",
+      "selected_state": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/observed_p/selected_state.pt",
+      "historical_test_evidence": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28102/observed_p/test_evidence.pt",
+      "graph": {
+        "nodes": 6000,
+        "undirected_edges": 35951,
+        "cross_client_undirected_edges": 14423,
+        "clients": 3,
+        "nodes_per_client": 2000,
+        "split_counts": {
+          "train": 1800,
+          "audit_unused": 600,
+          "validation": 1200,
+          "test_sealed": 2400
+        }
+      },
+      "selected_round": 96,
+      "parameter_count": 8775,
+      "initial_tensor_sha256": "4423c9787e5f99fbea5cb771099e2440d7b30192ad74dbc94dc56ad2b18d9999",
+      "selected_tensor_sha256": "3af8a8980b5eb85f7b3f027b367d268a87b84f934e8a5b0594e3723df44414a7",
+      "prediction_replay": {
+        "nominal_max_abs": 0.0,
+        "full_graph_max_abs": 0.0
+      },
+      "bundle_schema": {
+        "features": {
+          "shape": [
+            6000,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "labels": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "membership": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "full_edge_index": {
+          "shape": [
+            2,
+            71902
+          ],
+          "dtype": "torch.int64"
+        },
+        "missing_degree": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.float32"
+        },
+        "masks": {
+          "train": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "audit_unused": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "validation": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "test_sealed": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "metadata": {
+          "seed": "int",
+          "h": "float",
+          "rho": "float",
+          "nodes": "int",
+          "edges": "int",
+          "mean_degree": "float",
+          "actual_homophily": "float",
+          "actual_cut_ratio": "float",
+          "boundary_nodes": "int",
+          "derived_seeds": {
+            "edges": "int",
+            "features": "int",
+            "splits": "int",
+            "model": "int",
+            "diagnostic_reserved": "int"
+          },
+          "split_counts": {
+            "train": "int",
+            "audit_unused": "int",
+            "validation": "int",
+            "test_sealed": "int"
+          }
+        }
+      },
+      "state_schema": {
+        "theta": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.weight": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "evidence_schema": {
+        "nodes": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "labels": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "nominal_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "completion_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "softmax_change": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "flip": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.bool"
+        },
+        "groups": {
+          "all": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "near_boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "exposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "unexposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "certificates": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "slacks": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        "radius": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "reliability": {
+          "certified_flip_nodes": "list",
+          "bound_violations": "int",
+          "numeric_tolerance": "float",
+          "hidden_bound_max_excess": "float",
+          "symmetric_logit_bound_max_excess": "float",
+          "cone_margin_bound_max_excess": "float"
+        }
+      },
+      "client_schema": [
+        {
+          "client_id": 0,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16308,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 1,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16514,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 2,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16234,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        }
+      ]
+    },
+    {
+      "seed": 28103,
+      "graph_id": "h0.90_rho0.40_seed28103",
+      "bundle": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/sealed_graph_bundle.pt",
+      "selected_state": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/observed_p/selected_state.pt",
+      "historical_test_evidence": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28103/observed_p/test_evidence.pt",
+      "graph": {
+        "nodes": 6000,
+        "undirected_edges": 35965,
+        "cross_client_undirected_edges": 14406,
+        "clients": 3,
+        "nodes_per_client": 2000,
+        "split_counts": {
+          "train": 1800,
+          "audit_unused": 600,
+          "validation": 1200,
+          "test_sealed": 2400
+        }
+      },
+      "selected_round": 89,
+      "parameter_count": 8775,
+      "initial_tensor_sha256": "6385c9d0db7a1ed73ad8a62c4a28d0de7d82eae8c2ad5c6b6be6b0eb8e6a64cc",
+      "selected_tensor_sha256": "b1722cc5cc480c96be2bfb30f0032bb8f5e539676ac73cf8dbf5c8dd4905de25",
+      "prediction_replay": {
+        "nominal_max_abs": 0.0,
+        "full_graph_max_abs": 0.0
+      },
+      "bundle_schema": {
+        "features": {
+          "shape": [
+            6000,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "labels": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "membership": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "full_edge_index": {
+          "shape": [
+            2,
+            71930
+          ],
+          "dtype": "torch.int64"
+        },
+        "missing_degree": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.float32"
+        },
+        "masks": {
+          "train": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "audit_unused": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "validation": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "test_sealed": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "metadata": {
+          "seed": "int",
+          "h": "float",
+          "rho": "float",
+          "nodes": "int",
+          "edges": "int",
+          "mean_degree": "float",
+          "actual_homophily": "float",
+          "actual_cut_ratio": "float",
+          "boundary_nodes": "int",
+          "derived_seeds": {
+            "edges": "int",
+            "features": "int",
+            "splits": "int",
+            "model": "int",
+            "diagnostic_reserved": "int"
+          },
+          "split_counts": {
+            "train": "int",
+            "audit_unused": "int",
+            "validation": "int",
+            "test_sealed": "int"
+          }
+        }
+      },
+      "state_schema": {
+        "theta": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.weight": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "evidence_schema": {
+        "nodes": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "labels": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "nominal_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "completion_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "softmax_change": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "flip": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.bool"
+        },
+        "groups": {
+          "all": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "near_boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "exposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "unexposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "certificates": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "slacks": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        "radius": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "reliability": {
+          "certified_flip_nodes": "list",
+          "bound_violations": "int",
+          "numeric_tolerance": "float",
+          "hidden_bound_max_excess": "float",
+          "symmetric_logit_bound_max_excess": "float",
+          "cone_margin_bound_max_excess": "float"
+        }
+      },
+      "client_schema": [
+        {
+          "client_id": 0,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16346,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 1,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16572,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 2,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16200,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        }
+      ]
+    },
+    {
+      "seed": 28104,
+      "graph_id": "h0.90_rho0.40_seed28104",
+      "bundle": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/sealed_graph_bundle.pt",
+      "selected_state": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/observed_p/selected_state.pt",
+      "historical_test_evidence": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28104/observed_p/test_evidence.pt",
+      "graph": {
+        "nodes": 6000,
+        "undirected_edges": 36294,
+        "cross_client_undirected_edges": 14526,
+        "clients": 3,
+        "nodes_per_client": 2000,
+        "split_counts": {
+          "train": 1800,
+          "audit_unused": 600,
+          "validation": 1200,
+          "test_sealed": 2400
+        }
+      },
+      "selected_round": 95,
+      "parameter_count": 8775,
+      "initial_tensor_sha256": "377f416446c0cf06978081efc794ff278c521c6a68ef6585687a84474aad12c5",
+      "selected_tensor_sha256": "445c0c1277d50b85fda9fd7d607ced1cdef0aaeeca12aa05030b12333a8cf5c7",
+      "prediction_replay": {
+        "nominal_max_abs": 0.0,
+        "full_graph_max_abs": 0.0
+      },
+      "bundle_schema": {
+        "features": {
+          "shape": [
+            6000,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "labels": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "membership": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "full_edge_index": {
+          "shape": [
+            2,
+            72588
+          ],
+          "dtype": "torch.int64"
+        },
+        "missing_degree": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.float32"
+        },
+        "masks": {
+          "train": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "audit_unused": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "validation": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "test_sealed": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "metadata": {
+          "seed": "int",
+          "h": "float",
+          "rho": "float",
+          "nodes": "int",
+          "edges": "int",
+          "mean_degree": "float",
+          "actual_homophily": "float",
+          "actual_cut_ratio": "float",
+          "boundary_nodes": "int",
+          "derived_seeds": {
+            "edges": "int",
+            "features": "int",
+            "splits": "int",
+            "model": "int",
+            "diagnostic_reserved": "int"
+          },
+          "split_counts": {
+            "train": "int",
+            "audit_unused": "int",
+            "validation": "int",
+            "test_sealed": "int"
+          }
+        }
+      },
+      "state_schema": {
+        "theta": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.weight": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "evidence_schema": {
+        "nodes": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "labels": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "nominal_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "completion_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "softmax_change": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "flip": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.bool"
+        },
+        "groups": {
+          "all": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "near_boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "exposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "unexposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "certificates": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "slacks": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        "radius": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "reliability": {
+          "certified_flip_nodes": "list",
+          "bound_violations": "int",
+          "numeric_tolerance": "float",
+          "hidden_bound_max_excess": "float",
+          "symmetric_logit_bound_max_excess": "float",
+          "cone_margin_bound_max_excess": "float"
+        }
+      },
+      "client_schema": [
+        {
+          "client_id": 0,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16726,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 1,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16570,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 2,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16240,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        }
+      ]
+    },
+    {
+      "seed": 28105,
+      "graph_id": "h0.90_rho0.40_seed28105",
+      "bundle": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/sealed_graph_bundle.pt",
+      "selected_state": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/observed_p/selected_state.pt",
+      "historical_test_evidence": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28105/observed_p/test_evidence.pt",
+      "graph": {
+        "nodes": 6000,
+        "undirected_edges": 35918,
+        "cross_client_undirected_edges": 14273,
+        "clients": 3,
+        "nodes_per_client": 2000,
+        "split_counts": {
+          "train": 1800,
+          "audit_unused": 600,
+          "validation": 1200,
+          "test_sealed": 2400
+        }
+      },
+      "selected_round": 97,
+      "parameter_count": 8775,
+      "initial_tensor_sha256": "fc1b027d50a64a41faf2d5b76fd9ba3380a55a7ed6991c5616d81248bca09265",
+      "selected_tensor_sha256": "01cbdb9a0c418f0eb7a3cff1d5eeeeaf1f1e6b5c1b944ce02fd7271eefc43af1",
+      "prediction_replay": {
+        "nominal_max_abs": 0.0,
+        "full_graph_max_abs": 0.0
+      },
+      "bundle_schema": {
+        "features": {
+          "shape": [
+            6000,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "labels": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "membership": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "full_edge_index": {
+          "shape": [
+            2,
+            71836
+          ],
+          "dtype": "torch.int64"
+        },
+        "missing_degree": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.float32"
+        },
+        "masks": {
+          "train": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "audit_unused": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "validation": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "test_sealed": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "metadata": {
+          "seed": "int",
+          "h": "float",
+          "rho": "float",
+          "nodes": "int",
+          "edges": "int",
+          "mean_degree": "float",
+          "actual_homophily": "float",
+          "actual_cut_ratio": "float",
+          "boundary_nodes": "int",
+          "derived_seeds": {
+            "edges": "int",
+            "features": "int",
+            "splits": "int",
+            "model": "int",
+            "diagnostic_reserved": "int"
+          },
+          "split_counts": {
+            "train": "int",
+            "audit_unused": "int",
+            "validation": "int",
+            "test_sealed": "int"
+          }
+        }
+      },
+      "state_schema": {
+        "theta": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.weight": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "evidence_schema": {
+        "nodes": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "labels": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "nominal_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "completion_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "softmax_change": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "flip": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.bool"
+        },
+        "groups": {
+          "all": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "near_boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "exposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "unexposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "certificates": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "slacks": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        "radius": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "reliability": {
+          "certified_flip_nodes": "list",
+          "bound_violations": "int",
+          "numeric_tolerance": "float",
+          "hidden_bound_max_excess": "float",
+          "symmetric_logit_bound_max_excess": "float",
+          "cone_margin_bound_max_excess": "float"
+        }
+      },
+      "client_schema": [
+        {
+          "client_id": 0,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16168,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 1,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16502,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 2,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16620,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        }
+      ]
+    },
+    {
+      "seed": 28106,
+      "graph_id": "h0.90_rho0.40_seed28106",
+      "bundle": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/sealed_graph_bundle.pt",
+      "selected_state": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/observed_p/selected_state.pt",
+      "historical_test_evidence": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28106/observed_p/test_evidence.pt",
+      "graph": {
+        "nodes": 6000,
+        "undirected_edges": 35867,
+        "cross_client_undirected_edges": 14266,
+        "clients": 3,
+        "nodes_per_client": 2000,
+        "split_counts": {
+          "train": 1800,
+          "audit_unused": 600,
+          "validation": 1200,
+          "test_sealed": 2400
+        }
+      },
+      "selected_round": 82,
+      "parameter_count": 8775,
+      "initial_tensor_sha256": "a386cb3839c87c5ad2e7ae55c0268f7bb70c0ce44445944d7c38b5ce5f8f8b33",
+      "selected_tensor_sha256": "0817cec4bdda1e99f93cbef9c497c2957cb387054655e4740a5a5d5beebac7ab",
+      "prediction_replay": {
+        "nominal_max_abs": 0.0,
+        "full_graph_max_abs": 0.0
+      },
+      "bundle_schema": {
+        "features": {
+          "shape": [
+            6000,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "labels": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "membership": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "full_edge_index": {
+          "shape": [
+            2,
+            71734
+          ],
+          "dtype": "torch.int64"
+        },
+        "missing_degree": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.float32"
+        },
+        "masks": {
+          "train": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "audit_unused": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "validation": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "test_sealed": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "metadata": {
+          "seed": "int",
+          "h": "float",
+          "rho": "float",
+          "nodes": "int",
+          "edges": "int",
+          "mean_degree": "float",
+          "actual_homophily": "float",
+          "actual_cut_ratio": "float",
+          "boundary_nodes": "int",
+          "derived_seeds": {
+            "edges": "int",
+            "features": "int",
+            "splits": "int",
+            "model": "int",
+            "diagnostic_reserved": "int"
+          },
+          "split_counts": {
+            "train": "int",
+            "audit_unused": "int",
+            "validation": "int",
+            "test_sealed": "int"
+          }
+        }
+      },
+      "state_schema": {
+        "theta": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.weight": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "evidence_schema": {
+        "nodes": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "labels": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "nominal_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "completion_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "softmax_change": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "flip": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.bool"
+        },
+        "groups": {
+          "all": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "near_boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "exposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "unexposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "certificates": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "slacks": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        "radius": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "reliability": {
+          "certified_flip_nodes": "list",
+          "bound_violations": "int",
+          "numeric_tolerance": "float",
+          "hidden_bound_max_excess": "float",
+          "symmetric_logit_bound_max_excess": "float",
+          "cone_margin_bound_max_excess": "float"
+        }
+      },
+      "client_schema": [
+        {
+          "client_id": 0,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16364,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 1,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16326,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 2,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16512,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        }
+      ]
+    },
+    {
+      "seed": 28107,
+      "graph_id": "h0.90_rho0.40_seed28107",
+      "bundle": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/sealed_graph_bundle.pt",
+      "selected_state": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/observed_p/selected_state.pt",
+      "historical_test_evidence": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28107/observed_p/test_evidence.pt",
+      "graph": {
+        "nodes": 6000,
+        "undirected_edges": 36038,
+        "cross_client_undirected_edges": 14471,
+        "clients": 3,
+        "nodes_per_client": 2000,
+        "split_counts": {
+          "train": 1800,
+          "audit_unused": 600,
+          "validation": 1200,
+          "test_sealed": 2400
+        }
+      },
+      "selected_round": 55,
+      "parameter_count": 8775,
+      "initial_tensor_sha256": "8e22d79463b21615ed89279943a409ddfa1dc333783fbf7ea384f2628b0c2e6d",
+      "selected_tensor_sha256": "6bb27d1348832480314f6bf1a28ea2bd8fbe71bc5552a5f876c2653a2f21231f",
+      "prediction_replay": {
+        "nominal_max_abs": 0.0,
+        "full_graph_max_abs": 0.0
+      },
+      "bundle_schema": {
+        "features": {
+          "shape": [
+            6000,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "labels": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "membership": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "full_edge_index": {
+          "shape": [
+            2,
+            72076
+          ],
+          "dtype": "torch.int64"
+        },
+        "missing_degree": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.float32"
+        },
+        "masks": {
+          "train": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "audit_unused": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "validation": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "test_sealed": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "metadata": {
+          "seed": "int",
+          "h": "float",
+          "rho": "float",
+          "nodes": "int",
+          "edges": "int",
+          "mean_degree": "float",
+          "actual_homophily": "float",
+          "actual_cut_ratio": "float",
+          "boundary_nodes": "int",
+          "derived_seeds": {
+            "edges": "int",
+            "features": "int",
+            "splits": "int",
+            "model": "int",
+            "diagnostic_reserved": "int"
+          },
+          "split_counts": {
+            "train": "int",
+            "audit_unused": "int",
+            "validation": "int",
+            "test_sealed": "int"
+          }
+        }
+      },
+      "state_schema": {
+        "theta": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.weight": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "evidence_schema": {
+        "nodes": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "labels": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "nominal_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "completion_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "softmax_change": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "flip": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.bool"
+        },
+        "groups": {
+          "all": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "near_boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "exposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "unexposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "certificates": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "slacks": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        "radius": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "reliability": {
+          "certified_flip_nodes": "list",
+          "bound_violations": "int",
+          "numeric_tolerance": "float",
+          "hidden_bound_max_excess": "float",
+          "symmetric_logit_bound_max_excess": "float",
+          "cone_margin_bound_max_excess": "float"
+        }
+      },
+      "client_schema": [
+        {
+          "client_id": 0,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16442,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 1,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16606,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 2,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16086,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        }
+      ]
+    },
+    {
+      "seed": 28108,
+      "graph_id": "h0.90_rho0.40_seed28108",
+      "bundle": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/sealed_graph_bundle.pt",
+      "selected_state": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/observed_p/selected_state.pt",
+      "historical_test_evidence": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/test_evaluation/h0.90_rho0.40_seed28108/observed_p/test_evidence.pt",
+      "graph": {
+        "nodes": 6000,
+        "undirected_edges": 35938,
+        "cross_client_undirected_edges": 14294,
+        "clients": 3,
+        "nodes_per_client": 2000,
+        "split_counts": {
+          "train": 1800,
+          "audit_unused": 600,
+          "validation": 1200,
+          "test_sealed": 2400
+        }
+      },
+      "selected_round": 95,
+      "parameter_count": 8775,
+      "initial_tensor_sha256": "7e387431a6d05a7855c334be69429db73f77c6c6e0bb5c0f251037e180db2582",
+      "selected_tensor_sha256": "9cf91bfdacc62f565364e581cfd21ae62f79c87e75d718b134afa3201f0c3ea9",
+      "prediction_replay": {
+        "nominal_max_abs": 0.0,
+        "full_graph_max_abs": 0.0
+      },
+      "bundle_schema": {
+        "features": {
+          "shape": [
+            6000,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "labels": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "membership": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.int64"
+        },
+        "full_edge_index": {
+          "shape": [
+            2,
+            71876
+          ],
+          "dtype": "torch.int64"
+        },
+        "missing_degree": {
+          "shape": [
+            6000
+          ],
+          "dtype": "torch.float32"
+        },
+        "masks": {
+          "train": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "audit_unused": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "validation": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          },
+          "test_sealed": {
+            "shape": [
+              6000
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "metadata": {
+          "seed": "int",
+          "h": "float",
+          "rho": "float",
+          "nodes": "int",
+          "edges": "int",
+          "mean_degree": "float",
+          "actual_homophily": "float",
+          "actual_cut_ratio": "float",
+          "boundary_nodes": "int",
+          "derived_seeds": {
+            "edges": "int",
+            "features": "int",
+            "splits": "int",
+            "model": "int",
+            "diagnostic_reserved": "int"
+          },
+          "split_counts": {
+            "train": "int",
+            "audit_unused": "int",
+            "validation": "int",
+            "test_sealed": "int"
+          }
+        }
+      },
+      "state_schema": {
+        "theta": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.weight": {
+          "shape": [
+            64,
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_encoder.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_blocks.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.weight": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_norms.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.weight": {
+          "shape": [
+            2,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "feature_classifier.bias": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "evidence_schema": {
+        "nodes": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "labels": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.int64"
+        },
+        "nominal_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "completion_logits": {
+          "shape": [
+            2400,
+            2
+          ],
+          "dtype": "torch.float64"
+        },
+        "softmax_change": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "flip": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.bool"
+        },
+        "groups": {
+          "all": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "near_boundary": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "exposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "unexposed": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "certificates": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.bool"
+          }
+        },
+        "slacks": {
+          "additive_classwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "retained_pairwise": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_only": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          },
+          "cone_hybrid": {
+            "shape": [
+              2400
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        "radius": {
+          "shape": [
+            2400
+          ],
+          "dtype": "torch.float64"
+        },
+        "reliability": {
+          "certified_flip_nodes": "list",
+          "bound_violations": "int",
+          "numeric_tolerance": "float",
+          "hidden_bound_max_excess": "float",
+          "symmetric_logit_bound_max_excess": "float",
+          "cone_margin_bound_max_excess": "float"
+        }
+      },
+      "client_schema": [
+        {
+          "client_id": 0,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16262,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 1,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16598,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        },
+        {
+          "client_id": 2,
+          "global_nodes": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.int64"
+          },
+          "features": {
+            "shape": [
+              2000,
+              32
+            ],
+            "dtype": "torch.float64"
+          },
+          "shift_shape": [
+            2000,
+            2000
+          ],
+          "shift_nnz_including_self_loops": 16428,
+          "missing_degree": {
+            "shape": [
+              2000
+            ],
+            "dtype": "torch.float64"
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "synthetic historical checkpoints, not new independent application confirmation",
+    "floating-point replay is not outward-rounded verification",
+    "historical evidence contains labels; no query-policy or inference payload is produced here"
+  ]
+}

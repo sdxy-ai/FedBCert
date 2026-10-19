@@ -1,0 +1,1036 @@
+{
+  "schema_version": 1,
+  "analysis_date": "2026-10-15",
+  "measured_records": 240,
+  "replicate_unit": "whole-graph seed; repetitions, clients and nodes are not independent samples",
+  "bootstrap": {
+    "draws": 10000,
+    "rng_seed": 28616,
+    "paired": true,
+    "descriptive_only": true
+  },
+  "workloads": {
+    "all_test": {
+      "full_reference": {
+        "total_wire_bytes": {
+          "mean": 9661434.0,
+          "ci95": [
+            9634242.0,
+            9686118.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.2026965087497956,
+          "ci95": [
+            0.20081276925338898,
+            0.20478390104835853
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.20216231851372868,
+        "certified_ratio": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 18295.125,
+          "ci95": [
+            18243.625,
+            18341.875
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 24.0,
+          "ci95": [
+            24.0,
+            24.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      },
+      "exposure_only": {
+        "total_wire_bytes": {
+          "mean": 9710580.0,
+          "ci95": [
+            9683388.0,
+            9735264.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.26497377438499825,
+          "ci95": [
+            0.26060315740487566,
+            0.27140139026596444
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.26312999200308695,
+        "certified_ratio": {
+          "mean": 5.208333333333334e-05,
+          "ci95": [
+            0.0,
+            0.00015625
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 18295.125,
+          "ci95": [
+            18243.625,
+            18341.875
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 30.0,
+          "ci95": [
+            30.0,
+            30.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      },
+      "ball_pairwise": {
+        "total_wire_bytes": {
+          "mean": 9229458.0,
+          "ci95": [
+            9078648.0,
+            9340602.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.25917664613371016,
+          "ci95": [
+            0.2543136131385836,
+            0.2653683262615232
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.25866840899107046,
+        "certified_ratio": {
+          "mean": 0.23671875,
+          "ci95": [
+            0.19343749999999998,
+            0.2894791666666666
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 17339.875,
+          "ci95": [
+            17054.25,
+            17550.375
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 30.0,
+          "ci95": [
+            30.0,
+            30.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      },
+      "nonnegative_diameter": {
+        "total_wire_bytes": {
+          "mean": 8730234.0,
+          "ci95": [
+            8522268.0,
+            8891950.5
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.2537418568826979,
+          "ci95": [
+            0.2495343481430609,
+            0.2587728970365788
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.25265431552543305,
+        "certified_ratio": {
+          "mean": 0.3921354166666666,
+          "ci95": [
+            0.34484114583333336,
+            0.448125
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 16394.375,
+          "ci95": [
+            16000.5,
+            16700.65625
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 30.0,
+          "ci95": [
+            30.0,
+            30.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      },
+      "cone": {
+        "total_wire_bytes": {
+          "mean": 7526460.0,
+          "ci95": [
+            7276782.0,
+            7745126.25
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.2507993373728823,
+          "ci95": [
+            0.24410411562712397,
+            0.25748107442705076
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.2518263759848196,
+        "certified_ratio": {
+          "mean": 0.651875,
+          "ci95": [
+            0.6135403645833333,
+            0.69359375
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 14114.5,
+          "ci95": [
+            13641.625,
+            14528.640625
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 30.0,
+          "ci95": [
+            30.0,
+            30.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      }
+    },
+    "small_batch": {
+      "full_reference": {
+        "total_wire_bytes": {
+          "mean": 1056486.0,
+          "ci95": [
+            1031602.35,
+            1082358.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.09367906324041542,
+          "ci95": [
+            0.06767577269602043,
+            0.11164787973939383
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.11066172298160382,
+        "certified_ratio": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 1997.875,
+          "ci95": [
+            1950.746875,
+            2046.875
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 24.0,
+          "ci95": [
+            24.0,
+            24.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      },
+      "exposure_only": {
+        "total_wire_bytes": {
+          "mean": 1105632.0,
+          "ci95": [
+            1080748.35,
+            1131504.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.15916909186489647,
+          "ci95": [
+            0.1431693787308177,
+            0.16817713123600697
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.16714806549134664,
+        "certified_ratio": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 1997.875,
+          "ci95": [
+            1950.746875,
+            2046.875
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 30.0,
+          "ci95": [
+            30.0,
+            30.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      },
+      "ball_pairwise": {
+        "total_wire_bytes": {
+          "mean": 903888.0,
+          "ci95": [
+            847722.0,
+            961308.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.1669357447535731,
+          "ci95": [
+            0.16469075665609126,
+            0.16919149623336124
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.1668254125106614,
+        "certified_ratio": {
+          "mean": 0.25,
+          "ci95": [
+            0.19140625,
+            0.3125
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 1571.75,
+          "ci95": [
+            1465.375,
+            1680.5
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 30.0,
+          "ci95": [
+            30.0,
+            30.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      },
+      "nonnegative_diameter": {
+        "total_wire_bytes": {
+          "mean": 706020.0,
+          "ci95": [
+            639355.05,
+            768592.95
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.1488067837417475,
+          "ci95": [
+            0.12480952170499222,
+            0.16579011274734512
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.16418832150520757,
+        "certified_ratio": {
+          "mean": 0.4375,
+          "ci95": [
+            0.3671875,
+            0.51171875
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 1197.0,
+          "ci95": [
+            1070.740625,
+            1315.5093749999999
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 30.0,
+          "ci95": [
+            30.0,
+            30.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      },
+      "cone": {
+        "total_wire_bytes": {
+          "mean": 416378.5,
+          "ci95": [
+            343613.0,
+            489738.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "mean_seed_median_cpu_seconds": {
+          "mean": 0.1563089538612985,
+          "ci95": [
+            0.12951100547797978,
+            0.1751197477351525
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "median_seed_median_cpu_seconds": 0.174020936479792,
+        "certified_ratio": {
+          "mean": 0.703125,
+          "ci95": [
+            0.62890625,
+            0.77734375
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "remote_vectors": {
+          "mean": 648.5,
+          "ci95": [
+            510.75,
+            787.375
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "request_response_packets": {
+          "mean": 29.5,
+          "ci95": [
+            28.75,
+            30.0
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        }
+      }
+    }
+  },
+  "cone_comparisons": {
+    "all_test": {
+      "full_reference": {
+        "relative_payload_reduction": {
+          "mean": 0.22091948538694994,
+          "ci95": [
+            0.19752044853532397,
+            0.2475183118876193
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "positive_payload_saving_seeds": 8,
+        "cone_to_baseline_cpu_ratio": {
+          "mean": 1.237580389116248,
+          "ci95": [
+            1.2046510932534584,
+            1.2757156473003448
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "ideal_break_even_by_seed": [
+          {
+            "seed": 28101,
+            "bandwidth_bps": 215470081.05523735,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28102,
+            "bandwidth_bps": 466496591.92462415,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28103,
+            "bandwidth_bps": 398805929.8306984,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28104,
+            "bandwidth_bps": 260199654.61760467,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28105,
+            "bandwidth_bps": 266398657.87503055,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28106,
+            "bandwidth_bps": 340424549.45486206,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28107,
+            "bandwidth_bps": 708988718.8789868,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28108,
+            "bandwidth_bps": 402223192.09616804,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          }
+        ]
+      },
+      "exposure_only": {
+        "relative_payload_reduction": {
+          "mean": 0.22486283325738632,
+          "ci95": [
+            0.20158565789035804,
+            0.2513270406468716
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "positive_payload_saving_seeds": 8,
+        "cone_to_baseline_cpu_ratio": {
+          "mean": 0.9467245267960793,
+          "ci95": [
+            0.9250352027048805,
+            0.966398312292204
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "ideal_break_even_by_seed": [
+          {
+            "seed": 28101,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28102,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28103,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28104,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28105,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28106,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28107,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28108,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          }
+        ]
+      },
+      "ball_pairwise": {
+        "relative_payload_reduction": {
+          "mean": 0.18491324208660515,
+          "ci95": [
+            0.1706402083477203,
+            0.19989743454396336
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "positive_payload_saving_seeds": 8,
+        "cone_to_baseline_cpu_ratio": {
+          "mean": 0.9675992970100596,
+          "ci95": [
+            0.9542416912042551,
+            0.9814382597364745
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "ideal_break_even_by_seed": [
+          {
+            "seed": 28101,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28102,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28103,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28104,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28105,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28106,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28107,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28108,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          }
+        ]
+      },
+      "nonnegative_diameter": {
+        "relative_payload_reduction": {
+          "mean": 0.13823773888052382,
+          "ci95": [
+            0.12858338509618522,
+            0.14811387366181525
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "positive_payload_saving_seeds": 8,
+        "cone_to_baseline_cpu_ratio": {
+          "mean": 0.9881859678391018,
+          "ci95": [
+            0.9742925180186573,
+            0.9997062365523623
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "ideal_break_even_by_seed": [
+          {
+            "seed": 28101,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28102,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28103,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28104,
+            "bandwidth_bps": 6258173291.5553055,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28105,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28106,
+            "bandwidth_bps": 8162487769.722513,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28107,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28108,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          }
+        ]
+      }
+    },
+    "small_batch": {
+      "full_reference": {
+        "relative_payload_reduction": {
+          "mean": 0.6071364628630358,
+          "ci95": [
+            0.5430358375407717,
+            0.6726268097889812
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "positive_payload_saving_seeds": 8,
+        "cone_to_baseline_cpu_ratio": {
+          "mean": 2.0689833075323953,
+          "ci95": [
+            1.249926552414267,
+            3.0606641346340973
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "ideal_break_even_by_seed": [
+          {
+            "seed": 28101,
+            "bandwidth_bps": 73907784.5039721,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28102,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28103,
+            "bandwidth_bps": 42130349.96080963,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28104,
+            "bandwidth_bps": 69822937.51239325,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28105,
+            "bandwidth_bps": 31821097.134321123,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28106,
+            "bandwidth_bps": 80043563.21453755,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28107,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28108,
+            "bandwidth_bps": 70388908.73173602,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          }
+        ]
+      },
+      "exposure_only": {
+        "relative_payload_reduction": {
+          "mean": 0.6245668158974592,
+          "ci95": [
+            0.5630035563824218,
+            0.6872627755631487
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "positive_payload_saving_seeds": 8,
+        "cone_to_baseline_cpu_ratio": {
+          "mean": 1.014057489267662,
+          "ci95": [
+            0.823882886845277,
+            1.2304069675068674
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "ideal_break_even_by_seed": [
+          {
+            "seed": 28101,
+            "bandwidth_bps": 734427543.9528657,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28102,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28103,
+            "bandwidth_bps": 626306755.875445,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28104,
+            "bandwidth_bps": 67400549.08617258,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28105,
+            "bandwidth_bps": 672451079.9793648,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28106,
+            "bandwidth_bps": 1171812079.1210377,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28107,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28108,
+            "bandwidth_bps": 650056784.6906112,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          }
+        ]
+      },
+      "ball_pairwise": {
+        "relative_payload_reduction": {
+          "mean": 0.543859860342464,
+          "ci95": [
+            0.4844173604486072,
+            0.6077192516525077
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "positive_payload_saving_seeds": 8,
+        "cone_to_baseline_cpu_ratio": {
+          "mean": 0.9345972640114442,
+          "ci95": [
+            0.7832611756715145,
+            1.0423527782141164
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "ideal_break_even_by_seed": [
+          {
+            "seed": 28101,
+            "bandwidth_bps": 839542957.1561375,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28102,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28103,
+            "bandwidth_bps": 545347980.2334216,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28104,
+            "bandwidth_bps": 553421333.8624107,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28105,
+            "bandwidth_bps": 376107780.17944616,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28106,
+            "bandwidth_bps": 455289481.22326994,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28107,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28108,
+            "bandwidth_bps": 617588673.6348822,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          }
+        ]
+      },
+      "nonnegative_diameter": {
+        "relative_payload_reduction": {
+          "mean": 0.41655271160812446,
+          "ci95": [
+            0.34257742575204697,
+            0.4862471874716369
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "positive_payload_saving_seeds": 8,
+        "cone_to_baseline_cpu_ratio": {
+          "mean": 1.1207898726239316,
+          "ci95": [
+            0.8396691864776804,
+            1.4121533681505993
+          ],
+          "n_seeds": 8,
+          "interval_scope": "descriptive paired seed bootstrap, not simultaneous or confirmatory"
+        },
+        "ideal_break_even_by_seed": [
+          {
+            "seed": 28101,
+            "bandwidth_bps": 31665798.65569912,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28102,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28103,
+            "bandwidth_bps": 259901615.51937798,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28104,
+            "bandwidth_bps": 124677845.82646227,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28105,
+            "bandwidth_bps": 211405176.57977057,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28106,
+            "bandwidth_bps": 30368558.374467555,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          },
+          {
+            "seed": 28107,
+            "bandwidth_bps": null,
+            "regime": "cone_has_lower_payload_and_no_added_cpu_in_ideal_model"
+          },
+          {
+            "seed": 28108,
+            "bandwidth_bps": 357809584.75192744,
+            "regime": "cone_wins_only_below_threshold_in_ideal_serial_model"
+          }
+        ]
+      }
+    }
+  },
+  "engineering_gates": {
+    "complete_matrix_and_zero_mismatch": true,
+    "cone_vs_exposure_mean_payload_reduction_at_least_5pct": true,
+    "cone_vs_exposure_positive_in_at_least_6_of_8": true,
+    "cone_vs_nonnegative_diameter_mean_payload_reduction_positive": true,
+    "cone_vs_full_reference_mean_payload_reduction_positive": true,
+    "protocol_input_implementation_integrity": true
+  },
+  "engineering_feasibility_passed": true,
+  "decision_if_negative": "stop application expansion; retain certification-paper positioning; no cell, seed or threshold replacement",
+  "ideal_network_model": "T = measured CPU seconds + 8 * serialized application bytes / B; serial, no compute/transport overlap, no latency/TCP/TLS/access-control overhead; not measured network performance",
+  "claim_limits": [
+    "historical synthetic checkpoints, not new independent confirmation or real deployment",
+    "payload reduction does not imply CPU speedup or real communication-cost savings",
+    "class agreement is with one specified complete-graph predictor, not true-label correctness",
+    "engineering thresholds are not inferential significance tests or acceptance criteria"
+  ],
+  "integrity": {
+    "passed": true,
+    "protocol_sha256": "ff4464f7677f71054b6ae067a87c902db6b8333310b4e8ab14fce7ea35b99493",
+    "input_audit_sha256": "34d12b738dd9f9f6db6b914035e49562f09aa3f35ca01b8fd889dcea6d24d6c4",
+    "freeze_manifest_sha256": "aa96fbb9e407092399f9643acf798c5e0fd1a6a4a4052fd168fb728ae50d36d1",
+    "runs_sha256": "e539a8cc0c3604102a1665e2123bd66c1405e7007aa3add7b1656dd0306dab37",
+    "frozen_input_files": 137,
+    "frozen_implementation_files": 16,
+    "checked_before_and_after": true,
+    "labels_loaded": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "protocol": "FedBCert E13 same-threat completion certificate benchmark",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo"],
+  "partitions": ["metis", "random"],
+  "num_clients": [3],
+  "seeds": [21, 22, 23],
+  "expected_units": 30,
+  "certificate_information": [
+    "nodewise_exact",
+    "boundary_presence",
+    "global_max",
+    "universal"
+  ],
+  "frozen_variant_by_dataset": {
+    "Cora": "e8_linear_h64_d1",
+    "CiteSeer": "e8_linear_h64_d1",
+    "PubMed": "e8_linear_h64_d1",
+    "Computers": "dual_h64_d2_s05_sep025",
+    "Photo": "dual_h64_d2_s05_sep025"
+  },
+  "e10c_root": "results_boundary_certified/boundary_certified_spectral_e10c/e8_bundle_paired",
+  "bundle_root": "results_boundary_certified/boundary_certified_spectral_e8_q1/official_bridges/bundles",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e13_same_threat_certificates",
+  "claims": {
+    "no_training": true,
+    "no_model_or_checkpoint_selection": true,
+    "frozen_e10c_state_only": true,
+    "immutable_bundle_hash_must_match": true,
+    "all_methods_bound_the_same_completion_set": true,
+    "ordinary_logits_must_be_identical_across_certificate_information": true,
+    "test_metrics_are_evaluation_only": true
+  }
+}

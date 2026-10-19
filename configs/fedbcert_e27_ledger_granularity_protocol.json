@@ -1,0 +1,60 @@
+{
+  "protocol": "FedBCert E27 frozen structural-information granularity audit",
+  "status": "frozen_before_execution",
+  "purpose": "Measure how conservative endpoint-blind ledger representations affect a final retained-mass pairwise plus ReLU-cone certificate while keeping predictor states, logits, completion semantics, and evaluation nodes fixed.",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo"],
+  "partitions": ["metis", "random"],
+  "num_clients": 3,
+  "seeds": [21, 22, 23],
+  "expected_units": 30,
+  "information_modes": [
+    "exact",
+    "bin2",
+    "bin4",
+    "bin8",
+    "presence",
+    "client_max",
+    "universal"
+  ],
+  "frozen_variant_by_dataset": {
+    "Cora": "e8_linear_h64_d1",
+    "CiteSeer": "e8_linear_h64_d1",
+    "PubMed": "e8_linear_h64_d1",
+    "Computers": "dual_h64_d2_s05_sep025",
+    "Photo": "dual_h64_d2_s05_sep025"
+  },
+  "e10c_root": "results_boundary_certified/boundary_certified_spectral_e10c/e8_bundle_paired",
+  "bundle_root": "results_boundary_certified/boundary_certified_spectral_e8_q1/official_bridges/bundles",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e27_ledger_granularity",
+  "fixed_certificate": {
+    "recurrence": "retained_mass",
+    "margin": "pairwise_difference",
+    "one_sided_domain": "nonnegative unit l2 ball",
+    "certificate": "union of retained-mass pairwise and ReLU-cone one-sided certificates",
+    "count_semantics": "actual boundary count is any integer no greater than the represented safe upper bound"
+  },
+  "representation_cost": {
+    "exact": "hat_b_iv=b_iv; client i uses B_i(1)=ceil(log2(max(2,b_i_max+1))) bits for every local node, including the zero code",
+    "binned": "for s in {2,4,8}, hat_b_iv=s*ceil(b_iv/s), so b_iv=0 remains zero; B_i(s)=ceil(log2(max(2,ceil(b_i_max/s)+1))) bits per local node",
+    "presence": "one bit per node; zero gives delta=0 and positive gives the safe worst-case row budget delta=2 (retained mass zero), without pretending that presence alone is a finite count upper bound",
+    "client_max": "hat_b_iv=b_i_max for every local node; store one B_i(1)-bit scalar per client",
+    "universal": "no ledger; delta=2 and retained mass zero for every node",
+    "aggregation": "within a unit, bits/node is total client-local ledger bits divided by total nodes; Table 2 averages this unit value over the 30 frozen units",
+    "not_a_claim_about": "server-visible communication or privacy leakage"
+  },
+  "confidence_intervals": {
+    "draws": 10000,
+    "method": "paired hierarchical percentile bootstrap",
+    "levels": ["dataset", "partition within dataset", "seed within partition"],
+    "seed": 270831
+  },
+  "claims": {
+    "no_training": true,
+    "no_model_checkpoint_or_certificate_selection": true,
+    "frozen_e10c_state_only": true,
+    "immutable_bundle_hash_must_match": true,
+    "ordinary_logits_must_be_bitwise_identical_across_information_modes": true,
+    "every_reported_count_must_upper_bound_the_exact_local_count": true,
+    "test_metrics_are_evaluation_only": true
+  }
+}

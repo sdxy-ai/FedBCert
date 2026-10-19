@@ -1,0 +1,262 @@
+{
+  "task": "G1",
+  "status": "terminal_not_comparable_historical_input_gate_failed",
+  "failed_gate": "No stored E26 model/features or per-completion logits to establish exact frozen-input reconstruction (atol 1e-8). Aggregate max-error/gap/change values are not a full-logit anchor.",
+  "official_candidate_available": true,
+  "official_sources": [
+    {
+      "paper": "https://arxiv.org/html/2510.18591v2",
+      "original_artifact": "https://zenodo.org/records/17485304",
+      "latest_official_version": "https://zenodo.org/records/18946199",
+      "version": "v2",
+      "software_heritage_directory": "swh:1:dir:56341488b456df0a207e42f5a655983f46fefe30",
+      "published_md5": "82abb73d6f5b6c78e6b271c9dfc6ca50",
+      "downloaded_or_executed": false
+    }
+  ],
+  "claim": "This is a failed archival-input gate, not evidence that RobLight cannot encode the models or is inferior.",
+  "external_source_and_dependency_numeric_pin": "not attempted: earlier independent input-provenance gate failed; no numeric execution",
+  "historical_analysis_inventory": {
+    "results_boundary_certified/boundary_certified_spectral_e26_known_universe_verifier/analysis/bridge_summary.json": "b74e4dda2697e115a528fa696eab8d9c1c0213c38d7efd1ea77addac30ea9a19",
+    "results_boundary_certified/boundary_certified_spectral_e26_known_universe_verifier/analysis/paper_data_e26_gnnev_bridge_trials.csv": "11d4326d49c2488371985d1e9c0958c0f4ccedd61c13875b505beab407272a02",
+    "results_boundary_certified/boundary_certified_spectral_e26_known_universe_verifier/analysis/paper_table_e26_gnnev_bridge.csv": "f04d3ef15b36085a47e1078ef9e7d94bab0ba08cb273de57ceef61aa0b7481fb"
+  },
+  "historical_columns": [
+    "seed",
+    "predicted_class",
+    "known_completion_count",
+    "exact_known_robust",
+    "gnnev_result",
+    "gnnev_known_robust",
+    "fedbcert_symmetric_certified",
+    "fedbcert_cone_hybrid_certified",
+    "exact_minimum_pairwise_gap",
+    "maximum_known_completion_logit_change",
+    "fedbcert_symmetric_worst_slack",
+    "fedbcert_cone_hybrid_worst_slack",
+    "predictor_maximum_absolute_logit_error",
+    "hidden_identity_maximum_absolute_error",
+    "first_preactivation_minimum",
+    "gnnev_solver_seconds",
+    "gnnev_matches_enumeration",
+    "fedbcert_cone_sound_on_known_subset"
+  ],
+  "stored_e26_trial_tensors": [],
+  "trial_status": [
+    {
+      "seed": 2601,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2602,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2603,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2604,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2605,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2606,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2607,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2608,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2609,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2610,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2611,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2612,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2613,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2614,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2615,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2616,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2617,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2618,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2619,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2620,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2621,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2622,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2623,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2624,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2625,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2626,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2627,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2628,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2629,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2630,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2631,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2632,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2633,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2634,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2635,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2636,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2637,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2638,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2639,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    },
+    {
+      "seed": 2640,
+      "known_completions": 4,
+      "status": "pre_execution_unavailable"
+    }
+  ],
+  "numeric_comparisons": 0,
+  "translated_cases": 0,
+  "precision": null,
+  "solved_instance_ratio": null,
+  "no_regeneration": true,
+  "no_training": true,
+  "no_easy_case_search": true,
+  "historical_bridge_retained": true,
+  "same_threat_superiority_claim_allowed": false,
+  "pins": {
+    "scripts/audit_fedbcert_g1_gate_20261005.py": "5beb240b909a57bc3d5e444f7f444193809ed3b4909364c73ed2d89a276579b9",
+    "configs/fedbcert_gap_tasks_20261005.json": "512598f6247383858aea49b6b6e193a79af1caf5390971c8bf5224368544787c",
+    "configs/fedbcert_e26_known_universe_verifier_bridge.json": "b4945dd4f4e8bd4317237b3cd04c6047c05c7655c4e43ef404e78f51c83f1fbe",
+    "scripts/run_fedbcert_e26_gnnev_bridge.py": "7f8194b51feceaa068630c42c62e5b409ee0a72f5c1f8c43b9b171f498a233b9"
+  }
+}

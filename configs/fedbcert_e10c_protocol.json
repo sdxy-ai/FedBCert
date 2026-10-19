@@ -1,0 +1,40 @@
+{
+  "protocol": "FedBCert E10c frozen upgraded model on E8 immutable bundles",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo"],
+  "partitions": ["metis", "random"],
+  "num_clients": [3],
+  "seeds": [21, 22, 23],
+  "expected_units": 30,
+  "bundle_root": "results_boundary_certified/boundary_certified_spectral_e8_q1/official_bridges/bundles",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e10c",
+  "frozen_variant_by_dataset": {
+    "Cora": "e8_linear_h64_d1",
+    "CiteSeer": "e8_linear_h64_d1",
+    "PubMed": "e8_linear_h64_d1",
+    "Computers": "dual_h64_d2_s05_sep025",
+    "Photo": "dual_h64_d2_s05_sep025"
+  },
+  "robust_lambda": {
+    "Cora": 0.1,
+    "CiteSeer": 1.0,
+    "PubMed": 0.1,
+    "Computers": 0.1,
+    "Photo": 0.1
+  },
+  "rounds": 100,
+  "local_epochs": 1,
+  "order_count": 3,
+  "dropout": 0.2,
+  "learning_rate": 0.01,
+  "weight_decay": 0.0005,
+  "certificate_margin": 0.05,
+  "projection_ratio_cap": 0.25,
+  "boundary_threshold": 0.2,
+  "claims": {
+    "method_frozen_before_e10c": true,
+    "bundle_sha256_must_match_manifest": true,
+    "membership_and_four_masks_loaded_from_bundle": true,
+    "test_labels_used_for_training_or_selection": false,
+    "e10c_results_cannot_trigger_method_retuning": true
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "task": "G2",
+  "status": "frozen_before_measurement",
+  "cases": [
+    {
+      "case": "h0.90_rho0.40_seed28101",
+      "payload": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005/h0.90_rho0.40_seed28101_label_free.pt",
+      "payload_sha256": "1127ca4de0f246f5d96286e52bc6aa441cadbfcb906fe9d24deeda473db11108",
+      "tensor_sha256": "3e5de0d81a42dcbea7469fd3ffdbf87d88a9ed84888bd2d603d9474663df1abe",
+      "checkpoint": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/observed_p/selected_state.pt",
+      "checkpoint_sha256": "50d273995b8e2fb94402eacb7ce25cee6d052964e59cde1411c24a936323546f",
+      "artifact_loading_hashing_extraction_seconds": 0.013766865013167262
+    },
+    {
+      "case": "h0.90_rho0.40_seed28102",
+      "payload": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005/h0.90_rho0.40_seed28102_label_free.pt",
+      "payload_sha256": "e3e7152bac5953ee815656447ae351bd49b6cbd1f687e1e8955b9f2a08afadb8",
+      "tensor_sha256": "260fd00871e6601502cbb91c3a92b8cc01852305337546a41d744bda4a58b6ad",
+      "checkpoint": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/observed_p/selected_state.pt",
+      "checkpoint_sha256": "25aa0a99d5b4576a9f930bc1e43bfebbad316553e036d185ce7a45f63661d308",
+      "artifact_loading_hashing_extraction_seconds": 0.010023711947724223
+    },
+    {
+      "case": "h0.90_rho0.40_seed28103",
+      "payload": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005/h0.90_rho0.40_seed28103_label_free.pt",
+      "payload_sha256": "fd45a0811a7cf543f5510e5768f11605a083568dc3b9c35e918a36af1ecfaf80",
+      "tensor_sha256": "4881da82890a1bbe25b5ca4a6a6e902aff2a880a0ba57db21a91ae5db43ed19a",
+      "checkpoint": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/observed_p/selected_state.pt",
+      "checkpoint_sha256": "bbd0680d4907fc07854347dac1119f3a496a9c4bb0f2341a572ae093cee79a4d",
+      "artifact_loading_hashing_extraction_seconds": 0.011617240961641073
+    },
+    {
+      "case": "h0.90_rho0.40_seed28104",
+      "payload": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005/h0.90_rho0.40_seed28104_label_free.pt",
+      "payload_sha256": "ea4e4c613111deba60716a83e305612da79a4cd22ec0acf29833851dfe0ca1c1",
+      "tensor_sha256": "eab9e092c70ead5e70de1e2ee988ce90b0dbb6f8753394a9ae13d86d0fd5aa04",
+      "checkpoint": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/observed_p/selected_state.pt",
+      "checkpoint_sha256": "f74aaf18def2f11255905f57174137cf020e17e2710623dd832b1facb8c3d437",
+      "artifact_loading_hashing_extraction_seconds": 0.010371826821938157
+    },
+    {
+      "case": "h0.90_rho0.40_seed28105",
+      "payload": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005/h0.90_rho0.40_seed28105_label_free.pt",
+      "payload_sha256": "8fb12b34fae6120ecf913a7965acf8bbd207869bc807d655395d6a725f8173b3",
+      "tensor_sha256": "6997192d5c03e9e981471d40f31409c73a05d6511be027287c1e55bf70285e35",
+      "checkpoint": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/observed_p/selected_state.pt",
+      "checkpoint_sha256": "d68f9f03da222646d161d57dd98aa4d1de6883601f2aaa990205c132d2e15615",
+      "artifact_loading_hashing_extraction_seconds": 0.0094432991463691
+    },
+    {
+      "case": "h0.90_rho0.40_seed28106",
+      "payload": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005/h0.90_rho0.40_seed28106_label_free.pt",
+      "payload_sha256": "655edcc76f0ecc0ed5b70a460bf5c2c37b386850121f7236fd22a1b99c731e34",
+      "tensor_sha256": "8330141b150e7d206ec04ba54798cd688526e918f49ad2436cdaaca2476b19b4",
+      "checkpoint": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/observed_p/selected_state.pt",
+      "checkpoint_sha256": "8bab6cd47788efe540d3506bc424dab18c83f03be48bb875bb6425d972d34adb",
+      "artifact_loading_hashing_extraction_seconds": 0.009487143019214272
+    },
+    {
+      "case": "h0.90_rho0.40_seed28107",
+      "payload": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005/h0.90_rho0.40_seed28107_label_free.pt",
+      "payload_sha256": "d079b54c28399b1d60560b8aca2daf2c0f62f8db612e04a2ab4dc7c7c63d748d",
+      "tensor_sha256": "1861e04e5b512ccc07b4b2fb444b0f25c21de31bdcdc403c861e2d7ca6fb4eb9",
+      "checkpoint": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/observed_p/selected_state.pt",
+      "checkpoint_sha256": "8566be0e11cc5a88f29a77139c12547d4027594f04c78dfb2aeeb8f58dc6e36a",
+      "artifact_loading_hashing_extraction_seconds": 0.009917576797306538
+    },
+    {
+      "case": "h0.90_rho0.40_seed28108",
+      "payload": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005/h0.90_rho0.40_seed28108_label_free.pt",
+      "payload_sha256": "fa3e8a7799669a8bc57f49238634bf6a7b3b4933aefb6062c28319bfc80bbd84",
+      "tensor_sha256": "befdf11c213c3260ff22cea6a3397f59871ea356338cce8d760663ce3aa8f91d",
+      "checkpoint": "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/observed_p/selected_state.pt",
+      "checkpoint_sha256": "b7b68afb0bbf30f25fcb52ac25e375a01b5c118b9afa4f71f9fbf5b568945fc9",
+      "artifact_loading_hashing_extraction_seconds": 0.00928902206942439
+    }
+  ],
+  "unavailable": [
+    {
+      "case": "ogbn-arxiv_random_c3_seed76",
+      "status": "unavailable",
+      "reason": "membership and checkpoint exist, but no historical hash-bound features/local-view/ledger bundle or full nominal-logit anchor; unchecked reconstruction prohibited",
+      "protocol_sha256": "686ecded3260989779a8eedfa427ed91d887c307fc839f15e39f8854fec81d45",
+      "immutable_split_bundle_audit": {
+        "enabled": false,
+        "hash_verified": false,
+        "official_dataset_split": true
+      },
+      "inventory": [
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed76/fedavg_selected_state.pt",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed76/federated_metrics.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed76/partition_membership.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed76/protocol.json",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed76/round_validation_metrics.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed76/run_complete.json"
+      ]
+    },
+    {
+      "case": "ogbn-arxiv_random_c3_seed77",
+      "status": "unavailable",
+      "reason": "membership and checkpoint exist, but no historical hash-bound features/local-view/ledger bundle or full nominal-logit anchor; unchecked reconstruction prohibited",
+      "protocol_sha256": "420945871cb7ab31b4f862498fdda21a6c59a2d80d050aa1c85a38c68c302ae4",
+      "immutable_split_bundle_audit": {
+        "enabled": false,
+        "hash_verified": false,
+        "official_dataset_split": true
+      },
+      "inventory": [
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed77/fedavg_selected_state.pt",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed77/federated_metrics.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed77/partition_membership.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed77/protocol.json",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed77/round_validation_metrics.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed77/run_complete.json"
+      ]
+    },
+    {
+      "case": "ogbn-arxiv_random_c3_seed78",
+      "status": "unavailable",
+      "reason": "membership and checkpoint exist, but no historical hash-bound features/local-view/ledger bundle or full nominal-logit anchor; unchecked reconstruction prohibited",
+      "protocol_sha256": "6f37c79d883f3a82cb0573b1acb78c0b12eb09cf902393cba27a65864ce1a428",
+      "immutable_split_bundle_audit": {
+        "enabled": false,
+        "hash_verified": false,
+        "official_dataset_split": true
+      },
+      "inventory": [
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed78/fedavg_selected_state.pt",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed78/federated_metrics.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed78/partition_membership.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed78/protocol.json",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed78/round_validation_metrics.csv",
+        "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed78/run_complete.json"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "scripts/run_fedbcert_g2_cost_20261005.py": "71b128f2fe2d7fda942bbf46262212fc10a31f4356bc0dc5c62240d8c40c87b0",
+    "configs/fedbcert_e28b_controlled_protocol_v2.json": "8f899f9236d577a850d901cd18da861398f6af1bfb30ceea56914d7b0dc1c9b8",
+    "configs/fedbcert_gap_tasks_20261005.json": "512598f6247383858aea49b6b6e193a79af1caf5390971c8bf5224368544787c",
+    "tests/test_fedbcert_g2_cost_20261005.py": "8ffc322111897d885a8608439a72cf5a19bd5ffcf456a67ca67be03b21dc1435",
+    "openfgl/flcore/fedbcert/certificate.py": "eb4cd1cc98a4bd9ca51d96cf959c2c0c1ffc61460c83d84b15ca3f708bb4dbd2",
+    "openfgl/flcore/fedbcert/federated.py": "8657f722a2c2f1fcdc15c7260d5c5f51c66d47b0a99dc7eff1b5d1afb88beb79",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/checkpoint_commit.json": "f761d1c29c8cccd0357c553ea12567216f150d6c10ace2b3848d8128369edfc7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/sealed_graph_bundle.pt": "6f359334596f8254c890221d4127ecf5b702080bb5a997d0fae60b48f34b47c4",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/graph_manifest.json": "9b0f178bc0e0df8abef4fd12e7af60651857491960659f7a642fdc4f71732c46",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/observed_p/selected_state.pt": "50d273995b8e2fb94402eacb7ce25cee6d052964e59cde1411c24a936323546f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28101/observed_p/training_record.json": "34d4fa99850dcfe794ffd13871792020440f50da9c27a8bb752c2c5143690852",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/sealed_graph_bundle.pt": "8dd84093f6b6252531fe29dc09764dd40da6d71514f3f76fcbceb62592ad0788",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/graph_manifest.json": "4bd9d7869c755f818e70a2ded14fd0858c288af35752bd064b630f4a81564bfe",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/observed_p/selected_state.pt": "25aa0a99d5b4576a9f930bc1e43bfebbad316553e036d185ce7a45f63661d308",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28102/observed_p/training_record.json": "fa3646c085d66a7ffa5e9b0be3d05605d61c2a1f214eaf2d3936e785615bc5b3",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/sealed_graph_bundle.pt": "43342fc87fccc7b2913a604fe7278f40aac52f3be514dd76a790eb267f2c69b1",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/graph_manifest.json": "d4bb091c57d89adfd3ebd045708a94e5110e92fa908f87cda0dfc47f63a8635a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/observed_p/selected_state.pt": "bbd0680d4907fc07854347dac1119f3a496a9c4bb0f2341a572ae093cee79a4d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28103/observed_p/training_record.json": "1606a4e054912f3c73ea78af26f88eb934c4bfd99b0c5a3d5ed5e623d3c71a5a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/sealed_graph_bundle.pt": "4965d31629728dcd55b7386b77912feab90917361901980afc63b0d33892b7f2",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/graph_manifest.json": "c859f55443959454df21499ea5a9292d33898e148e2bd56b9efa91d4eb20f6a7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/observed_p/selected_state.pt": "f74aaf18def2f11255905f57174137cf020e17e2710623dd832b1facb8c3d437",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28104/observed_p/training_record.json": "34d88590ccb9608ccd67436e927888ff376e6fb3cee142629bed0225a1489214",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/sealed_graph_bundle.pt": "bd3cd47495b48629cb3b095f100a662194b3d98e98ccaf2af20a7681bb5a95bf",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/graph_manifest.json": "bc5cd5a7275c05dbbd3eb68e1ac565cd5a9089b11f11133dff8b38da6d3f32fb",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/observed_p/selected_state.pt": "d68f9f03da222646d161d57dd98aa4d1de6883601f2aaa990205c132d2e15615",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28105/observed_p/training_record.json": "6a25b8ef7c6e1b9aea59ee7bcf487ca07e1037c49dd315df492c147d7ecc6cfe",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/sealed_graph_bundle.pt": "ad5aa18abca71aed634f9053f0eba78971d2af28fc7ec2fe339b22bd8580a984",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/graph_manifest.json": "abf53dde3cba3569b000fedfaff80bc7b162e92baccc578119ef4b3352f82717",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/observed_p/selected_state.pt": "8bab6cd47788efe540d3506bc424dab18c83f03be48bb875bb6425d972d34adb",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28106/observed_p/training_record.json": "c782af47a8c89f118b3afde437f97c2313eca49afb7385af8d17f95c2aa80003",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/sealed_graph_bundle.pt": "bc8a9ac2ee1e56b6e0c807d9c59b5b525e84d1ce4cb2da74d4c5f2936c11377b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/graph_manifest.json": "39b323994c09650f2517734b891fd004cb7075a500d0e7216ef1634c67bafe97",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/observed_p/selected_state.pt": "8566be0e11cc5a88f29a77139c12547d4027594f04c78dfb2aeeb8f58dc6e36a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28107/observed_p/training_record.json": "098137b5407d273efb2732c9e1772815e7b058f744d8b6295fc566019f10110b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/sealed_graph_bundle.pt": "9e6141d7857c2e2c694a99281031459700a5bd0e5ee198553022fd17965f7305",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/graph_manifest.json": "c1ad0fb0aa612600b3055f5f695532a4adcb8b6ab77bd3ee706980ab4dfa9874",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/observed_p/selected_state.pt": "b7b68afb0bbf30f25fcb52ac25e375a01b5c118b9afa4f71f9fbf5b568945fc9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_confirmation/training/h0.90_rho0.40_seed28108/observed_p/training_record.json": "bd33998923ced46a32387153eb98fbc80d6650b3431e303166ce8192456e5c4c",
+    "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed76/protocol.json": "686ecded3260989779a8eedfa427ed91d887c307fc839f15e39f8854fec81d45",
+    "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed77/protocol.json": "420945871cb7ab31b4f862498fdda21a6c59a2d80d050aa1c85a38c68c302ae4",
+    "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025/ogbn-arxiv_random_c3_seed78/protocol.json": "6f37c79d883f3a82cb0573b1acb78c0b12eb09cf902393cba27a65864ce1a428"
+  },
+  "environment": {
+    "python": "3.9.25 (main, Nov  3 2025, 22:33:05) \n[GCC 11.2.0]",
+    "torch": "2.8.0+cu128",
+    "numpy": "2.0.0",
+    "platform": "Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "cpu_count": 12,
+    "device": "cpu",
+    "dtype": "float64",
+    "intraop": 1,
+    "interop": 1,
+    "sparse": "coalesced COO"
+  },
+  "warmups": 5,
+  "repeats": 30,
+  "stages": [
+    "forward",
+    "symmetric",
+    "cone",
+    "combined",
+    "forward_combined"
+  ],
+  "schedule": "five separate persistent workers per case; repetition r starts at stage r mod 5; one worker active at a time",
+  "boundaries": {
+    "cone": "cached H/logits; includes basis, existing symmetric-statistics bookkeeping and nominal spectral-logit recomputation required by frozen implementation",
+    "combined": "cached H/logits; includes basis and both certificates",
+    "forward_combined": "uncached frozen forward plus additional H encoding plus combined; no internal forward refactoring",
+    "rss": "parent samples active worker RSS every 1 ms plus before/after; sampled peak is not guaranteed true instantaneous peak; separate process lifetime HWM also reported"
+  },
+  "caps": {
+    "seconds": 3600,
+    "total_worker_rss_bytes": 8589934592
+  },
+  "no_training": true,
+  "no_label_scoring": true,
+  "no_threshold_changes": true
+}

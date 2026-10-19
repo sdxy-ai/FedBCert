@@ -1,0 +1,34 @@
+{
+  "complete": true,
+  "config_sha256": "a1dc34017f820ab0ee57590b9dc9a096ce12987cd739722fe8bed4e1c2a971b6",
+  "decision": "proceed_to_e18b",
+  "errors": [],
+  "expected_metric_rows": 60,
+  "expected_runner_units": 60,
+  "found_metric_rows": 60,
+  "found_runner_units": 60,
+  "protocol": "FedBCert E18 ReLU-cone one-sided completion certificate",
+  "reserved_confirmation_seeds": [
+    73,
+    74,
+    75
+  ],
+  "selected_alpha": 0.25,
+  "selected_certificate": "cone_hybrid",
+  "selected_variant": "dual_alpha025",
+  "selection_constraints": {
+    "eligible_variants": "alpha strictly greater than zero",
+    "maximum_validation_certificate_violations": 0,
+    "mean_absolute_completion_logit_change_min": 0.0001,
+    "mean_hybrid_minus_symmetric_certified_ratio_min": 0.02,
+    "mean_validation_hybrid_certified_ratio_min": 0.8,
+    "mean_validation_macro_f1_noninferiority_vs_feature": -0.005,
+    "minimum_dataset_mean_validation_hybrid_certified_ratio": 0.65,
+    "objective": "maximum mean pooled validation Macro-F1 among feasible nonzero-alpha global variants",
+    "tie_break": [
+      "larger hybrid certified ratio",
+      "smaller alpha"
+    ]
+  },
+  "test_metrics_used_or_emitted": false
+}

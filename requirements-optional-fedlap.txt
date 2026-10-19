@@ -1,0 +1,3 @@
+# Additional runtime dependencies used by the pinned FedLap+ implementation.
+pandas==2.3.3
+python-dotenv==1.2.1

@@ -1,0 +1,2244 @@
+{
+  "experiment": "E28b-independent-confirmation",
+  "frozen_at_utc": "2026-10-04T03:55:13.652995+00:00",
+  "source_sha256": {
+    "configs/fedbcert_e28b_controlled_protocol_v2.json": "8f899f9236d577a850d901cd18da861398f6af1bfb30ceea56914d7b0dc1c9b8",
+    "scripts/fedbcert_e28b_common.py": "35f42fe5c3aac679c3b485db16be287712448b430aae4004f46e4c812a6fd8c8",
+    "scripts/run_fedbcert_e28b_controlled.py": "724055787927edb5d5934ce62ab033785e6332f5d999c7deeca1b445e5c85474",
+    "scripts/analyze_fedbcert_e28b_controlled.py": "a14cbcaae82adb31d0391f7bf391fbef17d3f83c5365f999d8e1808da657205c",
+    "tests/test_fedbcert_e28b_controlled.py": "32aa745d5fc1fac175502da54e06e9a0b8d8aca63720b5bc6aa451ad0e70af2c",
+    "docs/FEDBCERT_E28B_CONTROLLED_PROTOCOL_ZH.md": "2dfbee24280e213193a5e21c42d1dc0b44e7af636c1585016cc3ad8cb83c2e25",
+    "configs/fedbcert_e28b_confirmation_protocol.json": "3629402157a678a1a51e3f4222dc3d740af48005ee7d802438fb94e2f898f347",
+    "scripts/fedbcert_e28b_confirmation_common.py": "ae601857ca11881f32f3a71b895d2487b6cc61f480168648b664adda65008174",
+    "scripts/run_fedbcert_e28b_confirmation.py": "8abdb71b2ef06c1faa9f9febae7d71b79b366e15a541e14a6a6ccb9008901a47",
+    "scripts/analyze_fedbcert_e28b_confirmation.py": "88baed34d50ab040340eea93c1eb419a65aa9cba1b6e6a121cb913a4e114e477",
+    "scripts/audit_fedbcert_e28b_confirmation.py": "20053d4b7d9776f47fd7111cb9d8e9f97589cc7e1c8f946c655d1e3c78bc228c",
+    "tests/test_fedbcert_e28b_confirmation.py": "204cd1fe8f5cd6d4336f69d45e14bcd64e8b24cb09ccce5b5894defe442460b7",
+    "docs/FEDBCERT_E28B_CONFIRMATION_PROTOCOL_ZH.md": "57dd482501c46aa3a338dd53d0fc748e83aaa2311ee65fef6137d6629e8b2a05"
+  },
+  "protected_sha256": {
+    "FedBCert：面向子图联邦节点分类的端点盲补全集认证（投稿主稿）.md": "8f977732f5b7af173fdb52cc7510be7ad8f53094410191923fbefbd57cd6dd0b",
+    "configs/fedbcert_e19_no_graph_protocol.json": "87acbe1d60cf18c1def5278aebaef2be1700a850784d70e69dd91e69823cfd9b",
+    "configs/fedbcert_e20_identity_null_protocol.json": "33f2e502632109e6a25edb7d345d156b85cf7a74c05cf785d1fc3fcb9a9e5ade",
+    "configs/fedbcert_e21_staged_residual_protocol.json": "70da650eb2b37996feb762022835b0d143d42c74c0bdad7a9fed6739dd642a0b",
+    "configs/fedbcert_e22_teacher_shield_protocol.json": "a7a8a1181cdc927eab2805c04be7de8236ca8b6457313b4a96a250e2ab6ff29d",
+    "configs/fedbcert_e23_safe_cover_protocol.json": "d9dac315c75195a21839abc310e9defa0aae38b185bacfa6810b616128469204",
+    "configs/fedbcert_e24_invariant_cover_protocol.json": "492d357b66f40fcb1c42dd3d6c9d49165aca935623e36bcfcd993a1059b40a7b",
+    "configs/fedbcert_e28a_exposure_protocol.json": "a91d4a1ecd482876ab0ddd3fb56096712f1c4bb344fa317c432c53d5695ed85e",
+    "configs/fedbcert_e28b_controlled_protocol.json": "4ba3142efcfaecb9c4939aa59681daee882cb228ed012b2b0b4ab9577c4e1e28",
+    "docs/snapshots/e28b_pre_recording_fix_20261004/configs/fedbcert_e28b_controlled_protocol.json": "4ba3142efcfaecb9c4939aa59681daee882cb228ed012b2b0b4ab9577c4e1e28",
+    "docs/snapshots/e28b_pre_recording_fix_20261004/docs/FEDBCERT_E28B_CONTROLLED_PROTOCOL_ZH.md": "8819e3bd82b03a9fe5d0d201b1ff230575427c612a4440b94e4065de04d91162",
+    "docs/snapshots/e28b_pre_recording_fix_20261004/scripts/analyze_fedbcert_e28b_controlled.py": "a14cbcaae82adb31d0391f7bf391fbef17d3f83c5365f999d8e1808da657205c",
+    "docs/snapshots/e28b_pre_recording_fix_20261004/scripts/fedbcert_e28b_common.py": "347ea6649693e8a94bab3daea3ef3b90ac3ab3bb5026635d4c830bdce5ea7ed6",
+    "docs/snapshots/e28b_pre_recording_fix_20261004/scripts/run_fedbcert_e28b_controlled.py": "0b6721d61ce55f0e517d63da0086f52a051561e59a527d58a07ceac46be61b1a",
+    "docs/snapshots/e28b_pre_recording_fix_20261004/tests/test_fedbcert_e28b_controlled.py": "90d507fba7933b5c9ac8a15432545e5bc1164bcb4bfb1173cbd1ba8120147b49",
+    "openfgl/flcore/fedbcert/__init__.py": "7ee983fdabf3f96d5e14c58b2d5349dd1f7a0909ff5234e55b4836ae17127164",
+    "openfgl/flcore/fedbcert/certificate.py": "eb4cd1cc98a4bd9ca51d96cf959c2c0c1ffc61460c83d84b15ca3f708bb4dbd2",
+    "openfgl/flcore/fedbcert/deployment.py": "f501439849960f61325bff4ca04c0dee84d3aab9bef073a89bf664211e478646",
+    "openfgl/flcore/fedbcert/federated.py": "8657f722a2c2f1fcdc15c7260d5c5f51c66d47b0a99dc7eff1b5d1afb88beb79",
+    "results_boundary_certified/boundary_certified_spectral_e28a_exposure_v2/freeze_manifest.json": "4606f64c61040ded656d52c58e0da1e00f98db99ade5e727fb0a016c16e05104",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/development/failure.json": "a8c0f9afc2068551eadd6ff0c9745ceb22ef002cc7dfe3a634753a1724df1578",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/development/h0.50_rho0.01_seed28001/graph_manifest.json": "1615c855fb11cf04916555c000ba5de1780fc502caadddffdca6613ce8809e9b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/development/h0.50_rho0.01_seed28001/observed_p/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/development/h0.50_rho0.01_seed28001/observed_p/selected_state.pt": "54dfd6ec31307dc4613b90d138eac981bef7f839163c9d7a292c81036725a4b8",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/development/h0.50_rho0.01_seed28001/observed_p/validation_evidence.pt": "fc386845cdc92eeaff358ff26b97c4be3f1dd71264b798e6862111285d5ec7a7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/development/h0.50_rho0.01_seed28001/observed_p/validation_trajectory.json": "0e9fdcf2acb980af9d728668349184643c3e6fe3d2137b42349620645a023be0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/development/h0.50_rho0.01_seed28001/sealed_graph_bundle.pt": "6528532a4d241452d15a032aeda61d8da4bb1756db163fd34266cf264159465f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/engineering_preflight/resource_reliability.json": "f471a5731234727eedee7c9600bece2e7de069f5ee6deeaec6445477b24933e0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled/freeze_manifest.json": "4ae05ea1f8771f74f370458d0b6996d25d329624cb2244dd152df32f3ba5fb8c",
+    "submissions/knowledge_based_systems_fedbcert_20260831/fedbcert_anonymous_code_ready_20260907.zip": "1e669c5b2ccde8c58aad131e6d43360f7170fd7da6fab769ef58bae5344da9e4",
+    "submissions/knowledge_based_systems_fedbcert_20260831/fedbcert_kbs.tex": "de42191f6ff08b21c03768049cf5b7e2d02e334a1a6d9081bc4f35966a92d7d9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/freeze_manifest.json": "9f38ee9f3efbe9be78852956e6077692e9e8495976cc74587ee17b68f77ca616",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/analysis/artifact_integrity_audit.json": "27ce0c7789c3c3befe3ce011a939ef62fe6202507c12b055a76274ff36cb3ada",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/analysis/summary.json": "5309fa8177b5754779ec9b917d5460f9c67f2cca7fd89a2670ee56626e5bfbe9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/analysis/paired_seed_metrics.csv": "d7ce5ab17f887849c991018536305bdf8a774fb1e647291627e63f5155cdb571",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/analysis/validation_subgroups.csv": "3243c28debb39fef91f804990dd51a4825b481af98167c5320e56e65fe93a55b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/analysis/RESULTS_ZH.md": "9f1a153cc2e1ba805ed6fbe5201d27cfe79f0236e7cf6ff7fcc909ad1e3463a3",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/completion.json": "c0ce3012d8187846df43e7f57a98903890a4a9ffdde951feb08b75391587cfc8",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/graph_manifest.json": "c3aa8ba3147858d5e4b27cd40b6e31089ea0ca5e9f9d05468a0829c525afd815",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/sealed_graph_bundle.pt": "dd976c92b1141af510fba88fdd8c0136d8551fc04d63d49dc3a215a3753bb142",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/observed_p/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/observed_p/selected_state.pt": "31827860e355d7440293fe5fba535fa18877712443c5483e920056e29e486ed4",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/observed_p/validation_trajectory.json": "501bd9d10516ce154cc9a13977dbaecc1026907dd131401364678aaf14cfa8e7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/observed_p/validation_metrics.json": "a1079f08d6fa720bc534bd147619a38bac89d15609fa1751cdf4aa0f579025d8",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/observed_p/validation_evidence.pt": "598ea9196465f72ae1db0e0a9bc4c9b964b15e80830288857c5c4edae84ac4ce",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/strong_mlp/initial_state.pt": "c3db25ea8ecc787ae0e7d1335c23a20d26fc321689ad8aed4e3ed8cda4b9aef9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/strong_mlp/selected_state.pt": "f5aa74396accdbf9eb46b3055939d5d1a241add57c4b9d9dcba56f79904ffb3e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/strong_mlp/validation_trajectory.json": "fd4e9e86a0fc70f9465c25c857dc3d2fd61cf2be50e4ce3637b9016eb5487bd9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/strong_mlp/validation_metrics.json": "9b85ff7d29009b95f8d85260dafb89937ed786015e52d0041bba91ad2a6a0574",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/strong_mlp/validation_evidence.pt": "c39abe5844ab93d0895f7402fd630fcbb8658ef91000dc7686575ba86d5a008a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/identity/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/identity/selected_state.pt": "106ef5f3df61e1113ce6ea33bc9d50f126449bbf332bfb8e3bb076b8ab1ff642",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/identity/validation_trajectory.json": "b8b6d983413a1ec762abceef0632e4398c2e5cfeb19c6ed43a694081c3fd30e2",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/identity/validation_metrics.json": "823bae1935d028e3deccb69e3e53ed8a259f4f5c38c57fd2c3bb06ebfc48c01e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28001/identity/validation_evidence.pt": "66a76f59a40a69281de89378f0aadb47326ed7592a7e22858d9804f84fff3fb9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/graph_manifest.json": "b392ef608266a8d1ce813a06a86908a7bef6d596ebe1f5ee9a966855ba69b85c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/sealed_graph_bundle.pt": "f9011c7a23f490f0c2ad552414003189ec1c8c1b3467821d45a7702aa23ebe62",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/observed_p/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/observed_p/selected_state.pt": "a36d9d1b39ee8bce45de396a71646a585369efd2f1067956ed6fd95b990d6b3a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/observed_p/validation_trajectory.json": "b791160759325104ce1029e70230e51eb2f911b0d99b5b675f5c36f53bb5bff3",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/observed_p/validation_metrics.json": "51f0a9d5ea4309acd2f21f29c56414937641c2a10fe81525d712c6daba90e1c6",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/observed_p/validation_evidence.pt": "dd787270352104bd5d2232f6d8e9cb2619583e37689013f4d9262db1940381dc",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/strong_mlp/initial_state.pt": "c3db25ea8ecc787ae0e7d1335c23a20d26fc321689ad8aed4e3ed8cda4b9aef9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/strong_mlp/selected_state.pt": "f5aa74396accdbf9eb46b3055939d5d1a241add57c4b9d9dcba56f79904ffb3e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/strong_mlp/validation_trajectory.json": "fd4e9e86a0fc70f9465c25c857dc3d2fd61cf2be50e4ce3637b9016eb5487bd9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/strong_mlp/validation_metrics.json": "4be0d0612811029b5517421c3a82cfdcd15a01d462315dbfb2409c2e6d7efaf5",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/strong_mlp/validation_evidence.pt": "db2c53b743141fb3621a55acee129362b78aae0455b0089b9c95fe22253505e4",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/identity/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/identity/selected_state.pt": "106ef5f3df61e1113ce6ea33bc9d50f126449bbf332bfb8e3bb076b8ab1ff642",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/identity/validation_trajectory.json": "b8b6d983413a1ec762abceef0632e4398c2e5cfeb19c6ed43a694081c3fd30e2",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/identity/validation_metrics.json": "db4f1472590919541d4320719235dee6388780f4180cf631d03e51126c392ddd",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28001/identity/validation_evidence.pt": "b54ee0853c2b5a8333a0a0d6baa794df2120b64b26dcf80325229950c0144ac9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/graph_manifest.json": "0abd86467700bc754bc936ac1a6d5f98efeecbc3cda587ecceee5d1c66ab992f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/sealed_graph_bundle.pt": "26c3ee7b67861633beceb4c73a9e3fce5c25148b0f2b922589be237b7db37453",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/observed_p/initial_state.pt": "93fa43d43a0787f06dc929a3981675f751ebaddef8533ae53b37a0b755726d08",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/observed_p/selected_state.pt": "77fdd6f99c05197982569f78543e65351ab85cbebd8847e64ee275dae76b52a3",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/observed_p/validation_trajectory.json": "a3b86731e5ed0b2a2a17bf136cd6d6cd66d06b4256a3f9f6837a22aba3b56614",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/observed_p/validation_metrics.json": "785b6539766a51aea14a5663897e2152d5c0d3673c1d1871cec4eeab35f4a5a7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/observed_p/validation_evidence.pt": "0f729ab477a5f0825b2fc7589e62c53149353123bf20ec72173f922b17eb45fa",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/strong_mlp/initial_state.pt": "b8309e703cd7e83de83788bc431bbc7baa9a73a55fed66f9b450d56cdeca6a7c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/strong_mlp/selected_state.pt": "8b8efe2e4c80fe940ec5c2af33b7ce196c659ae43c54098f353bdcaf84858ae0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/strong_mlp/validation_trajectory.json": "1667be6e6e05dd4ec573ed60c07f462698f09c61e9adc466a06c3756c3e5583f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/strong_mlp/validation_metrics.json": "892da403b5262a88933b55c65abc9f013063aa58baba5a7fc6832d858217f39f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/strong_mlp/validation_evidence.pt": "51d9532b02461d9b6577d30fb04fd5117a3aa10ed7a5ba70016660fa4c081b4d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/identity/initial_state.pt": "93fa43d43a0787f06dc929a3981675f751ebaddef8533ae53b37a0b755726d08",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/identity/selected_state.pt": "2222c68ea4489bfdc1e4fa59f1800b3689b1b7f146a9b57836ebc752eaa1bbc0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/identity/validation_trajectory.json": "e9b07cc9ba2c676c6b0f9fc3757bd8f2639c5470b3417403e2ea3e040cc88898",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/identity/validation_metrics.json": "777d2ef22de7755e88942d7ee2ab3f37715046ef0d62e0df50d9618b08a4a865",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.40_seed28002/identity/validation_evidence.pt": "9a086d75e27f16294d45f0522836e672fe423d77b4a995dc3788b3a98a0088e8",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/graph_manifest.json": "fe67720bd344d909120e116a9ba1599846ff2efad04765eb92d2873c3139e40c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/sealed_graph_bundle.pt": "6528532a4d241452d15a032aeda61d8da4bb1756db163fd34266cf264159465f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/observed_p/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/observed_p/selected_state.pt": "54dfd6ec31307dc4613b90d138eac981bef7f839163c9d7a292c81036725a4b8",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/observed_p/validation_trajectory.json": "0e9fdcf2acb980af9d728668349184643c3e6fe3d2137b42349620645a023be0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/observed_p/validation_metrics.json": "2d6634200ba7a27a2e0e8c5be686f35edbebf63ee2629811243ed8fd2d5f8742",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/observed_p/validation_evidence.pt": "fc386845cdc92eeaff358ff26b97c4be3f1dd71264b798e6862111285d5ec7a7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/strong_mlp/initial_state.pt": "c3db25ea8ecc787ae0e7d1335c23a20d26fc321689ad8aed4e3ed8cda4b9aef9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/strong_mlp/selected_state.pt": "f5aa74396accdbf9eb46b3055939d5d1a241add57c4b9d9dcba56f79904ffb3e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/strong_mlp/validation_trajectory.json": "fd4e9e86a0fc70f9465c25c857dc3d2fd61cf2be50e4ce3637b9016eb5487bd9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/strong_mlp/validation_metrics.json": "d84f154d7a5c8c3e6f93cb4ca943e201fc7b98b6e4427dcebeae445a8f43b41f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/strong_mlp/validation_evidence.pt": "ff228e381f23093b9915182b9f7c8ab3d9f3093bd90dd6b4374afe37b9f81fc8",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/identity/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/identity/selected_state.pt": "106ef5f3df61e1113ce6ea33bc9d50f126449bbf332bfb8e3bb076b8ab1ff642",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/identity/validation_trajectory.json": "b8b6d983413a1ec762abceef0632e4398c2e5cfeb19c6ed43a694081c3fd30e2",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/identity/validation_metrics.json": "105c1495cb9de7d85b0769da749b2330ea042e9c98a5242d90450ab4b114e2b8",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28001/identity/validation_evidence.pt": "cf5a6b4d664fc98d8b27bef34dc284d388f363d8f62a5f48b44d21cc57e8689d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/graph_manifest.json": "56e6a97829ffff3b5db235b79545ec88ca93ad542fd453dda94fab115566f584",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/sealed_graph_bundle.pt": "d36c219bcc8c7116e0ffa3b8645bd944f98fb70e98e254821d9a9813ff0b8e18",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/observed_p/initial_state.pt": "93fa43d43a0787f06dc929a3981675f751ebaddef8533ae53b37a0b755726d08",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/observed_p/selected_state.pt": "1987edbe25d96b05d6a76e446efa71483b000eae66b70daaacd7d8d6a2b66ab0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/observed_p/validation_trajectory.json": "57cbcb49e3234840cada79bc56ffbe83b47e7e5e58c1829a0df1443482376dbb",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/observed_p/validation_metrics.json": "97cba2547667c69870160dd9729df6e24abca50e74d60f568110b91679bcde1b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/observed_p/validation_evidence.pt": "11342b7357abe76ec3a8730ff814d8c96309aaff5721a59b149fa376757a03da",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/strong_mlp/initial_state.pt": "b8309e703cd7e83de83788bc431bbc7baa9a73a55fed66f9b450d56cdeca6a7c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/strong_mlp/selected_state.pt": "8b8efe2e4c80fe940ec5c2af33b7ce196c659ae43c54098f353bdcaf84858ae0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/strong_mlp/validation_trajectory.json": "1667be6e6e05dd4ec573ed60c07f462698f09c61e9adc466a06c3756c3e5583f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/strong_mlp/validation_metrics.json": "6329b4d5bbd24a3635bc8f97bb5ec32f1fac0083e059b8c407bccd2233845674",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/strong_mlp/validation_evidence.pt": "cbc50a3271651a530a7efd937a757ca8fb1b0d775fd2c09fe48280b8321b033d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/identity/initial_state.pt": "93fa43d43a0787f06dc929a3981675f751ebaddef8533ae53b37a0b755726d08",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/identity/selected_state.pt": "2222c68ea4489bfdc1e4fa59f1800b3689b1b7f146a9b57836ebc752eaa1bbc0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/identity/validation_trajectory.json": "e9b07cc9ba2c676c6b0f9fc3757bd8f2639c5470b3417403e2ea3e040cc88898",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/identity/validation_metrics.json": "20b7b67d20ed01a97b9cb2a6e07ca5de1c438213dd9aee04ea1b418006d09d2a",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28002/identity/validation_evidence.pt": "3e5ccf5ad8117a8a8c430fe1d2a66e1fa09d06107bbf01f504c2cd6322fcaec6",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/graph_manifest.json": "9c4078fae87eae1d4cd4b9db94b6950ee3f3cfc69ebe3446ec737dfb10d36022",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/sealed_graph_bundle.pt": "dccbcdd05f36ff8dbe444e80a9ae73dc669c8d7efc36009e72686082c6461c6b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/observed_p/initial_state.pt": "93fa43d43a0787f06dc929a3981675f751ebaddef8533ae53b37a0b755726d08",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/observed_p/selected_state.pt": "c2b4d05966b5ff309fcfee218dafcf4996e98dfabaf2736af36355f7d4e35ea9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/observed_p/validation_trajectory.json": "14836b554616d16ae87fc4c14bb610f428e20737db4fc56b2632f127ae62bd46",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/observed_p/validation_metrics.json": "2f864ff127dcafdf3dfd75e4d4dc0c68cb4ccd9d6eeffd2ae147519a9bfbb61e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/observed_p/validation_evidence.pt": "709f252f9ab34220918f465b9fb61ba5410625eebb477193b12cad5e4d94c69e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/strong_mlp/initial_state.pt": "b8309e703cd7e83de83788bc431bbc7baa9a73a55fed66f9b450d56cdeca6a7c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/strong_mlp/selected_state.pt": "8b8efe2e4c80fe940ec5c2af33b7ce196c659ae43c54098f353bdcaf84858ae0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/strong_mlp/validation_trajectory.json": "1667be6e6e05dd4ec573ed60c07f462698f09c61e9adc466a06c3756c3e5583f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/strong_mlp/validation_metrics.json": "3ce118636dea257fcfd0fbcd82aeb845e1701404ef7027cd28c8bb98aaddba05",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/strong_mlp/validation_evidence.pt": "675c1f833037650d9f5caf3117adf6117e6be81af30a1d7fcc327566d1a1357b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/identity/initial_state.pt": "93fa43d43a0787f06dc929a3981675f751ebaddef8533ae53b37a0b755726d08",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/identity/selected_state.pt": "2222c68ea4489bfdc1e4fa59f1800b3689b1b7f146a9b57836ebc752eaa1bbc0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/identity/validation_trajectory.json": "e9b07cc9ba2c676c6b0f9fc3757bd8f2639c5470b3417403e2ea3e040cc88898",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/identity/validation_metrics.json": "8b70b3543122ebbcc4dbbe49c97a27adc36feae21a3fb6e93975a86ae4a41f60",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.01_seed28002/identity/validation_evidence.pt": "1b5c1136cb58836894322b41772d6c12409868d2937022f9946fe81a6267fb6d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/graph_manifest.json": "cd6cb5c84a1bd67753d4e5b1da10ac6fd4d2146ed4b5c4f87f2b6b36c5f956cc",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/sealed_graph_bundle.pt": "63a66efd6148e9e150273a38baecb528ccbb1a6409960f68d214811231327348",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/observed_p/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/observed_p/selected_state.pt": "4e04e2cf57efab6d2089c6c810f6d86635b79dc798558afe709a6560e867d728",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/observed_p/validation_trajectory.json": "dcdaf297f7a8f648f9002053020beba92e6e11f7bce11440315f351b5b898fff",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/observed_p/validation_metrics.json": "3e599b4c177b7c306933982ea93be8694ccca00f3fc3f64cf800144968b05804",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/observed_p/validation_evidence.pt": "1ea9cc9760654da138ca92fc702bde62db6f4a8580879bbea1ccc7482368fd2e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/strong_mlp/initial_state.pt": "c3db25ea8ecc787ae0e7d1335c23a20d26fc321689ad8aed4e3ed8cda4b9aef9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/strong_mlp/selected_state.pt": "f5aa74396accdbf9eb46b3055939d5d1a241add57c4b9d9dcba56f79904ffb3e",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/strong_mlp/validation_trajectory.json": "fd4e9e86a0fc70f9465c25c857dc3d2fd61cf2be50e4ce3637b9016eb5487bd9",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/strong_mlp/validation_metrics.json": "c07f336eab7bff8ffd971922bc58289f53ca21da4644c980255203c0d8ac9b2c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/strong_mlp/validation_evidence.pt": "74ab6f2400668912146c1dc9796117f7de7a1e4fad1369b4b0f547708a5c6ce4",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/identity/initial_state.pt": "41cad77623085ee8ccaef570cdbe10f0b33f5e4e08156761dced767bbc90856c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/identity/selected_state.pt": "106ef5f3df61e1113ce6ea33bc9d50f126449bbf332bfb8e3bb076b8ab1ff642",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/identity/validation_trajectory.json": "b8b6d983413a1ec762abceef0632e4398c2e5cfeb19c6ed43a694081c3fd30e2",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/identity/validation_metrics.json": "ce8d7701ff59192a12f21e7286f0bb69475bd5f64d7f68240ae4fb6ccc336131",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.50_rho0.40_seed28001/identity/validation_evidence.pt": "0b7b0cd7578f9825a8a045f53c95a161175d4a39e4189672d68080a79f215de3",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/graph_manifest.json": "a2bfbda54aa75db27a674f7ca6dd53bf69d43e80d1e7d4ed68475100cbd29087",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/sealed_graph_bundle.pt": "fcc3a031c4f188bbd49dc525d7ac8f4b7f260ccecbcd7dc513cc2e6d8a92c292",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/observed_p/initial_state.pt": "93fa43d43a0787f06dc929a3981675f751ebaddef8533ae53b37a0b755726d08",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/observed_p/selected_state.pt": "88760d478b233e21dc52f34209ec35edea4e76538bb7664f9f1a65f54b55b3bc",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/observed_p/validation_trajectory.json": "3c4d2c7a91f56032e8a779018c581417a7f0f011d9b3d7b77219cba1fec86406",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/observed_p/validation_metrics.json": "5e14f3f98cd044f97e067b43cc4510c3352202bba59884facce42f0a1c42ae53",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/observed_p/validation_evidence.pt": "92eb9e29fde5e2de31a336388c274bce57fd6e9bbd2920df4f489795b68ad64d",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/strong_mlp/initial_state.pt": "b8309e703cd7e83de83788bc431bbc7baa9a73a55fed66f9b450d56cdeca6a7c",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/strong_mlp/selected_state.pt": "8b8efe2e4c80fe940ec5c2af33b7ce196c659ae43c54098f353bdcaf84858ae0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/strong_mlp/validation_trajectory.json": "1667be6e6e05dd4ec573ed60c07f462698f09c61e9adc466a06c3756c3e5583f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/strong_mlp/validation_metrics.json": "0a1ef382c6bc1a92f7d9a03c3fedbcbcd373aebafcdd85dfa4b48df39aac347b",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/strong_mlp/validation_evidence.pt": "df4328ec03e434215577471365be40d3a39714829933ffad23deda5ce36b131f",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/identity/initial_state.pt": "93fa43d43a0787f06dc929a3981675f751ebaddef8533ae53b37a0b755726d08",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/identity/selected_state.pt": "2222c68ea4489bfdc1e4fa59f1800b3689b1b7f146a9b57836ebc752eaa1bbc0",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/identity/validation_trajectory.json": "e9b07cc9ba2c676c6b0f9fc3757bd8f2639c5470b3417403e2ea3e040cc88898",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/identity/validation_metrics.json": "8680bc609dd9e22db84e08c1915fe1fb90029a30a79a68e6ebb65adef9da77f7",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/development/h0.90_rho0.01_seed28002/identity/validation_evidence.pt": "ffb3bbe2376c1750159addb8f1d3899f07681de11cb7a3b3b95dce58863bb753",
+    "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2/engineering_preflight/resource_reliability.json": "2246bad35fa26360b7a34e5091ba6110eea6d2bb146e5dbc1a26f8fc531023fe",
+    "docs/FEDBCERT_E28B_CONTROLLED_RESULTS_ZH.md": "be1fa9dd6326b9ec1bea5193bd75f8f759ba23e499a3f43c674838db8e0afbcf",
+    "scripts/audit_fedbcert_e28b_artifacts.py": "bf20876b5646986c48a3b30c1958e6a2627253a7e1f6d36a7ced0d6144ecbedd"
+  },
+  "matrix": [
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.40_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.40_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.40_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.40_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.40_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.40_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.00_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.01_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.10_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.40_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.40_seed28101"
+    },
+    {
+      "seed": 28101,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.40_seed28101"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.40_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.40_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.40_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.40_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.40_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.40_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.00_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.01_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.10_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.40_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.40_seed28102"
+    },
+    {
+      "seed": 28102,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.40_seed28102"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.40_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.40_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.40_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.40_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.40_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.40_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.00_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.01_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.10_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.40_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.40_seed28103"
+    },
+    {
+      "seed": 28103,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.40_seed28103"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.40_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.40_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.40_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.40_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.40_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.40_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.00_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.01_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.10_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.40_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.40_seed28104"
+    },
+    {
+      "seed": 28104,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.40_seed28104"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.40_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.40_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.40_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.40_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.40_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.40_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.00_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.01_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.10_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.40_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.40_seed28105"
+    },
+    {
+      "seed": 28105,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.40_seed28105"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.40_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.40_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.40_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.40_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.40_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.40_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.00_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.01_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.10_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.40_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.40_seed28106"
+    },
+    {
+      "seed": 28106,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.40_seed28106"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.40_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.40_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.40_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.40_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.40_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.40_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.00_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.01_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.10_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.40_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.40_seed28107"
+    },
+    {
+      "seed": 28107,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.40_seed28107"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.50_rho0.40_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.50_rho0.40_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.5,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.50_rho0.40_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.70_rho0.40_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.70_rho0.40_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.7,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.70_rho0.40_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.0,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.00_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.01,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.01_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.1,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.10_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "observed_p",
+      "graph_id": "h0.90_rho0.40_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "identity",
+      "graph_id": "h0.90_rho0.40_seed28108"
+    },
+    {
+      "seed": 28108,
+      "h": 0.9,
+      "rho": 0.4,
+      "model": "strong_mlp",
+      "graph_id": "h0.90_rho0.40_seed28108"
+    }
+  ],
+  "confirmation_authorized": true,
+  "test_unlock_requires_all_checkpoints": true,
+  "device": "cuda:0",
+  "development_summary_sha256": "5309fa8177b5754779ec9b917d5460f9c67f2cca7fd89a2670ee56626e5bfbe9",
+  "seed_audit": {
+    "seeds": [
+      28101,
+      28102,
+      28103,
+      28104,
+      28105,
+      28106,
+      28107,
+      28108
+    ],
+    "hits": [],
+    "malformed": [],
+    "scanned_json_count": 5118,
+    "scanned_path_list_sha256": "cd88b9bf784d913e5190d79d80a3811101fca2af04a6c577c7ee1dc3abbb1f80",
+    "scope": "actual seed fields and seed-number artifact paths under results_boundary_certified/logs; planned/reserved seed lists are not evidence of consumption"
+  },
+  "environment": {
+    "python": "3.9.25",
+    "numpy": "2.0.0",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

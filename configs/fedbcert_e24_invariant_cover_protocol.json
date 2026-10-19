@@ -1,0 +1,59 @@
+{
+  "protocol": "FedBCert E24 invariant-cover independent control",
+  "status": "frozen_before_execution",
+  "purpose": "Test whether the graph-dependent safe expert contributes certificate cover beyond parameter- and budget-matched graph-invariant expert unions.",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Photo"],
+  "num_clients": [3],
+  "partitions": ["metis", "random"],
+  "confirmation_seeds": [128, 129, 130],
+  "expected_teacher_units": 24,
+  "expected_component_training_units": 96,
+  "expected_cover_evaluation_units": 24,
+  "components": {
+    "feature_ce": "two-layer graph-invariant feature expert trained with CE",
+    "feature_kd_cad": "two-layer graph-invariant feature expert trained with CE, KD and zero-radius CAD",
+    "spectral_identity_cad": "one-layer normalized-ReLU polynomial expert with P=I, zero completion radius, CE and CAD",
+    "spectral_cad": "one-layer normalized-ReLU polynomial expert with observed P, retained-mass radius, CE and CAD"
+  },
+  "reported_covers": {
+    "feature_kd_cad": ["feature_kd_cad"],
+    "feature_invariant_union": ["feature_kd_cad", "feature_ce"],
+    "identity_invariant_cover": ["feature_kd_cad", "spectral_identity_cad"],
+    "observed_graph_cover": ["feature_kd_cad", "spectral_cad"]
+  },
+  "priority_within_every_union": "feature_kd_cad first, comparator second, frozen FedLap+ teacher otherwise",
+  "selection_or_reselection": false,
+  "fixed_hyperparameters": {
+    "rounds": 100,
+    "local_epochs": 1,
+    "hidden_dim": 64,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "distillation_weight": 1.0,
+    "distillation_temperature": 2.0,
+    "cad_weight": 0.25,
+    "certificate_margin": 0.05,
+    "observed_spectral_certificate": "positive-cone hybrid",
+    "identity_certificate": "symmetric zero-radius"
+  },
+  "claim_gate": {
+    "maximum_certificate_violations": 0,
+    "teacher_prediction_preservation_required": true,
+    "exact_union_required": true,
+    "observed_minus_feature_invariant_cover_mean_min": 0.0,
+    "observed_minus_feature_invariant_cover_ci_low_strictly_positive": true,
+    "observed_minus_identity_invariant_cover_mean_min": 0.0,
+    "observed_minus_identity_invariant_cover_ci_low_strictly_positive": true
+  },
+  "decision_if_gate_fails": "demote_e23_graph_complementarity_claim",
+  "test_labels_used_for_training_or_selection": false,
+  "prohibited_actions": [
+    "changing models, losses, priorities, thresholds or seeds after any E24 test result",
+    "selecting a cover or route per dataset",
+    "dropping either graph-invariant union comparator",
+    "recomputing routing after a completion is revealed",
+    "claiming exact parameter matching between the two different feature MLPs and the spectral architecture; exact matching is required and audited only for observed-P versus P=I spectral experts"
+  ]
+}

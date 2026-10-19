@@ -1,0 +1,71 @@
+{
+  "protocol": "FedBCert E18 ReLU-cone one-sided completion certificate",
+  "status": "frozen_before_execution",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e18_cone",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo", "CS"],
+  "num_clients": 3,
+  "partition": "random",
+  "development_seeds": [71, 72],
+  "reserved_confirmation_seeds": [73, 74, 75],
+  "variants": {
+    "feature_alpha0": {"encoder_type": "feature_only_mlp", "encoder_depth": 2, "alpha": 0.0},
+    "dual_alpha010": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 0.1},
+    "dual_alpha025": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 0.25},
+    "dual_alpha050": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 0.5},
+    "dual_alpha100": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 1.0}
+  },
+  "expected_development_runner_units": 60,
+  "expected_development_metric_rows": 60,
+  "selection_rule": {
+    "eligible_variants": "alpha strictly greater than zero",
+    "mean_validation_hybrid_certified_ratio_min": 0.80,
+    "minimum_dataset_mean_validation_hybrid_certified_ratio": 0.65,
+    "mean_hybrid_minus_symmetric_certified_ratio_min": 0.02,
+    "mean_validation_macro_f1_noninferiority_vs_feature": -0.005,
+    "mean_absolute_completion_logit_change_min": 0.0001,
+    "maximum_validation_certificate_violations": 0,
+    "objective": "maximum mean pooled validation Macro-F1 among feasible nonzero-alpha global variants",
+    "tie_break": ["larger hybrid certified ratio", "smaller alpha"]
+  },
+  "confirmation_matrix": {
+    "num_clients": [3, 10],
+    "partitions": ["metis", "random"],
+    "seeds": [73, 74, 75],
+    "variants": ["feature_alpha0", "e18a_selected_nonzero_alpha"],
+    "expected_runner_units": 144,
+    "expected_metric_rows": 144
+  },
+  "confirmation_claims": {
+    "hybrid_minus_symmetric_certified_ratio_ci_low_min": 0.0,
+    "selected_minus_feature_macro_f1_ci_low_min": -0.01,
+    "maximum_certificate_violations": 0,
+    "required_secondary_report": "hybrid minus symmetric certified-correct accuracy with paired 95% interval"
+  },
+  "fixed_hyperparameters": {
+    "hidden_dim": 64,
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "encoder_residual_scale": 0.5,
+    "uncertainty_recurrence": "retained_mass",
+    "certificate_margin_mode": "pairwise_difference",
+    "cone_count_semantics": "actual boundary count no greater than ledger value",
+    "cone_hybrid": "union of symmetric retained-mass pairwise and positive-cone one-sided certificates"
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 180071,
+    "hierarchy": ["dataset", "client_partition_configuration", "seed"]
+  },
+  "test_labels_used_for_selection": false,
+  "prohibited_actions": [
+    "using seeds 73-75 before an E18a proceed decision",
+    "dataset-specific alpha routing",
+    "changing the certificate union after development",
+    "reselecting alpha after confirmation",
+    "using confirmation test metrics for model or certificate selection"
+  ]
+}

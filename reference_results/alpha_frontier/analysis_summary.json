@@ -1,0 +1,24 @@
+{
+  "certificate_violations": 0,
+  "certified_completion_violations": 0,
+  "complete": true,
+  "decision": "confirmation_complete_after_float64_structural_reaudit",
+  "errors": [],
+  "expected_metric_rows": 360,
+  "expected_runner_units": 360,
+  "float64_spectral_logit_bound_violations": 0,
+  "found_metric_rows": 360,
+  "found_runner_units": 360,
+  "numerical_reaudit_applied": true,
+  "protocol": "FedBCert E15 fixed utility-certificate Pareto independent confirmation",
+  "pure_feature_min_certified_ratio": 1.0,
+  "raw_reported_logit_bound_violations": 37,
+  "revised_dtype_aware_logit_bound_violations": 0,
+  "selected_alpha": null,
+  "test_labels_used_for_selection": false,
+  "untouched_e14b_seeds": [
+    47,
+    48,
+    49
+  ]
+}

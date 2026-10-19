@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "cone_hybrid_minus_symmetric_recall": 0.3589743589743589,
+  "cone_hybrid_minus_symmetric_recall_95ci": [
+    0.253968253968254,
+    0.4727272727272727
+  ],
+  "cone_hybrid_precision": 1.0,
+  "cone_hybrid_recall": 0.8205128205128205,
+  "cone_raw_recall": 0.8205128205128205,
+  "config_sha256": "5dd42ea118da8ab8454916ada8e19008d27810cfb07bcaf58e4f5fb18db19328",
+  "decision": "exact_cone_oracle_audit_pass",
+  "enumerated_graph_completions": 8640,
+  "exact_remote_positive_ball_optimization": true,
+  "lower_bound_violations": 0,
+  "protocol": "FedBCert E25 exact ReLU-cone finite-completion oracle audit",
+  "soundness_violations": 0,
+  "symmetric_recall": 0.46153846153846156,
+  "test_labels_used": false,
+  "training_or_selection_performed": false,
+  "trials": 40
+}

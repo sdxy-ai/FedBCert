@@ -1,0 +1,33 @@
+{
+  "protocol": "FedBCert E25 exact ReLU-cone finite-completion oracle audit",
+  "status": "frozen_before_execution",
+  "purpose": "Independently audit cone_raw and cone_hybrid soundness, recall, precision, and lower-bound tightness on an exactly enumerable physical completion family.",
+  "seeds": [131, 132, 133, 134, 135, 136, 137, 138, 139, 140],
+  "filter_orders": [2, 3, 4, 5],
+  "local_graph": "four-node undirected path with retained self-loops",
+  "boundary_stub_counts": [1, 2, 1, 0],
+  "remote_node_count": 3,
+  "completion_family": {
+    "endpoint_assignments": "all simple local-to-remote assignments consistent with the stub counts",
+    "remote_internal_graphs": "all undirected simple graphs on the three remote nodes",
+    "expected_completions_per_trial": 216,
+    "expected_trials": 40,
+    "expected_total_graph_completions": 8640
+  },
+  "remote_feature_adversary": "exact independent optimization over every remote initial hidden row in the nonnegative L2 unit ball",
+  "certificate_variants": ["retained_symmetric", "cone_raw", "cone_hybrid"],
+  "count_semantics": "exact",
+  "required_audits": {
+    "maximum_soundness_violations": 0,
+    "maximum_lower_bound_violations": 0,
+    "float64_absolute_tolerance": 1e-10
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 2501,
+    "interval": 0.95,
+    "unit": "outer seed cluster; all filter orders retained within a resampled seed"
+  },
+  "selection_or_training": false,
+  "test_labels_used": false
+}

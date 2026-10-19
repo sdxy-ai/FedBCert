@@ -1,0 +1,33 @@
+{
+  "protocol": "FedBCert E16c frozen ogbn-arxiv scale audit",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e16c_ogb_scale",
+  "dataset": "ogbn-arxiv",
+  "num_clients": 3,
+  "partition": "random",
+  "seeds": [58, 59, 60],
+  "variants": {
+    "feature_alpha0": {"encoder_type": "feature_only_mlp", "encoder_depth": 2, "alpha": 0.0},
+    "dual_alpha025": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 0.25},
+    "dual_alpha100": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 1.0}
+  },
+  "expected_runner_units": 9,
+  "expected_metric_rows": 9,
+  "training_method": "standard FedAvg only; no OGB model or alpha selection",
+  "fixed_hyperparameters": {
+    "hidden_dim": 64,
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "uncertainty_recurrence": "retained_mass",
+    "certificate_margin_mode": "pairwise_difference"
+  },
+  "required_audits": {
+    "maximum_certificate_violations": 0,
+    "pure_feature_certified_ratio_min": 0.999999,
+    "official_ogb_split_required": true
+  },
+  "decision_rule": "report all three predeclared scale points, runtime, memory and communication; do not select or tune"
+}

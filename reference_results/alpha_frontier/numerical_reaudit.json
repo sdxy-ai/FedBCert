@@ -1,0 +1,23 @@
+{
+  "aligned_no_tolerance_logit_bound_violations": 3867,
+  "all_historical_flags_had_zero_analytic_bound": true,
+  "certified_completion_violations": 0,
+  "certified_prediction_flips": 0,
+  "complete": true,
+  "device": "cuda:0",
+  "flagged_frozen_states": 13,
+  "float64_max_audit_tolerance": 3.997574994755492e-13,
+  "float64_max_excess_over_bound": 1.7763568394002505e-15,
+  "float64_spectral_logit_bound_violations": 0,
+  "logits_predictions_radii_or_certified_nodes_modified": false,
+  "max_aligned_deviation": 2.470430850982666,
+  "max_aligned_vs_original_completion": 5.7220458984375e-06,
+  "max_flagged_raw_deviation": 2.6226043701171875e-06,
+  "primary_resolution": "cancel the graph-invariant expert algebraically, reuse identical local-batch bounded encodings, and re-evaluate only the spectral path in float64 with a fixed 128-ULP double-precision audit",
+  "protocol": "FedBCert E15 read-only dtype-aware numerical re-audit",
+  "raw_reported_logit_bound_violations": 37,
+  "reproduced_historical_logit_bound_violations": 37,
+  "revised_dtype_aware_logit_bound_violations": 0,
+  "tolerance_rule": "max(1e-6 + 1e-5*scale, 64*torch.finfo(dtype).eps*(1+scale))",
+  "training_or_state_modified": false
+}

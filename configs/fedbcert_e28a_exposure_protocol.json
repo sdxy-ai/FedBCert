@@ -1,0 +1,58 @@
+{
+  "protocol": "FedBCert E28a retrospective frozen-predictor boundary-exposure audit",
+  "status": "retrospective_scope_fixed_before_audit_execution",
+  "scope_date": "2026-10-04 Asia/Shanghai",
+  "source_root": "results_boundary_certified/boundary_certified_spectral_e18_cone",
+  "source_protocol": "configs/fedbcert_e18_cone_protocol.json",
+  "source_policy": "results_boundary_certified/boundary_certified_spectral_e18_cone/analysis/frozen_cone_policy.json",
+  "source_confirmation": "results_boundary_certified/boundary_certified_spectral_e18_cone/analysis/confirmation_summary.json",
+  "source_overall_table": "results_boundary_certified/boundary_certified_spectral_e18_cone/analysis/paper_table_e18b_overall.csv",
+  "selected_variant": "dual_alpha025",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo", "CS"],
+  "num_clients": [3, 10],
+  "partitions": ["metis", "random"],
+  "seeds": [73, 74, 75],
+  "expected_units": 72,
+  "data_root": "data/fedsla_xn",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e28a_exposure_v2",
+  "maximum_propagation_power": 2,
+  "exposure": {
+    "definition": "distance in the observed induced graph to an exact-count boundary node <= maximum_propagation_power - 1; empty for zero propagation power",
+    "count_source": "exact missing degree reconstructed from cached full graph and saved partition_membership.csv",
+    "uses_learned_coefficients_or_predictions": false,
+    "groups": ["all", "exposed", "direct", "indirect", "non_exposed"],
+    "meaning": "potential structural exposure, not observed sensitivity or proven non-robustness"
+  },
+  "certificates": ["symmetric", "cone_raw", "combined"],
+  "count_semantics": "upper_bound",
+  "source_metric_tolerance": {
+    "classification_and_coverage_absolute": 1e-9,
+    "completion_logit_change_absolute": 1e-5
+  },
+  "diagnostic_softmax_change_threshold": 0.05,
+  "aggregation": {
+    "primary": "unweighted mean of per-unit rates, matching the E18 overall table; NA groups excluded with explicit defined_units",
+    "secondary": "count-weighted rates over repeated evaluation occurrences, not distinct independent nodes",
+    "coverage_decomposition": "mean of within-unit exposed/non-exposed certified counts divided by all test nodes; do not multiply marginal averages"
+  },
+  "protected_files": [
+    "openfgl/flcore/fedbcert/certificate.py",
+    "openfgl/flcore/fedbcert/federated.py",
+    "openfgl/flcore/fedbcert/__init__.py",
+    "openfgl/flcore/fedsla_xn/data.py",
+    "scripts/run_boundary_certified_spectral_e1.py",
+    "FedBCert：面向子图联邦节点分类的端点盲补全集认证（投稿主稿）.md",
+    "submissions/knowledge_based_systems_fedbcert_20260831/fedbcert_anonymous_code_ready_20260907.zip"
+  ],
+  "claims": {
+    "no_training": true,
+    "no_checkpoint_or_certificate_selection": true,
+    "no_partition_regeneration": true,
+    "source_metrics_must_reproduce": true,
+    "source_data_provenance": "E18 did not freeze an immutable split bundle or nominal logits; current cache and deterministic masks are fingerprinted and checked against frozen metrics, not asserted historically bitwise identical",
+    "test_labels_are_retrospective_evaluation_only": true,
+    "not_new_independent_confirmation": true,
+    "no_reinterpretation_of_e19_e22_or_e24": true,
+    "no_application_success_gate": true
+  }
+}

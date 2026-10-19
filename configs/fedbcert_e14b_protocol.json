@@ -1,0 +1,51 @@
+{
+  "protocol": "FedBCert E14b independent unified dual-expert confirmation",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e14b",
+  "selection_source": "results_boundary_certified/boundary_certified_spectral_e14a/analysis/selection_decision.json",
+  "required_e14a_decision": "proceed_to_e14b",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo", "CS"],
+  "previously_unused_before_e14": "CS",
+  "num_clients": [3, 5, 10],
+  "partitions": ["metis", "random"],
+  "confirmation_seeds": [47, 48, 49],
+  "variants": ["feature_alpha0", "selected_dual", "spectral_only"],
+  "expected_runner_units": 324,
+  "expected_metric_rows": 756,
+  "evaluation_scope": "full",
+  "test_evaluation_count_per_frozen_model": 1,
+  "unified_hyperparameters": {
+    "hidden_dim": 64,
+    "encoder_depth_dual": 2,
+    "robust_lambda": 0.1,
+    "boundary_threshold": 0.2,
+    "projection_ratio_cap": 0.25,
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "certificate_margin": 0.05,
+    "uncertainty_recurrence": "retained_mass",
+    "certificate_margin_mode": "pairwise_difference"
+  },
+  "noninferiority": {
+    "metric": "test pooled Macro-F1",
+    "margin": 0.005,
+    "null": "mean(BA-DE - same-architecture FedAvg) <= -0.005",
+    "pass_rule": "hierarchical paired bootstrap 95% lower bound > -0.005"
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 140047,
+    "hierarchy": ["dataset", "client_count_partition_within_dataset", "seed_within_configuration"],
+    "estimand": "equal-weight mean over the fixed six-dataset, three-client-scale, two-partition benchmark suite"
+  },
+  "claims": {
+    "method_and_global_alpha_frozen_before_confirmation": true,
+    "test_metrics_never_used_for_selection": true,
+    "no_dataset_specific_model_route": true,
+    "e10c_is_retrospective_only": true,
+    "failure_does_not_trigger_method_recall": true
+  }
+}

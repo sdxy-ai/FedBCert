@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedbcert"
+version = "1.1.0"
+description = "Endpoint-blind completion certification for federated polynomial graph predictors"
+readme = "README.md"
+requires-python = ">=3.9,<3.12"
+license = {file = "LICENSE"}
+dependencies = [
+  "torch==2.8.0", "torch-geometric==2.6.1", "numpy==2.0.0",
+  "scipy==1.13.1", "scikit-learn==1.6.1", "matplotlib==3.9.2",
+  "ogb==1.3.6", "pymetis==2023.1.1", "PyYAML==6.0.3",
+  "psutil==7.2.2", "pytest>=8.0,<9",
+]
+
+[project.urls]
+Repository = "https://github.com/sdxy-ai/FedBCert"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["openfgl*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "optional: requires an external repository, solver, or license",
+]
+

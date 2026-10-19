@@ -1,0 +1,15 @@
+{
+  "bootstrap": "10000-draw hierarchical percentile bootstrap: dataset, partition within dataset, seed within partition",
+  "certificate_violations": 0,
+  "complete": true,
+  "decision": "frozen_information_audit_complete_no_selection",
+  "errors": [],
+  "expected_metric_rows": 210,
+  "expected_units": 30,
+  "found_metric_rows": 210,
+  "found_units": 30,
+  "model_or_hyperparameter_selection_performed": false,
+  "ordinary_logits_identical": true,
+  "protocol": "FedBCert E27 frozen structural-information granularity audit",
+  "refinement_monotonicity_verified": true
+}

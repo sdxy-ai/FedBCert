@@ -1,0 +1,76 @@
+{
+  "protocol": "FedBCert E10a-r2 separated dual-expert validation-only development",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e10a",
+  "datasets": ["Cora", "Computers", "Photo"],
+  "num_clients": [3],
+  "partitions": ["random"],
+  "development_seeds": [30, 31],
+  "reserved_confirmation_seeds": [32, 33, 34],
+  "e9_reserved_seeds_left_untouched": [27, 28, 29],
+  "variants": {
+    "e8_linear_h64_d1": {
+      "encoder_type": "linear_relu",
+      "hidden_dim": 64,
+      "encoder_depth": 1,
+      "encoder_residual_scale": 0.5
+    },
+    "dual_h64_d2_s05_sep025": {
+      "encoder_type": "dual_feature_spectral",
+      "hidden_dim": 64,
+      "encoder_depth": 2,
+      "encoder_residual_scale": 0.5
+    },
+    "dual_h128_d2_s05_sep025": {
+      "encoder_type": "dual_feature_spectral",
+      "hidden_dim": 128,
+      "encoder_depth": 2,
+      "encoder_residual_scale": 0.5
+    },
+    "dual_h256_d2_s05_sep025": {
+      "encoder_type": "dual_feature_spectral",
+      "hidden_dim": 256,
+      "encoder_depth": 2,
+      "encoder_residual_scale": 0.5
+    }
+  },
+  "expected_development_units": 24,
+  "methods_per_unit": ["fedavg", "fedbcert_ba"],
+  "evaluation_scope": "validation_only",
+  "selection_uses_test_metrics": false,
+  "robust_lambda": {"Cora": 0.1, "Computers": 0.1, "Photo": 0.1},
+  "boundary_threshold": 0.2,
+  "projection_ratio_cap": 0.25,
+  "rounds": 100,
+  "local_epochs": 1,
+  "order_count": 3,
+  "dropout": 0.2,
+  "learning_rate": 0.01,
+  "weight_decay": 0.0005,
+  "certificate_margin": 0.05,
+  "gate": {
+    "computers_ba_validation_f1_lift_min": 0.10,
+    "photo_ba_validation_f1_lift_min": 0.08,
+    "cora_ba_validation_f1_lift_min": -0.02,
+    "ba_minus_same_arch_fedavg_validation_f1_min": -0.01,
+    "ba_validation_certified_accuracy_lift_min": -0.02,
+    "maximum_validation_certificate_violations": 0
+  },
+  "certificate_extension": {
+    "logits": "spectral_logits(P,X) + feature_logits(X)",
+    "feature_branch_boundary_deviation": 0,
+    "spectral_fusion_scale": 0.25,
+    "separate_feature_and_spectral_classification_losses": true,
+    "class_bound": "r_v * norm(spectral_classifier_weight_c)",
+    "feature_classifier_weight_excluded_from_radius": true,
+    "feature_expert_detached_from_certificate_auxiliary_gradient": true
+  },
+  "claims": {
+    "e8_and_e9_test_results_are_motivation_only": true,
+    "e10a_r1_seed30_pilot_used_only_to_diagnose_objective_coupling": true,
+    "e10a_r2_candidates_frozen_before_r2_results": true,
+    "test_metrics_are_not_emitted_during_e10a": true,
+    "development_and_confirmation_seeds_are_disjoint": true,
+    "reserved_confirmation_seeds_must_not_run_before_freezing": true,
+    "old_e8_model_and_results_are_not_overwritten": true
+  }
+}

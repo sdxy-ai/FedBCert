@@ -1,0 +1,46 @@
+{
+  "protocol": "FedBCert E15 fixed utility-certificate Pareto independent confirmation",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e15",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo", "CS"],
+  "num_clients": [3, 10],
+  "partitions": ["metis", "random"],
+  "confirmation_seeds": [50, 51, 52],
+  "untouched_e14b_seeds": [47, 48, 49],
+  "variants": {
+    "feature_alpha0": {"encoder_type": "feature_only_mlp", "encoder_depth": 2, "alpha": 0.0},
+    "dual_alpha010": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 0.1},
+    "dual_alpha025": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 0.25},
+    "dual_alpha050": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 0.5},
+    "dual_alpha100": {"encoder_type": "dual_feature_spectral", "encoder_depth": 2, "alpha": 1.0}
+  },
+  "expected_runner_units": 360,
+  "expected_metric_rows": 360,
+  "training_method": "standard FedAvg only; FedBCert is evaluated post hoc",
+  "evaluation_scope": "full independent confirmation",
+  "model_selection": false,
+  "test_labels_used_for_selection": false,
+  "fixed_hyperparameters": {
+    "hidden_dim": 64,
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "encoder_residual_scale": 0.5,
+    "uncertainty_recurrence": "retained_mass",
+    "certificate_margin_mode": "pairwise_difference"
+  },
+  "primary_estimand": "the complete fixed alpha-indexed utility-certificate frontier; no single alpha is selected",
+  "required_audits": {
+    "maximum_certificate_violations": 0,
+    "pure_feature_certified_ratio_min": 0.999999,
+    "ordinary_logits_unchanged_by_certificate_ablation": true
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 150050,
+    "hierarchy": ["dataset", "client_partition_configuration", "seed_within_configuration"]
+  },
+  "decision_rule": "report the entire frontier regardless of direction; results may not select or tune alpha"
+}

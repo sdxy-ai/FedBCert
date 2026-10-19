@@ -1,0 +1,71 @@
+{
+  "status": "both_tasks_terminal_and_audited",
+  "task_outcomes": {
+    "G1": "not_comparable_archival_gate",
+    "G2": "8 executed, 3 OGB unavailable"
+  },
+  "aggregate": [
+    {
+      "stage": "forward",
+      "median_of_case_medians_ms": 13.017475022934377,
+      "min_case_median_ms": 12.937566032633185,
+      "max_case_median_ms": 13.31629988271743,
+      "median_sampled_increment_mib": 5.814453125,
+      "max_sampled_increment_mib": 5.8828125
+    },
+    {
+      "stage": "symmetric",
+      "median_of_case_medians_ms": 3.1548961997032166,
+      "min_case_median_ms": 3.0743739334866405,
+      "max_case_median_ms": 3.1918295426294208,
+      "median_sampled_increment_mib": 2.8125,
+      "max_sampled_increment_mib": 2.875
+    },
+    {
+      "stage": "cone",
+      "median_of_case_medians_ms": 18.307923222891986,
+      "min_case_median_ms": 18.04868900217116,
+      "max_case_median_ms": 19.015425466932356,
+      "median_sampled_increment_mib": 6.06640625,
+      "max_sampled_increment_mib": 6.07421875
+    },
+    {
+      "stage": "combined",
+      "median_of_case_medians_ms": 18.12268269713968,
+      "min_case_median_ms": 17.843787441961467,
+      "max_case_median_ms": 18.375542596913874,
+      "median_sampled_increment_mib": 6.06640625,
+      "max_sampled_increment_mib": 6.10546875
+    },
+    {
+      "stage": "forward_combined",
+      "median_of_case_medians_ms": 32.306054315995425,
+      "min_case_median_ms": 31.836079666391015,
+      "max_case_median_ms": 36.42567002680153,
+      "median_sampled_increment_mib": 6.94140625,
+      "max_sampled_increment_mib": 7.06640625
+    }
+  ],
+  "combined_to_forward_ratio": {
+    "median": 1.3910902887022247,
+    "minimum": 1.3720409332809247,
+    "maximum": 1.4097348954011308
+  },
+  "scientific_scope": "timing replay only; no new model training, test scoring, independent efficacy confirmation or same-threat external-verifier ranking",
+  "limitations": [
+    "G1 does not establish external-tool superiority or inability",
+    "G2 does not establish large-graph cert-only overhead",
+    "RSS sampling is not an instantaneous true-peak bound",
+    "float64 replay is not historical float32 training or formal floating-point soundness"
+  ],
+  "final_experimental_freeze_complete": true,
+  "english_publication_sync_complete": false,
+  "editorial_revision": "navigation status erratum only",
+  "prior_seal_sha256": "23373e2b895a3ecf0a88ce8a592305016f5d63db76c177f62a65001850cbc7e8",
+  "artifact_sha256": {
+    "results_boundary_certified/fedbcert_gap_closure_20261005/manifest.json": "23373e2b895a3ecf0a88ce8a592305016f5d63db76c177f62a65001850cbc7e8",
+    "FedBCert：端点盲补全集认证（实验收口候选稿20261005v2）.md": "c5309d86fc6bafc9786c1c5a47203696838f6308119451e550516a6fed36e4ef",
+    "docs/FEDBCERT_GAP_CLOSURE_V2_ERRATUM_20261005_ZH.md": "97d10afb3b3642ea01c6eb9a8265e84fedb0d74262a69fcf9a7f9187909f4e6e",
+    "scripts/seal_fedbcert_gap_closure_v2_20261005.py": "1d1042e4c499249b9919f8d7a40ac4144b301cc7ba08c5a9af80a660106613a2"
+  }
+}

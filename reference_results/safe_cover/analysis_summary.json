@@ -1,0 +1,28 @@
+{
+  "certificate_violations": 0,
+  "complete": true,
+  "component_training_budget_and_teacher_matching_verified": true,
+  "config_sha256": "492d357b66f40fcb1c42dd3d6c9d49165aca935623e36bcfcd993a1059b40a7b",
+  "decision": "demote_e23_graph_complementarity_claim",
+  "errors": [],
+  "expected_component_training_units": 96,
+  "expected_cover_evaluation_units": 24,
+  "expected_teacher_units": 24,
+  "found_component_training_units": 96,
+  "found_cover_evaluation_units": 24,
+  "found_teacher_units": 24,
+  "mean_observed_minus_feature_invariant_cover_certified_ratio": 0.04096689801370542,
+  "mean_observed_minus_identity_invariant_cover_certified_ratio": 0.030756280898432006,
+  "model_or_hyperparameter_selection_performed": false,
+  "observed_minus_feature_invariant_cover_certified_ratio_95ci": [
+    0.009368691812755082,
+    0.08485662567050066
+  ],
+  "observed_minus_identity_invariant_cover_certified_ratio_95ci": [
+    -0.004266213012660879,
+    0.07553789209136157
+  ],
+  "protocol": "FedBCert E24 invariant-cover independent control",
+  "spectral_observed_identity_parameter_matching_verified": true,
+  "test_labels_used_for_selection": false
+}

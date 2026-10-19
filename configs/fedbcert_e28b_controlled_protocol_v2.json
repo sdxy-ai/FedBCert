@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "experiment": "E28b",
+  "status": "freeze_before_development_execution",
+  "date": "2026-10-04",
+  "scope": "synthetic controlled development only; not a real application claim",
+  "generator": {
+    "name": "balanced_contextual_sbm_bernoulli_pairs_v1",
+    "nodes": 6000,
+    "clients": 3,
+    "classes": 2,
+    "nodes_per_client_class": 1000,
+    "feature_dim": 32,
+    "feature_signal": 0.35,
+    "noise": "independent standard normal; no normalization fitted on held-out data",
+    "expected_degree_excluding_self": 12,
+    "homophily_grid": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "cross_client_mass_grid": [
+      0,
+      0.01,
+      0.1,
+      0.4
+    ],
+    "pair_probabilities": {
+      "local_same": "(1-rho)*12*h/999",
+      "local_different": "(1-rho)*12*(1-h)/1000",
+      "remote_same": "rho*12*h/2000",
+      "remote_different": "rho*12*(1-h)/2000"
+    },
+    "sampling": "each unordered pair sampled once, no edge deletion, no self loops before propagation",
+    "membership": "balanced predefined synthetic client/class blocks; not a label-informed partition of real data",
+    "splits": {
+      "train": 0.3,
+      "audit_unused": 0.1,
+      "validation": 0.2,
+      "test_sealed": 0.4
+    },
+    "split_strata": "client and class"
+  },
+  "seeds": {
+    "engineering": [
+      28000
+    ],
+    "development": [
+      28001,
+      28002
+    ],
+    "confirmation_reserved_only": [
+      28101,
+      28102,
+      28103,
+      28104,
+      28105,
+      28106,
+      28107,
+      28108
+    ],
+    "streams": {
+      "edges": 11,
+      "features": 12,
+      "splits": 13,
+      "model": 14,
+      "diagnostic_reserved": 15
+    },
+    "derivation": "numpy SeedSequence([whole_graph_seed, stream_id]).generate_state(1)[0]; training uses SeedSequence([model_seed, round, client_id])",
+    "pairing": "same seed shares features, splits, client membership and model seed across grid cells; independent whole-graph seeds are the experimental units"
+  },
+  "development": {
+    "homophily": [
+      0.5,
+      0.9
+    ],
+    "cross_client_mass": [
+      0.01,
+      0.4
+    ],
+    "graph_units": 8,
+    "models_per_graph": [
+      "observed_p",
+      "identity",
+      "strong_mlp"
+    ],
+    "training_runs": 24,
+    "evaluation_scope": "validation_only",
+    "report_interim_efficacy": false,
+    "automatic_confirmation": false
+  },
+  "models": {
+    "observed_p": {
+      "encoder": "dual_feature_spectral",
+      "hidden_dim": 64,
+      "encoder_depth": 2,
+      "parameters": 8775,
+      "operator": "observed induced row-normalized graph"
+    },
+    "identity": {
+      "encoder": "dual_feature_spectral",
+      "hidden_dim": 64,
+      "encoder_depth": 2,
+      "parameters": 8775,
+      "operator": "identity in training AND every completion; structurally graph invariant"
+    },
+    "strong_mlp": {
+      "encoder": "feature_only_mlp",
+      "hidden_dim": 77,
+      "encoder_depth": 2,
+      "parameters": 8857,
+      "operator": "ignored",
+      "capacity_rule": "nearest integer hidden width to 8775 parameters, selected by counts only; 0.9345% larger; residual GELU + LayerNorm, no architecture search"
+    }
+  },
+  "training": {
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "alpha": 0.25,
+    "dropout": 0.2,
+    "residual_scale": 0.5,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "optimizer": "Adam reset for each client in each round, inherited train_client",
+    "aggregation": "FedAvg weighted by local labelled training count",
+    "loss": "P/I: CE(feature)+CE(spectral), MLP: CE(output); no certificate loss",
+    "checkpoint": "each model maximizes its own pooled validation Macro-F1, exact ties earliest round; no certificate or full-graph selection",
+    "pairing": "P/I identical initial state and per-client/per-round random seeds, train masks, capacity and budgets; MLP same seed and optimizer budget, different parameter-matched architecture",
+    "dtype": "float32 training; CPU float64 frozen-checkpoint certificate and diagnostic audit",
+    "torch_cpu_threads": 1,
+    "device": "cuda:0 if available else cpu",
+    "resource_failure": "stop and preserve failure; no hidden CPU retry, seed replacement, model or budget reduction"
+  },
+  "certification": {
+    "ledger": "exact generated cross-client incident counts consumed as safe upper bounds",
+    "semantics": "upper_bound",
+    "certificate_variants": [
+      "additive_classwise",
+      "retained_pairwise",
+      "cone_only",
+      "cone_hybrid"
+    ],
+    "primary_comparison": "cone_hybrid minus retained_pairwise on identical observed-P checkpoint/logits",
+    "reference_groups": [
+      "all",
+      "boundary",
+      "near_boundary",
+      "exposed",
+      "unexposed"
+    ],
+    "exposure": "boundary rows plus K-2 observed local hops, computed independently of labels and shared by P/I/MLP",
+    "acceptance": "worst_slack > 1e-6 for each numerical certificate; hybrid is the union; not a formally rounded floating-point proof",
+    "invariant_controls": "I/MLP have coverage 1 by their predictor definitions, including ties; not credited as new completion certificates"
+  },
+  "diagnostic": {
+    "completion": "the single generated full graph, legal under the upper-count ledger, same frozen model and fixed features",
+    "scope": "validation nodes only; full propagation may use unlabelled features transductively",
+    "softmax_change": "maximum absolute component difference >= 0.05",
+    "bounds": "per-order hidden displacement, symmetric class-logit bounds and cone class-pair lower bounds",
+    "tolerance": 0.000001,
+    "interpretation": "one completion is a sensitivity witness, never exhaustive verification; zero empirical violations do not prove soundness"
+  },
+  "stopping": {
+    "hard_stop": [
+      "any certified category flip",
+      "any analytic bound violation beyond tolerance",
+      "input/label-isolation/hash mismatch",
+      "resource cap or nonfinite value"
+    ],
+    "resource_caps": {
+      "seconds_per_training_run": 900,
+      "seconds_total_development": 7200,
+      "cuda_peak_gib": 6,
+      "process_peak_rss_gib": 8
+    },
+    "efficacy_early_stop": false,
+    "development_cell_gate": {
+      "p_minus_i_all_macro_f1_at_least": 0.02,
+      "p_minus_i_exposed_macro_f1_at_least": 0.01,
+      "p_minus_mlp_all_macro_f1_at_least": -0.01,
+      "validation_exposure_fraction_at_least": 0.2,
+      "exposed_softmax_change_fraction_at_least_OR": 0.05,
+      "exposed_category_flip_fraction_at_least_OR": 0.01,
+      "hybrid_exposed_certified_ratio_at_least": 0.25,
+      "hybrid_minus_symmetric_exposed_ratio_at_least": 0.05,
+      "reliability_violations_equal": 0
+    },
+    "decision": "all 24 runs finish before efficacy inspection; arithmetic seed means within each of four cells; at least one cell meets every gate => eligible_for_separately_authorized_confirmation, otherwise stop_after_e28b_development; all seeds/cells retained",
+    "inference": "two development seeds: point estimates only, no inferential CI or significance claims, no revising h/rho/feature signal/alpha after efficacy inspection",
+    "confirmation": "reserved 8 seeds x full 12-cell grid x 3 controls = 288 runs; needs separate user authorization and pre-execution confirmation analysis freeze; no confirmation seed generated by this runner"
+  },
+  "artifacts": {
+    "output_root": "results_boundary_certified/boundary_certified_spectral_e28b_controlled_v2",
+    "freeze": "exclusive freeze_manifest.json with protocol/code/protected-file hashes, seed audit and exact run matrix",
+    "data": "exclusive full graph/features/membership/four-way masks bundle per graph; labels for audit/test sealed from training/evaluation helpers",
+    "models": "initial state tensor digest, selected checkpoint and digest, validation trajectory, validation-only predictions/certificates/diagnostics",
+    "failure": "failure.json retained; no overwrite or replacement",
+    "old_results": "E19-E24 decisions, E28a results, manuscript, core theory code and submission ZIP unchanged"
+  }
+}

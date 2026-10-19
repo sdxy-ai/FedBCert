@@ -1,0 +1,70 @@
+{
+  "protocol": "FedBCert E26 frozen GNNev known-universe common-predictor bridge",
+  "status": "frozen_before_numeric_execution",
+  "official_verifier": "GNNev",
+  "official_repository": "https://github.com/minghao-liu/GNNEV",
+  "official_commit": "09295460e28f240cc840013cd745fa0f4e903434",
+  "official_release": "1.1 (2026-05-12)",
+  "official_pinned_gurobipy": "11.0.3",
+  "isolated_compatible_gurobipy": "12.0.3",
+  "license_scope": "A reviewer-provided valid Gurobi license is required",
+  "trial_seeds": [
+    2601, 2602, 2603, 2604, 2605, 2606, 2607, 2608, 2609, 2610,
+    2611, 2612, 2613, 2614, 2615, 2616, 2617, 2618, 2619, 2620,
+    2621, 2622, 2623, 2624, 2625, 2626, 2627, 2628, 2629, 2630,
+    2631, 2632, 2633, 2634, 2635, 2636, 2637, 2638, 2639, 2640
+  ],
+  "model": {
+    "family": "two-layer PyG mean-GraphSAGE node classifier",
+    "input_dim": 3,
+    "hidden_dim": 3,
+    "num_classes": 3,
+    "num_layers": 2,
+    "first_neighbor_weight": "identity",
+    "root_weights": "zero in both layers",
+    "first_bias": "zero",
+    "second_neighbor_weight": "seeded frozen Gaussian matrix",
+    "second_bias": "seeded frozen Gaussian vector with scale 0.05",
+    "equivalent_polynomial": "logits = W P^2 H + q",
+    "feature_domain": "strictly positive unit-L2 rows; first ReLU is identity"
+  },
+  "graph": {
+    "local_node_count": 4,
+    "remote_node_count": 3,
+    "target_node": 0,
+    "local_undirected_edges": [[0, 1], [1, 2], [2, 3], [3, 0]],
+    "self_loops": "explicit in GNNev and implicit-equivalent in FedBCert",
+    "candidate_directed_additions": [[4, 0], [5, 0], [6, 0]],
+    "global_edge_budget": 1,
+    "local_edge_budget": 1,
+    "feature_budget": 0.0
+  },
+  "set_relation": {
+    "known_universe": "fixed remote endpoints and fixed positive unit features; zero or one listed incoming edge is added",
+    "endpoint_blind": "target boundary count is upper-bounded by one; endpoint and positive-unit remote representation are arbitrary",
+    "relation": "the GNNev known-universe set is a strict subset of the FedBCert conservative row-completion set"
+  },
+  "verification": {
+    "gnnev_solver": "gurobi",
+    "gnnev_incremental_verification": false,
+    "gnnev_tight_bounds": true,
+    "gnnev_objective": "default predicted class versus all competitors",
+    "enumerated_known_completions_per_trial": 4,
+    "fedbcert_count_semantics": "upper_bound",
+    "fedbcert_certificate": "cone_hybrid",
+    "numeric_tolerance": 1e-8
+  },
+  "selection": {
+    "model_or_hyperparameter_selection_performed": false,
+    "labels_used": false,
+    "stopping_or_reselection_allowed": false
+  },
+  "success_conditions": {
+    "official_commit_verified": true,
+    "gurobi_solver_usable": true,
+    "all_predictor_logits_match": true,
+    "all_gnnev_decisions_match_enumeration": true,
+    "gnnev_unknown_results": 0,
+    "fedbcert_soundness_violations_on_known_subset": 0
+  }
+}

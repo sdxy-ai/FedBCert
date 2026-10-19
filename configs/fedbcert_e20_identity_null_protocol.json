@@ -1,0 +1,78 @@
+{
+  "protocol": "FedBCert E20 identity-null certified structural residual",
+  "status": "frozen_before_execution",
+  "purpose": "remove the E19 graph-independent capacity confound and test whether observed local structure contributes utility",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo", "CS"],
+  "num_clients": 3,
+  "partition": "random",
+  "development_seeds": [85, 86],
+  "reserved_confirmation_seeds": [87, 88, 89],
+  "alphas": [0.1, 0.25, 0.5, 1.0],
+  "encoder_type": "dual_feature_identity_null_spectral",
+  "expected_development_runner_units": 96,
+  "expected_development_metric_rows": 96,
+  "identity_null_contract": {
+    "formula": "sum_{k>=1} theta_k (P^k-I)H",
+    "spectral_classifier_bias": false,
+    "identity_shift_spectral_logits": "exactly zero",
+    "identity_shift_fused_logits": "exactly equal to graph-invariant feature-expert logits",
+    "completion_radius": "unchanged because the invariant -H term cancels between completions"
+  },
+  "selection_rule": {
+    "eligible_variants": "one global nonzero alpha; no dataset-specific routing",
+    "mean_observed_minus_identity_validation_macro_f1_min": 0.01,
+    "minimum_dataset_observed_minus_identity_validation_macro_f1": -0.005,
+    "minimum_positive_dataset_count": 5,
+    "mean_validation_hybrid_certified_ratio_min": 0.65,
+    "minimum_dataset_mean_validation_hybrid_certified_ratio": 0.45,
+    "mean_hybrid_minus_symmetric_certified_ratio_min": 0.01,
+    "mean_absolute_completion_logit_change_min": 0.0001,
+    "maximum_validation_certificate_violations": 0,
+    "objective": "maximum mean observed-minus-identity validation Macro-F1 among feasible global alphas",
+    "tie_break": ["larger observed validation Macro-F1", "larger hybrid certified ratio", "smaller alpha"]
+  },
+  "confirmation_matrix": {
+    "num_clients": [3, 10],
+    "partitions": ["metis", "random"],
+    "seeds": [87, 88, 89],
+    "variants": ["observed_selected_alpha", "identity_selected_alpha"],
+    "expected_runner_units": 144,
+    "expected_metric_rows": 144
+  },
+  "confirmation_claims": {
+    "primary_estimand": "observed P minus identity P pooled test Macro-F1",
+    "macro_f1_hierarchical_ci_low_min": 0.0,
+    "mean_hybrid_certified_ratio_min": 0.60,
+    "maximum_certificate_violations": 0,
+    "no_operating_point_reselection": true
+  },
+  "fixed_hyperparameters": {
+    "hidden_dim": 64,
+    "encoder_depth": 2,
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "encoder_residual_scale": 0.5,
+    "uncertainty_recurrence": "retained_mass",
+    "certificate_margin_mode": "pairwise_difference",
+    "certificate": "positive-cone hybrid",
+    "federated_optimizer": "standard FedAvg weighted by labelled local training count"
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 200085,
+    "hierarchy": ["dataset", "client_partition_configuration", "seed"]
+  },
+  "test_metrics_used_for_selection": false,
+  "prohibited_actions": [
+    "using seeds 87-89 before an E20a proceed decision",
+    "dataset-specific alpha routing",
+    "changing the identity-null formula after viewing validation or confirmation metrics",
+    "dropping a dataset because observed P underperforms I",
+    "reselecting alpha after confirmation",
+    "using confirmation test metrics for model or certificate selection"
+  ]
+}

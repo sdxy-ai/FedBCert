@@ -1,0 +1,62 @@
+{
+  "protocol": "FedBCert E19 parameter-matched no-graph audit",
+  "status": "frozen_before_execution",
+  "purpose": "isolate the utility contribution of observed graph propagation without model selection",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo", "CS"],
+  "num_clients": [3, 10],
+  "partitions": ["metis", "random"],
+  "seeds": [73, 74, 75],
+  "variants": {
+    "dual_observed_alpha025": {
+      "encoder_type": "dual_feature_spectral",
+      "encoder_depth": 2,
+      "alpha": 0.25,
+      "spectral_shift_mode": "observed"
+    },
+    "dual_identity_alpha025": {
+      "encoder_type": "dual_feature_spectral",
+      "encoder_depth": 2,
+      "alpha": 0.25,
+      "spectral_shift_mode": "identity"
+    }
+  },
+  "expected_runner_units": 144,
+  "expected_metric_rows": 144,
+  "fixed_hyperparameters": {
+    "hidden_dim": 64,
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "encoder_residual_scale": 0.5,
+    "uncertainty_recurrence": "retained_mass",
+    "certificate_margin_mode": "pairwise_difference",
+    "federated_optimizer": "standard FedAvg weighted by labelled local training count"
+  },
+  "comparison": {
+    "estimand": "observed P minus identity P pooled test metric",
+    "primary_metric": "pooled Macro-F1",
+    "secondary_metrics": ["pooled accuracy", "worst-client Macro-F1"],
+    "claim_rule": "the hierarchical 95% interval for observed-minus-identity pooled Macro-F1 must exclude zero",
+    "parameter_matching": [
+      "identical architecture and trainable parameter count",
+      "identical alpha, initialization seed, optimizer, rounds, masks, membership, and FedAvg aggregation",
+      "only the polynomial propagation operator changes from observed induced-graph P to I"
+    ]
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 190073,
+    "hierarchy": ["dataset", "client_partition_configuration", "seed"]
+  },
+  "model_or_hyperparameter_selection_performed": false,
+  "test_labels_used_for_selection": false,
+  "prohibited_actions": [
+    "changing alpha after inspecting E19 results",
+    "dataset-specific selection between P and I",
+    "dropping datasets, client counts, partitions, or seeds after execution",
+    "using certificate metrics from the identity control as evidence for the graph certificate"
+  ]
+}

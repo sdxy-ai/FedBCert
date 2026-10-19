@@ -1,0 +1,63 @@
+{
+  "protocol": "FedBCert E14a unified dual-expert pure-feature-degeneration validation-only development",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e14a",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo", "CS"],
+  "new_dataset": "CS",
+  "num_clients": [3],
+  "partitions": ["random"],
+  "development_seeds": [45, 46],
+  "reserved_confirmation_seeds": [47, 48, 49],
+  "historical_test_seeds_excluded": [11, 12, 13, 14, 15, 16, 21, 22, 23, 32, 33, 34],
+  "variants": {
+    "feature_alpha0": {"encoder_type": "feature_only_mlp", "alpha": 0.0, "include_local": true},
+    "dual_alpha010": {"encoder_type": "dual_feature_spectral", "alpha": 0.1},
+    "dual_alpha025": {"encoder_type": "dual_feature_spectral", "alpha": 0.25},
+    "dual_alpha050": {"encoder_type": "dual_feature_spectral", "alpha": 0.5},
+    "dual_alpha100": {"encoder_type": "dual_feature_spectral", "alpha": 1.0},
+    "spectral_only": {"encoder_type": "linear_relu", "alpha": 1.0}
+  },
+  "expected_runner_units": 72,
+  "expected_metric_rows": 156,
+  "evaluation_scope": "validation_only",
+  "selection_uses_test_metrics": false,
+  "unified_hyperparameters": {
+    "hidden_dim": 64,
+    "encoder_depth_dual": 2,
+    "spectral_fusion_candidates": [0.0, 0.1, 0.25, 0.5, 1.0],
+    "robust_lambda": 0.1,
+    "boundary_threshold": 0.2,
+    "projection_ratio_cap": 0.25,
+    "rounds": 100,
+    "local_epochs": 1,
+    "order_count": 3,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "certificate_margin": 0.05,
+    "uncertainty_recurrence": "retained_mass",
+    "certificate_margin_mode": "pairwise_difference"
+  },
+  "gate": {
+    "fixed_suite_structural_f1_lift_min": 0.005,
+    "hierarchical_bootstrap_structural_lift_lower_min": 0.0,
+    "same_arch_noninferiority_margin": 0.005,
+    "hierarchical_bootstrap_ba_minus_fedavg_lower_min": -0.005,
+    "minimum_dataset_structural_lift": -0.03,
+    "certified_ratio_min": 0.5,
+    "certified_accuracy_over_clean_accuracy_min": 0.5,
+    "maximum_validation_certificate_violations": 0,
+    "pure_feature_certified_ratio_min": 0.999999
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 140045,
+    "hierarchy": ["dataset", "seed_within_dataset"],
+    "estimand": "equal-weight mean over the fixed six-dataset benchmark suite"
+  },
+  "decision_rule": {
+    "candidate_set": ["dual_alpha010", "dual_alpha025", "dual_alpha050", "dual_alpha100"],
+    "selection": "among candidates passing every gate, maximize validation BA Macro-F1; tie-break certified ratio then smaller alpha",
+    "failure": "stop dual-expert main-method claim and retain completion-set certificate as the paper core",
+    "success": "freeze one global alpha and unlock E14b; no dataset-specific route"
+  }
+}

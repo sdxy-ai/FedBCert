@@ -1,0 +1,16 @@
+{
+  "protocol": "FedBCert E19b ogbn-arxiv parameter-matched no-graph scale audit",
+  "status": "frozen_before_execution",
+  "dataset": "ogbn-arxiv",
+  "num_clients": 3,
+  "partition": "random",
+  "seeds": [76, 77, 78],
+  "observed_source": "results_boundary_certified/boundary_certified_spectral_e18c_ogb_cone_scale/runs/dual_alpha025",
+  "identity_result_root": "results_boundary_certified/boundary_certified_spectral_e19b_ogb_no_graph/runs/dual_identity_alpha025",
+  "alpha": 0.25,
+  "expected_new_runner_units": 3,
+  "expected_paired_units": 3,
+  "model_or_hyperparameter_selection_performed": false,
+  "test_labels_used_for_selection": false,
+  "interpretation": "descriptive parameter-matched scale control; the three-seed result is not an efficacy selection gate"
+}

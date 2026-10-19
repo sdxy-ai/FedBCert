@@ -1,0 +1,44 @@
+{
+  "certificate_violations": 0,
+  "complete": true,
+  "completed_units": 72,
+  "decision": "retrospective_audit_complete_no_new_graph_utility_claim",
+  "expected_units": 72,
+  "fraction_of_mean_gain_from_exposed": 1.0,
+  "historical_stop_decisions_unchanged": true,
+  "mean_exposed_combined_coverage_mass": 0.7563197205516242,
+  "mean_exposed_coverage_gain_mass": 0.11281387679300074,
+  "mean_non_exposed_combined_coverage_mass": 0.15675573693539877,
+  "mean_non_exposed_coverage_gain_mass": 0.0,
+  "new_independent_confirmation": false,
+  "no_training": true,
+  "not_distinct_independent_node_count": true,
+  "registered_sources_unchanged": true,
+  "source_overall_checks": {
+    "cone_hybrid_certified_accuracy": {
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    "cone_hybrid_certified_ratio": {
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    "selected_accuracy": {
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    "selected_macro_f1": {
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    "symmetric_certified_accuracy": {
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    "symmetric_certified_ratio": {
+      "absolute_difference": 1.1102230246251565e-16,
+      "passed": true
+    }
+  },
+  "total_evaluation_occurrences": 314244
+}

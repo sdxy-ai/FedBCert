@@ -1,0 +1,4 @@
+variant,trials,enumerated_graph_completions,exact_robust_nodes,certified_nodes,certificate_recall,certificate_precision,soundness_violations,lower_bound_violations,mean_exact_minus_certificate_slack,median_trial_certificate_to_exact_positive_gap_ratio,certificate_recall_ci_low,certificate_recall_ci_high
+retained_symmetric,40,8640,117,54,0.46153846153846156,1.0,0,0,0.42858203805548867,0.6454614743528396,0.3793103448275862,0.5390625
+cone_raw,40,8640,117,96,0.8205128205128205,1.0,0,0,0.08369074277184926,0.9099357657325504,0.7008530183727034,0.9316239316239316
+cone_hybrid,40,8640,117,96,0.8205128205128205,1.0,0,0,0.08369074277184926,0.9099357657325504,0.6974789915966386,0.9316239316239316

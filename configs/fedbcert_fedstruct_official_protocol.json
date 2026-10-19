@@ -1,0 +1,48 @@
+{
+  "protocol": "FedBCert E8 FedStruct official-code matched confirmation",
+  "status": "frozen_before_formal_runs",
+  "official_repository": "https://github.com/JavadAliakbari/FedStruct",
+  "official_commit": "7ac4e8129f62140cc4a67b306f6c84538dff887a",
+  "adapter_revision": "fedstruct-e8-v7-hop2vec-feasible",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo"],
+  "num_clients": [3],
+  "partitions": ["metis", "random"],
+  "seeds": [21, 22, 23],
+  "expected_runs": 30,
+  "variant": {
+    "data_type": "f+s",
+    "feature_model": "dataset-specific checked-in official YAML",
+    "structure_model": "dataset-specific checked-in official YAML",
+    "structure_type": "hop2vec for all datasets; checked-in YAML default for four datasets and checked-in official alternative for Computers",
+    "aggregation": "official gradient aggregation"
+  },
+  "hyperparameters": "dataset-specific official YAML without E8 test tuning, except the predeclared Computers structure_type=hop2vec feasibility amendment",
+  "feasibility_amendment": {
+    "dataset": "Computers",
+    "original_yaml_structure_type": "GDV",
+    "formal_structure_type": "hop2vec",
+    "reason": "official pure-Python five-node GDV orbit enumeration is combinatorial on Computers hubs; hop2vec is listed in the same checked-in official YAML and matches the other four formal datasets",
+    "selection_used_validation_or_test_metrics": false
+  },
+  "runtime_memory_placement": {
+    "global_abar": "CPU",
+    "global_abar_storage": "exact sparse-to-dense transition before predicted sparse storage exceeds dense storage",
+    "client_row_extraction": "one-time O(nnz+n) exact CSR construction from coalesced row-major COO followed by exact CSR row copying on CPU, algebraically identical to one-hot row selection",
+    "client_abar_storage": "smaller of mathematically identical dense/sparse layouts before device transfer",
+    "gdv_preprocessing": {
+      "status": "dormant under the formal hop2vec variant",
+      "compatibility_patch": "exact one-pass undirected adjacency construction and reused edge-pair list; official graphlet orbit equations unchanged"
+    },
+    "pruning_enabled_by_adapter": false,
+    "model_or_optimizer_changed": false
+  },
+  "checkpoint_selection": {
+    "primary": "pooled_validation_macro_f1",
+    "tie_break": "pooled_validation_accuracy",
+    "calibration_fold_used": false,
+    "test_labels_used": false
+  },
+  "output_root": "results_boundary_certified/boundary_certified_spectral_e8_q1/official_bridges/fedstruct_core",
+  "table_tier": "isolated_official_code_appendix",
+  "information_interface_matches_fedbcert": false
+}

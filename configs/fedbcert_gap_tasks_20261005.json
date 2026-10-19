@@ -1,0 +1,127 @@
+{
+  "protocol": "FedBCert evidence-use freeze and exactly two targeted gap tasks",
+  "date": "2026-10-05",
+  "status": "scoped_tasks_not_executed",
+  "core_claims": [
+    "conditional_endpoint_blind_completion_soundness",
+    "same_predictor_certificate_tightening",
+    "sparse_computational_feasibility"
+  ],
+  "global_constraints": {
+    "training_allowed": false,
+    "new_graph_utility_search_allowed": false,
+    "business_safety_experiment_allowed": false,
+    "test_labels_allowed": false,
+    "checkpoint_reselection_allowed": false,
+    "certificate_threshold_tuning_allowed": false,
+    "overwrite_historical_outputs_allowed": false,
+    "repeat_until_positive_allowed": false,
+    "null_unknown_timeout_and_negative_results_must_be_reported": true
+  },
+  "tasks": [
+    {
+      "id": "G1",
+      "name": "closest_certificate_comparability_and_frozen_instance_comparison",
+      "status": "not_started_requires_equivalence_gate",
+      "question": "Does a closest published verifier have a genuinely comparable special case without changing the predictor or uncertainty set?",
+      "existing_evidence": "E26 is implementation consistency on a strict known-universe subset, not an endpoint-blind performance ranking.",
+      "priority_external_candidate": "RobLight; GNNev and the E26 exact oracle remain reference checks",
+      "reference_protocol": "configs/fedbcert_e26_known_universe_verifier_bridge.json",
+      "instances": "all 40 E26 frozen models and all 4 known-endpoint completions per model; no new instance search",
+      "allowed_extra_information": "known-universe mode only, separately labelled; never passed to the endpoint-blind verifier",
+      "pre_execution_gate": [
+        "pin official external source commit and dependencies in a new exclusive manifest before numeric comparison",
+        "use the existing E26 stored model/feature tensors or verify deterministic reconstruction against stored logits; never silently regenerate unverified inputs",
+        "check the same unperturbed logits and all 4 completion logits with absolute tolerance 1e-8",
+        "enumerate and prove the same known-universe candidate-edge, count, feature and self-loop semantics",
+        "label subset or superset encodings as diagnostic only, not same-threat rankings",
+        "freeze supported mode, timeout, memory budget, all-case order and analysis before execution"
+      ],
+      "resource_caps": {
+        "seconds_per_verification": 60,
+        "whole_task_seconds": 3600,
+        "rss_gib": 8
+      },
+      "report": [
+        "robust nonrobust unknown timeout and translation failures",
+        "precision and solved-instance ratio against the exact known-universe oracle",
+        "same-set comparison only if the equivalence gate passes",
+        "endpoint-blind coverage separately, as a strict superset guarantee",
+        "timings with matching boundaries, without an endpoint-blind speed ranking"
+      ],
+      "hard_stop": "If equivalence or official support cannot be established, archive that limitation and stop; do not train another predictor, change the uncertainty domain or sample easier models.",
+      "closure_without_positive_outcome": "Retain existing bridge and source-backed interface distinctions; exclude claims of superiority to a stronger published verifier.",
+      "planned_output_root": "results_boundary_certified/fedbcert_g1_comparability_20261005"
+    },
+    {
+      "id": "G2",
+      "name": "certificate_only_overhead_on_frozen_predictors",
+      "status": "not_started_requires_label_free_adapter_and_timing_manifest",
+      "question": "What is certification's measured added time and memory relative to inference on the same frozen model?",
+      "frozen_case_groups": [
+        {
+          "source": "E28b committed observed_p primary cell h0.90_rho0.40",
+          "seeds": [28101, 28102, 28103, 28104, 28105, 28106, 28107, 28108],
+          "role": "timing replay only, not a new independent confirmation"
+        },
+        {
+          "source": "E18c dual_alpha025 ogbn-arxiv_random_c3",
+          "seeds": [76, 77, 78],
+          "role": "large-graph timing replay; verify reconstructable view before including"
+        }
+      ],
+      "pre_execution_gate": [
+        "verify checkpoint, protocol, local view, features, row order and ledger hashes",
+        "construct a label-free tensor input before invoking any measurement worker",
+        "never call training, test scoring or checkpoint selection functions",
+        "freeze environment, devices, dtype, sparse format and measurement ordering",
+        "use exactly the existing alpha, coefficients, model and certificate predicates",
+        "log an unavailable OGB view and stop that group rather than invent reconstruction equivalence"
+      ],
+      "main_environment": {
+        "device": "cpu",
+        "dtype": "float64",
+        "intraop_threads": 1,
+        "interop_threads": 1,
+        "model_in_eval_mode": true,
+        "autograd": false,
+        "dtype_scope": "audit execution path; do not compare directly to historical float32 training time"
+      },
+      "measurement": {
+        "warmups_per_stage": 5,
+        "repeats_per_stage": 30,
+        "stage_order": "fixed rotation across repetitions, not choose the fastest order",
+        "timer": "perf_counter with synchronize before and after every device stage if a GPU mode is separately frozen",
+        "stages": [
+          "model_forward_from_cached_local_sparse_view",
+          "symmetric_from_cached_logits_including_uncertainty_basis",
+          "cone_from_cached_hidden_and_logits_including_interval_propagation",
+          "combined_from_cached_hidden_and_logits_including_both_certificates",
+          "forward_plus_combined_certificate"
+        ],
+        "separate_setup_stages": [
+          "artifact_loading_and_hash_verification",
+          "local_sparse_operator_construction",
+          "contract_validation_and_snapshot_hashing"
+        ],
+        "report": [
+          "per-case median p10 p90 and all raw repetitions",
+          "per-case combined-time to forward-time ratio using the same device and dtype",
+          "node count edge count polynomial terms hidden dimension class count",
+          "process RSS baseline peak and increment; separate worker per case and stage",
+          "GPU allocation peak only if GPU mode is independently frozen; never call it total GPU memory",
+          "cached and uncached boundaries explicitly",
+          "output finite checks and input/model tensor digests unchanged"
+        ]
+      },
+      "resource_caps": {
+        "whole_task_seconds": 3600,
+        "rss_gib": 8
+      },
+      "hard_stop": "Any input mutation, hash mismatch, nonfinite value or resource breach ends the affected case and is recorded; no rerun until a faster or more favourable result appears.",
+      "closure_without_positive_outcome": "Publish observed overhead or unavailable cases and retain only computational feasibility; low-overhead wording is not a required positive gate.",
+      "planned_output_root": "results_boundary_certified/fedbcert_g2_cert_only_cost_20261005"
+    }
+  ],
+  "final_freeze_rule": "After each task reaches executed-and-audited or an explicit negative/not-comparable/unavailable terminal outcome, freeze all outputs and claim scope. No further parameter search or positive-result campaign. A later correctness bug requires a transparent new revision, not silent replacement."
+}

@@ -1,0 +1,15 @@
+{
+  "certificate_violations": 0,
+  "complete": true,
+  "decision": "confirmation_complete_claim_supported",
+  "errors": [],
+  "expected_metric_rows": 144,
+  "expected_runner_units": 144,
+  "found_metric_rows": 144,
+  "found_runner_units": 144,
+  "operating_point_reselected_after_confirmation": false,
+  "protocol": "FedBCert E18b frozen ReLU-cone independent confirmation",
+  "selected_alpha": 0.25,
+  "selected_variant": "dual_alpha025",
+  "test_labels_used_for_selection": false
+}

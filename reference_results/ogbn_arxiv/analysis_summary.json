@@ -1,0 +1,19 @@
+{
+  "alpha_or_certificate_selected_on_ogb": false,
+  "certificate_violations": 0,
+  "complete": true,
+  "dataset": "ogbn-arxiv",
+  "decision": "scale_audit_complete_no_selection",
+  "errors": [],
+  "expected_metric_rows": 6,
+  "expected_runner_units": 6,
+  "found_metric_rows": 6,
+  "found_runner_units": 6,
+  "node_count": 169343,
+  "protocol": "FedBCert E18c frozen cone-hybrid ogbn-arxiv scale audit",
+  "pure_feature_min_certified_ratio": 1.0,
+  "selected_alpha": 0.25,
+  "selected_certificate": "cone_hybrid",
+  "selected_variant": "dual_alpha025",
+  "test_labels_used_for_selection": false
+}

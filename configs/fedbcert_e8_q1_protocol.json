@@ -1,0 +1,49 @@
+{
+  "protocol": "FedBCert E8 Q1 frozen matched-partition confirmation",
+  "result_root": "results_boundary_certified/boundary_certified_spectral_e8_q1",
+  "datasets": ["Cora", "CiteSeer", "PubMed", "Computers", "Photo"],
+  "num_clients": [3, 5, 10],
+  "partitions": ["metis", "random"],
+  "confirmation_seeds": [21, 22, 23],
+  "development_seed": 17,
+  "expected_confirmation_units": 90,
+  "internal_methods": ["fedavg", "fedbcert_pg", "fedbcert_ba"],
+  "matched_native_baselines": ["fedsage_plus", "feddep", "fedpub", "fedtad", "fedgta"],
+  "official_bridge_baselines": ["fedstruct", "fedlap", "s2fgl"],
+  "robust_lambda": {
+    "Cora": 0.1,
+    "CiteSeer": 1.0,
+    "PubMed": 0.1,
+    "Computers": 0.1,
+    "Photo": 0.1
+  },
+  "boundary_threshold": 0.2,
+  "projection_ratio_cap": 0.25,
+  "rounds": 100,
+  "local_epochs": 1,
+  "hidden_dim": 64,
+  "order_count": 3,
+  "dropout": 0.2,
+  "learning_rate": 0.01,
+  "weight_decay": 0.0005,
+  "certificate_margin": 0.05,
+  "split": {
+    "train": 0.3,
+    "calibration": 0.1,
+    "validation": 0.2,
+    "test": 0.4
+  },
+  "native_tuning": {
+    "partition": "random",
+    "num_clients": 3,
+    "learning_rates": [0.001, 0.005, 0.01],
+    "weight_decays": [0.0, 0.0005],
+    "selection_metric": "pooled_val_macro_f1",
+    "test_labels_used_for_selection": false
+  },
+  "claims": {
+    "official_bridge_results_are_not_mixed_into_matched_main_table": true,
+    "test_labels_used_for_training_or_selection": false,
+    "new_dataset_hyperparameters_are_transferred_without_retuning_fedbcert": true
+  }
+}
