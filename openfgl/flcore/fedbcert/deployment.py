@@ -27,6 +27,7 @@ from .certificate import (
     retained_mass_uncertainty_basis,
     row_normalized_shift,
 )
+from .model_contract import model_fingerprint, validate_stock_model
 
 
 def _json_hash(value: dict) -> str:
@@ -129,57 +130,12 @@ class FrozenLocalDeployment:
 
     @staticmethod
     def _validate_model(model: PolynomialSpectralClassifier) -> None:
-        if type(model) is not PolynomialSpectralClassifier:
-            raise ValueError("only the stock PolynomialSpectralClassifier is supported")
-        if model.encoder_type not in {"linear_relu", "dual_feature_spectral"}:
-            raise ValueError("unsupported predictor: this adapter does not certify teachers or shields")
-        if any(module.training for module in model.modules()):
-            raise ValueError("freeze an eval-mode predictor; the adapter never changes its mode")
-        if model.certificate_margin_mode != "pairwise_difference":
-            raise ValueError("this adapter requires the pairwise_difference certificate configuration")
-        if (model.encoder_type == "linear_relu" and model.spectral_fusion_scale != 1.0):
-            raise ValueError("linear_relu forward requires spectral_fusion_scale=1 in this adapter")
-        if (not math.isfinite(model.spectral_fusion_scale) or model.spectral_fusion_scale < 0
-                or model.order_count < 2 or model.theta.shape != (model.order_count,)
-                or model.classifier.out_features < 2
-                or (model.encoder_type == "linear_relu" and model.encoder_depth != 1)
-                or (model.encoder_type == "dual_feature_spectral" and model.encoder_depth < 2)):
-            raise ValueError("invalid polynomial or classification configuration")
-        if model.theta.device.type != "cpu" or model.theta.dtype not in {torch.float32, torch.float64}:
-            raise ValueError("this demonstration supports CPU float32/float64 only")
-        for module in model.modules():
-            if type(module) not in {PolynomialSpectralClassifier, nn.Linear, nn.LayerNorm, nn.ModuleList}:
-                raise ValueError("custom modules are outside this adapter's contract")
-            if module._forward_hooks or module._forward_pre_hooks:
-                raise ValueError("forward hooks are outside this adapter's contract")
-            if any(callable(value) for value in vars(module).values()):
-                raise ValueError("instance method overrides are outside this adapter's contract")
-        if len(model.encoder_blocks) or len(model.encoder_norms):
-            raise ValueError("the supported spectral encoding is ReLU followed by row normalization")
-        if (model.encoder_type == "linear_relu" and model.feature_classifier is not None
-                or model.encoder_type == "dual_feature_spectral" and (
-                    model.feature_classifier is None or model.feature_encoder is None
-                    or len(model.feature_blocks) != model.encoder_depth - 1
-                    or len(model.feature_norms) != model.encoder_depth - 1)):
-            raise ValueError("feature-branch architecture does not match the declared predictor")
-        for value in model.state_dict().values():
-            if (value.device.type != "cpu" or value.dtype != model.theta.dtype
-                    or not bool(torch.isfinite(value).all())):
-                raise ValueError("model state must be finite and have one CPU floating-point dtype")
+        validate_stock_model(model, require_pairwise=True)
 
     def _model_hash(self) -> str:
-        fields = (
-            "order_count", "dropout", "encoder_type", "encoder_depth",
-            "encoder_residual_scale", "utility_diffusion_hops", "utility_diffusion_scale",
-            "spectral_fusion_scale", "certificate_margin_mode",
-        )
         return _json_hash({
             "core_sha256": self._core_sha256,
-            "configuration": {key: getattr(self._model, key) for key in fields},
-            "modules": {key: {"type": type(value).__qualname__, "configuration": value.extra_repr(),
-                              "training": value.training}
-                        for key, value in self._model.named_modules()},
-            "state": {key: _tensor_hash(value) for key, value in self._model.state_dict().items()},
+            "stock_model_sha256": model_fingerprint(self._model, require_pairwise=True),
         })
 
     def _view_hash(self) -> str:

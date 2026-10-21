@@ -1,0 +1,20 @@
+{
+  "scripts/verify_gap_reference_results.py": {
+    "frozen_copy": "provenance/verify_gap_reference_results_frozen.py",
+    "frozen_sha256": "068b91156dc4df576b175b4dd0a05708fa4ba7fd74ecc394c758e163cc63b05f",
+    "public_sha256": "d5fc9046f46f5770615b101e1aeb90de3d7fe5c30c401350a085c1044bc75abf",
+    "scope": "Historical source-location resolution only; no scientific implementation change"
+  },
+  "scripts/verify_review_artifact.py": {
+    "frozen_copy": "provenance/verify_review_artifact_frozen.py",
+    "frozen_sha256": "6703841a4f9f7c0f7aef465aae34e82e9d1d9ba78f4fb4986cf83674a469a174",
+    "public_sha256": "e7a9c7714fa6396acdeb1a3a9ab6d780519e4d56649601f17345733d654e85b0",
+    "scope": "Historical source-location resolution only; no scientific implementation change"
+  },
+  "scripts/verify_on_demand_reference.py": {
+    "frozen_copy": "provenance/verify_on_demand_reference_frozen.py",
+    "frozen_sha256": "e7d36e33e59b926c2366b148e203f6c78f0ade65ca1c4057d80bc9485bde2cfa",
+    "public_sha256": "b07c0fa37c4c958fd08a392e2999c913a674a44e9d3bf8668ef3ac9834a674bc",
+    "scope": "Historical source-location resolution only; no scientific implementation change"
+  }
+}

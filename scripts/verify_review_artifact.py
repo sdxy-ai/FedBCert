@@ -23,8 +23,11 @@ def verify(root=ROOT):
         if not candidate.is_relative_to(root) or sha256(candidate) != expected:
             raise RuntimeError(f"package hash/path mismatch: {relative}")
     historical = json.loads((root / "HISTORICAL_SOURCE_SHA256.json").read_text())
+    locations_path = root / "HISTORICAL_SOURCE_LOCATIONS.json"
+    locations = json.loads(locations_path.read_text()) if locations_path.exists() else {}
     for relative, expected in historical.items():
-        if sha256(root / relative) != expected:
+        source = (root / locations.get(relative, relative)).resolve()
+        if not source.is_relative_to(root) or sha256(source) != expected:
             raise RuntimeError(f"historical source not preserved: {relative}")
     spec, base = load_protocol()
     validate_specification(spec, base)

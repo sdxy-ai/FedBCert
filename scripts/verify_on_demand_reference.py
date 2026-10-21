@@ -33,7 +33,10 @@ def verify(root=ROOT):
     require(runs["inputs_unchanged_after"] and runs["implementation_unchanged_after"], "recorded integrity failure")
     require(audit["passed"] and audit["source_hashes_unchanged_after_audit"], "recorded audit failure")
     require(tuple(protocol["seeds"]) == tuple(range(28101, 28109)), "seed mismatch")
-    verify_index(root, freeze["source_sha256"])
+    locations = read_json(root / "HISTORICAL_SOURCE_LOCATIONS.json")
+    historical_sources = {locations.get(relative, relative): expected
+                          for relative, expected in freeze["source_sha256"].items()}
+    verify_index(root, historical_sources)
     verify_index(root, runs["evidence_sha256"])
     report, rows = analyze_records(runs["records"])
     saved = read_json(pilot / "analysis/summary.json")

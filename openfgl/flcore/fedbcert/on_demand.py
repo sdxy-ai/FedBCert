@@ -19,6 +19,7 @@ import numpy as np
 import torch
 
 from .certificate import PolynomialSpectralClassifier, canonical_undirected, row_normalized_shift
+from .model_contract import model_fingerprint, validate_stock_model
 
 
 _HEADER = struct.Struct("<8sB32sIqqI")
@@ -83,17 +84,8 @@ def _tensor_hash(value: torch.Tensor) -> bytes:
 
 
 def state_fingerprint(model: PolynomialSpectralClassifier) -> str:
-    """Hash parameters, buffers and inference-affecting model configuration."""
-    digest = hashlib.sha256()
-    for key, value in model.state_dict().items():
-        digest.update(key.encode("utf8"))
-        digest.update(_tensor_hash(value))
-    digest.update(repr((
-        model.encoder_type, model.order_count, model.encoder_depth,
-        model.dropout, model.encoder_residual_scale,
-        model.spectral_fusion_scale, model.certificate_margin_mode,
-    )).encode("utf8"))
-    return digest.hexdigest()
+    """Bind the shared validated stock inference contract, not just tensors."""
+    return model_fingerprint(model)
 
 
 def _pack_header(magic: bytes, snapshot: str, stage: int, source: int, receiver: int, count: int) -> bytes:
@@ -218,16 +210,7 @@ class AggregateReplayService:
         self, model: PolynomialSpectralClassifier, features: torch.Tensor,
         edge_index: torch.Tensor, membership: torch.Tensor | np.ndarray,
     ) -> None:
-        if not isinstance(model, PolynomialSpectralClassifier):
-            raise ValueError("unsupported model")
-        if any(module.training for module in model.modules()):
-            raise ValueError("aggregate replay requires model.eval()")
-        if model.encoder_type not in {"linear_relu", "dual_feature_spectral"}:
-            raise ValueError("unsupported encoder type")
-        if model.encoder_type == "linear_relu" and model.spectral_fusion_scale != 1.0:
-            raise ValueError("linear_relu forward requires fusion scale one")
-        if not math.isfinite(float(model.spectral_fusion_scale)) or model.spectral_fusion_scale < 0.0:
-            raise ValueError("fusion scale must be finite and nonnegative")
+        validate_stock_model(model)
         if features.ndim != 2 or features.size(0) == 0:
             raise ValueError("features must be a nonempty matrix")
         if features.device.type != "cpu" or features.dtype not in {torch.float32, torch.float64}:

@@ -134,6 +134,12 @@ def verify(root=ROOT):
     derivative_checks = []
     for original, expected in bindings.items():
         candidate = root / original
+        # Earlier timing records bind the earlier source, not the B1/B2 runtime.
+        # Preserve and verify that source separately instead of rewriting its pin.
+        archived = root / "provenance/pre_b1_b2" / original
+        if candidate.is_file() and sha(candidate) != expected and archived.is_file():
+            require(sha(archived) == expected, "Archived source hash mismatch: " + original)
+            candidate = archived
         if not candidate.is_file() and original.startswith("scripts/"):
             candidate = root / "provenance/gap_source_scripts" / Path(original).name
         if original.endswith("/checkpoint_commit.json"):

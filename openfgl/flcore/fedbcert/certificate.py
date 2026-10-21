@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
 from typing import List, Literal
 
 import numpy as np
@@ -571,7 +572,30 @@ class PolynomialSpectralClassifier(nn.Module):
         logits, _, _, _ = self.training_logits(features, shift)
         return logits
 
+    def _validate_certificate_fusion_contract(self) -> None:
+        """Reject scale metadata not applied to the certified predictor."""
+        scale = float(self.spectral_fusion_scale)
+        if not math.isfinite(scale) or scale < 0.0:
+            raise ValueError("certificate fusion scale must be finite and nonnegative")
+        if self.encoder_type == "feature_only_mlp":
+            if scale != 0.0:
+                raise ValueError("feature_only_mlp certification requires fusion scale=0")
+        elif self.encoder_type in {"dual_feature_spectral", "dual_feature_identity_null_spectral"}:
+            if self.feature_classifier is None:
+                raise ValueError("dual-model certification requires a feature classifier")
+        elif self.encoder_type in {
+            "linear_relu", "bounded_residual_mlp",
+            "shielded_sage_spectral", "shielded_diffusion_spectral",
+        }:
+            # These certificate targets are the unscaled safe spectral logits,
+            # not a shield's separately evaluated graph-sensitive utility output.
+            if scale != 1.0:
+                raise ValueError("unscaled spectral certification requires fusion scale=1")
+        else:
+            raise ValueError("unsupported encoder type for certificate fusion contract")
+
     def boundary_radius(self, basis: List[torch.Tensor]) -> torch.Tensor:
+        self._validate_certificate_fusion_contract()
         if len(basis) != self.order_count:
             raise ValueError("uncertainty basis does not match filter order")
         radius = sum(

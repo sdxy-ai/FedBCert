@@ -14,7 +14,7 @@ jobs:
           cache: pip
       - name: Install pinned CPU dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade 'pip>=25.1,<26' setuptools==79.0.1 wheel==0.48.0
           python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -r requirements-no-torch.txt
           python -m pip install -e . --no-deps
@@ -22,6 +22,7 @@ jobs:
       - name: Check included results
         run: |
           python scripts/smoke_certificate.py
+          python scripts/verify_rg1_reference.py
           python scripts/verify_review_artifact.py
           python scripts/verify_reference_results.py
           python scripts/verify_gap_reference_results.py
@@ -30,4 +31,4 @@ jobs:
         env:
           OMP_NUM_THREADS: '1'
           MKL_NUM_THREADS: '1'
-        run: python -m pytest -q -m 'not optional'
+        run: python -m pytest -q -m 'not optional and not archive'
