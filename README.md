@@ -24,9 +24,12 @@ Python 3.9–3.11; the other interpreter versions have not received the same
 validation. CPU execution is sufficient for the commands below. Native Windows
 is not supported by historical replay programs, which use POSIX `resource`.
 
+Download the source archive from the repository page you are viewing and
+extract it. When using an anonymous review copy, obtain the files from that
+copy rather than cloning a separate public repository. Open a terminal in the
+extracted repository root (the directory containing `pyproject.toml`), then run:
+
 ```bash
-git clone https://github.com/sdxy-ai/FedBCert.git
-cd FedBCert
 python3.9 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade 'pip>=25.1,<26' setuptools==79.0.1 wheel==0.48.0
